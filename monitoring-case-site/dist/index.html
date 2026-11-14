@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -8,9 +10,11 @@
   <title>Мониторинг бортовых систем — Елена Сулоева</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Geist:wght@400;500;600&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="results-animation.css">
   <script src="index.js" defer></script>
+  <script src="results-animation.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#case">К содержанию</a>
@@ -47,7 +51,13 @@
       <article class="solution-summary"><h3>Общая картина → устройство → подробности</h3><p>Сначала специалист оценивает состояние системы, затем находит устройство в таблице. Цветовые акценты выделяют проблемы, а текстовые статусы объясняют состояние.</p></article>
       <div class="solution-grid"><article><h3>Прокрутка и пагинация</h3><p>Большие таблицы можно прокручивать, а записи — просматривать постранично. Это позволяет работать с большим объёмом данных, сохраняя читаемый размер текста.</p></article><article><h3>Фильтры — по кнопке</h3><p>Из-за ограничения разработки результаты не могли обновляться при каждом выборе. Поэтому пользователь сначала задаёт нужные параметры, затем нажимает «Применить» — весь набор фильтров применяется за один раз.</p></article></div>
     </div>
-    <figure class="screen-figure"><button class="screen" data-zoom type="button" aria-label="Увеличить обзор системы"><img src="assets/overview.png" width="1248" height="832" alt="Обзор системы: сводка доступности, фильтры и таблица устройств" loading="lazy"><span class="zoom-hint">Рассмотреть экран ↗</span></button></figure>
+    <figure class="screen-figure overview-prototype" aria-labelledby="overview-prototype-caption">
+      <div class="prototype-viewport results-animation" role="img" aria-label="Зацикленная демонстрация выбора даты теста, классов объектов, качества метрик и версии модели. После применения фильтров обновляется таблица, затем показаны горизонтальная прокрутка, действие «Удалить» и окно подтверждения удаления версии модели.">
+        <img class="animation-screen" src="assets/results-screen.png" width="1280" height="832" alt="" loading="lazy">
+        <svg class="animation-cursor" viewBox="0 0 24 30" aria-hidden="true"><path d="M2 2v23l6-6 5 10 5-2-5-10h9Z" fill="#fff" stroke="#163240" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </div>
+      <figcaption id="overview-prototype-caption">Выбор фильтров → обновление таблицы → горизонтальная прокрутка → действие «Удалить» и окно подтверждения.</figcaption>
+    </figure>
   </section>
   <section class="case-section container" id="diagnostics" aria-labelledby="diagnostics-title">
     <p class="section-label">03 · Диагностика устройства</p>

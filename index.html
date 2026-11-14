@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="hover.css"><link rel="stylesheet" href="layout.css"><link rel="stylesheet" href="figma-alignment.css"><link rel="stylesheet" href="mobile.css"><script defer src="index.js"></script><script defer src="mobile.js"></script>
+  <link rel="stylesheet" href="portfolio-carousel.css">
+  <script defer src="portfolio-carousel.js"></script>
 </head>
 <body>
 <a class="skip" href="#case">К содержанию</a>
@@ -78,6 +80,19 @@
   <section class="case-section transfer-section" id="transfer" aria-labelledby="transfer-title"><div class="container"><span class="section-label reveal">Решение 4 · Единый билет</span><h2 class="section-title reveal" id="transfer-title">Маршрут с пересадкой остаётся одной <br>поездкой</h2><div class="transfer-panel reveal"><div class="transfer-intro caption"><h3>Один билет на весь маршрут — даже с пересадками.</h3><p>Технически маршрут состоит из нескольких рейсов и сегментов, но для пассажира это одна поездка из точки А в точку Б. Поэтому все участки объединены в единый маршрут, который можно оформить одним билетом.</p></div><div class="transfer-grid"><div class="transfer-column"><div class="transfer-copy"><h3>Для пользователя:</h3><p>Легче сравнивать варианты, понятнее общая длительность, меньше риска купить несовместимые рейсы.</p></div><div class="transfer-phone"><button class="mockup" type="button" data-zoom aria-label="Увеличить список билетов"><img src="assets/transfer.png" alt="Список билетов с маршрутом и пересадкой" loading="lazy"></button></div></div><div class="transfer-column"><div class="transfer-copy"><h3>Для продукта</h3><p>Покупка остаётся единым сценарием, заказ проще сопровождать при изменении одного из сегментов.</p></div><div class="transfer-phone"><button class="mockup" type="button" data-zoom aria-label="Увеличить единый билет с QR-кодом"><img src="assets/unified-ticket.png" alt="Единый билет с QR-кодом" loading="lazy"></button></div></div></div></div></div></section>
 
   <section class="format-section" id="format" aria-labelledby="format-title"><div class="container"><span class="section-label reveal">Формат проекта</span><h2 class="section-title reveal" id="format-title">Переосмысление транспортного приложения</h2><div class="format-grid"><article class="format-card reveal"><h3>Сохранила</h3><p>Учла реальные пользовательские сценарии, особенности оплаты и ограничения транспортной системы.</p></article><article class="format-card reveal"><h3>Переработала логику</h3><p>Переосмыслила структуру приложения, навигацию и связь между ключевыми сценариями.</p></article><article class="format-card reveal"><h3>Создала интерфейс</h3><p>Разработала визуальную систему, экраны и тексты для представленных сценариев.</p></article></div><p class="nda">Самостоятельный концепт. Оригинальные интерфейсы и материалы рабочих проектов не используются в связи с NDA.</p></div></section>
+  <section class="portfolio-projects" id="other-projects" aria-labelledby="other-projects-title" data-portfolio-carousel data-current-case="transport">
+    <div class="container">
+      <div class="portfolio-heading">
+        <h2 id="other-projects-title">Другие проекты</h2>
+        <div class="portfolio-controls" hidden>
+          <button type="button" data-project-direction="-1" aria-label="Предыдущий проект" aria-controls="portfolio-track" disabled><img src="assets/portfolio/chevron-left.svg" alt="" width="20" height="20"></button>
+          <button type="button" data-project-direction="1" aria-label="Следующий проект" aria-controls="portfolio-track"><img src="assets/portfolio/chevron-right.svg" alt="" width="20" height="20"></button>
+        </div>
+      </div>
+      <div class="portfolio-track" id="portfolio-track" tabindex="0" role="region" aria-label="Другие проекты — прокручиваемый список"></div>
+      <noscript><p><a href="https://lenaslv.github.io/portfolio_v2/site/">Посмотреть другие проекты портфолио →</a></p></noscript>
+    </div>
+  </section>
 </main>
 <footer class="footer" id="contact"><div class="container"><h2>Открыта к сотрудничеству</h2><div class="contact-grid"><a class="contact-card" href="https://t.me/Lena_Suloeva"><span>Telegram</span><strong>@Lena_Suloeva →</strong></a><a class="contact-card" href="mailto:lensuloeva@yandex.ru"><span>Почта</span><strong>lensuloeva@yandex.ru →</strong></a></div><div class="footer-meta"><span>Елена Сулоева · Product designer</span><span>Портфолио · 2026</span></div><div class="footer-route" aria-hidden="true"></div></div></footer>
 <button class="to-top" type="button" aria-label="Вернуться наверх" title="Наверх">↑</button>
