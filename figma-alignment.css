@@ -26,6 +26,41 @@
 .balance-section .balance-stack{height:auto}
 .balance-bottom .large-phone-tile,.balance-bottom .balance-copy{background:#1f1f1f;border-radius:40px}
 .balance-bottom{background:#171717;border-radius:40px}
+/* Figma 2837:18611: balance top-up with a shared heading and two panels. */
+.balance-refill{margin-top:28px;padding:8px;border-radius:40px;background:#171717;font-family:Montserrat,Arial,sans-serif}
+.balance-refill-heading{padding:24px 32px;border-radius:40px;background:#1f1f1f}
+.balance-refill-heading h2{margin:0 0 8px;color:#eef2f7;font-size:28px;font-weight:600;line-height:34px}
+.balance-refill-heading p{color:#8f99b2;font-size:16px;line-height:24px}
+.balance-refill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px}
+.balance-refill-tile,.balance-refill-copy{min-width:0;min-height:647px;border-radius:40px;background:#1f1f1f;overflow:hidden}
+.balance-refill-tile{display:grid;place-items:center;padding:40px 24px}
+.balance-refill-screen{width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none}
+.balance-refill-copy{padding:40px 32px;color:#9999a2;font-size:16px;line-height:24px}
+.balance-refill-copy p{line-height:24px}
+.balance-refill-copy h3{margin:8px 0;color:#f6f9ff;font-size:20px;font-weight:600;line-height:26px;letter-spacing:-.36px}
+.balance-refill-copy ul{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.balance-refill-copy li{display:grid;grid-template-columns:4px minmax(0,1fr);gap:8px}
+.balance-refill-copy li>img{width:4px;height:11px}
+.balance-refill-copy strong{font-weight:700}
+.phone-zoom-trigger{position:absolute;inset:0;z-index:2;border:0;border-radius:42px;background:transparent;cursor:zoom-in;padding:0}
+.phone-zoom-trigger:focus-visible{outline:2px solid #8bc3ff;outline-offset:4px}
+.zoom-dialog.is-phone-zoom>img{display:none}
+.zoom-phone-stage{position:relative;flex:none}
+.zoom-phone-stage>.management-phone{position:absolute;inset:0;transform-origin:0 0}
+.zoom-dialog .zoom-phone-stage img{max-width:none;max-height:none;filter:none;flex:none}
+.zoom-dialog .zoom-phone-stage .management-phone-frame{width:100%!important;height:100%}
+.zoom-dialog .zoom-phone-stage .balance-refill-screen{width:100%!important;height:100%}
+.zoom-dialog .zoom-phone-stage .management-phone-island img{width:11.352px!important;height:11.352px}
+@media(max-width:900px){
+ .balance-refill{margin-top:24px;border-radius:32px}
+ .balance-refill-heading{padding:24px;border-radius:24px}
+ .balance-refill-heading h2{font-size:24px;line-height:30px}
+ .balance-refill-grid{display:flex;flex-direction:column}
+ .balance-refill-copy{order:-1;min-height:0;padding:24px;border-radius:24px}
+ .balance-refill-tile{min-height:608px;padding:24px 0;border-radius:24px}
+ .balance-refill-copy h3{font-size:17px;line-height:24px;margin:16px 0 12px}
+}
+@media(max-width:359px){.balance-refill-heading,.balance-refill-copy{padding:20px}.balance-refill-heading h2{font-size:22px;line-height:28px}}
 .balance-bottom .balance-copy{padding:40px}
 .balance-bottom .balance-copy h3{font-size:24px;font-weight:600;line-height:26px;letter-spacing:-.36px;margin:0 0 8px;color:#f6f9ff}
 .balance-bottom .balance-copy h4{font-size:20px;font-weight:600;line-height:26px;letter-spacing:-.36px;margin:8px 0;color:#f6f9ff}
