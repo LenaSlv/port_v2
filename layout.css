@@ -1,0 +1,87 @@
+/* Fixed navigation stays outside the Figma page flow. Section spacing comes from style.css. */
+main{padding-top:169px}
+.site-header{position:fixed;inset:0 0 auto;z-index:80;background:#101010;transition:height .3s ease,background .3s ease,padding .3s ease}
+.site-header.is-scrolled{height:90px;padding-top:8px;background:rgba(16,16,16,.92);backdrop-filter:blur(16px);border-bottom:1px solid #313131}
+.site-header.is-scrolled .nav-pill{height:74px;box-shadow:0 8px 26px #0005}
+.site-header.is-scrolled .back-link,.site-header.is-scrolled::after{display:none}
+main section[id],#contact{scroll-margin-top:110px}
+.to-top{position:fixed;right:28px;bottom:28px;z-index:70;width:54px;height:54px;border:1px solid #81bdff;border-radius:16px;background:#3995ff;color:#fff;box-shadow:0 10px 30px #0008;display:grid;place-items:center;font-size:28px;line-height:1;transition:transform .25s ease,background .25s ease,box-shadow .25s ease}
+.to-top:hover{transform:translateY(-4px);background:#61aaff;box-shadow:0 14px 32px #0009}
+.to-top:active{transform:translateY(-1px)}
+@media(max-width:760px){main{padding-top:130px}.site-header.is-scrolled{height:74px;padding-top:8px}.site-header.is-scrolled .nav-pill{height:58px}main section[id],#contact{scroll-margin-top:92px}.to-top{right:16px;bottom:16px;width:48px;height:48px;border-radius:14px;font-size:24px}.phone-tile .mockup{aspect-ratio:279/570}.phone-tile .mockup img{width:100%;height:100%;object-fit:contain}}
+@media(prefers-reduced-motion:reduce){.site-header,.to-top{transition:none}}
+
+.card-section .journey-panel{position:relative}
+
+/* Figma node 2835:17450: pass purchase and four 279 px mockups. */
+@media(min-width:761px){
+  .balance-stack{height:1458.3058px;border-radius:40px;background:#171717;font-family:Montserrat,Arial,sans-serif}
+  .balance-stack .balance-top{grid-template-columns:612px minmax(0,1fr)}
+  .balance-stack .large-phone-tile,.balance-stack .balance-copy{border-radius:40px;background:#1f1f1f}
+  .balance-stack .balance-copy h3{font-size:24px;font-weight:600;line-height:26px;margin:0 0 8px}
+  .balance-stack .balance-copy h4{font-size:20px;font-weight:600;line-height:26px;margin:8px 0}
+  .balance-stack .balance-copy p,.balance-stack .balance-copy li{line-height:24px}
+  .balance-stack .after-pass{height:787.3058px;border-radius:48px;background:#171717}
+  .balance-stack .after-pass .caption{height:112px;min-height:0;padding:23px 24px;border-radius:40px;background:#1f1f1f}
+  .balance-stack .after-pass .caption h3{font-size:28px;font-weight:600;line-height:34px;margin:0 0 8px}
+  .balance-stack .after-pass .caption p{line-height:24px}
+  .balance-stack .after-pass .phone-grid{height:649.3058px;margin-top:10px;grid-template-columns:repeat(4,279px);gap:16px;justify-content:center}
+}
+@media(max-width:760px){
+  .balance-stack .after-pass .phone-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+}
+@media(min-width:761px) and (max-width:1243px){
+  .balance-stack .balance-top{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .balance-stack .after-pass .phone-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .balance-stack .after-pass .phone-tile .mockup{width:100%}
+}
+
+/* Figma node 2810:18611: virtual card mockups and caption. */
+@media(min-width:761px){
+  .card-section .phone-section{height:800.3058px;padding:8px;border-radius:48px;background:#171717;font-family:Montserrat,Arial,sans-serif}
+  .card-section .phone-section .phone-grid{height:649.3058px;grid-template-columns:repeat(4,279px);gap:16px;justify-content:center}
+  .card-section .phone-section .caption{height:125px;min-height:0;margin-top:10px;padding:23px 24px;border-radius:40px;background:#1f1f1f}
+  .card-section .phone-section .caption h3{margin:0 0 8px;font-size:24px;font-weight:600;line-height:26px;letter-spacing:-.36px;color:#f6f9ff}
+  .card-section .phone-section .caption p{font-size:16px;line-height:22.4px;color:#9999a2}
+}
+@media(min-width:761px) and (max-width:1243px){
+  .card-section .phone-section .phone-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .card-section .phone-section .phone-tile .mockup{width:100%}
+}
+@media(max-width:760px){
+  .card-section .phone-section .phone-grid{gap:16px}
+}
+
+/* Cover artwork is decorative and stays still when hovered or clicked. */
+.hero-stage .hero-mockup{animation:none;transition:none;pointer-events:none}
+.hero-stage .hero-mockup img{width:100%;height:auto;pointer-events:none;user-select:none}
+
+/* Figma node 2883:26825: card management with a live prototype inside the phone. */
+.management-section{padding-top:28px}
+.management-panel{display:grid;grid-template-columns:minmax(0,1fr) 612px;gap:8px;max-width:1232px;margin-inline:auto;font-family:Montserrat,Arial,sans-serif}
+.management-copy,.management-mockup-tile{height:647px;border-radius:40px;background:#1f1f1f;overflow:hidden}
+.management-copy{padding:40px;color:#f6f9ff}
+.management-copy h2{font-size:24px;font-weight:600;line-height:26px;letter-spacing:-.36px;margin:0 0 8px}
+.management-copy p,.management-copy li{font-size:16px;font-weight:400;line-height:24px;color:#9999a2}
+.management-copy p{margin:0}
+.management-copy h3{font-size:20px;font-weight:600;line-height:26px;letter-spacing:-.36px;margin:8px 0}
+.management-copy ul{list-style:none;padding:0;margin:0}
+.management-copy li{display:grid;grid-template-columns:4px minmax(0,1fr);gap:8px;margin:0 0 8px}
+.management-copy li::before{content:'•';font-size:13px;line-height:20px;color:#9999a2}
+.management-mockup-tile{display:grid;place-items:center}
+.management-phone{position:relative;width:274.784px;height:560.704px;flex:none}
+.management-phone-screen{position:absolute;left:12.69px;top:10.7px;width:249.076px;height:540.977px;border-radius:36.727px;overflow:hidden;background:#000}
+.management-phone-screen iframe{display:block;width:402px;height:874px;border:0;background:#000;transform:scale(.619592);transform-origin:0 0}
+.management-phone-frame{position:absolute;inset:0;width:100%;height:100%;max-width:none;pointer-events:none;user-select:none}
+.management-phone-island{position:absolute;left:97.16px;top:18.05px;width:79.464px;height:23.07px;border-radius:33.388px;background:#000;pointer-events:none}
+.management-phone-island img{position:absolute;left:61.77px;top:5.68px;width:11.352px;height:11.352px;opacity:.6}
+.pass-mockup-tile{height:647px;display:grid;place-items:center;overflow:hidden;border-radius:40px;background:#1f1f1f}
+.balance-stack .balance-top .balance-copy{padding:40px 32px;font-family:Montserrat,Arial,sans-serif}
+.balance-stack .balance-top .balance-copy h3{font-size:24px;line-height:26px;letter-spacing:-.36px;color:#f6f9ff;margin:0 0 8px;font-weight:600}
+.balance-stack .balance-top .balance-copy h4{font-size:20px;line-height:26px;letter-spacing:-.36px;color:#f6f9ff;margin:8px 0;font-weight:600}
+.balance-stack .balance-top .balance-copy p,.balance-stack .balance-top .balance-copy li{font-size:16px;line-height:24px;color:#9999a2}
+.balance-stack .balance-top .balance-copy ul{margin:0;padding-left:12px}
+.balance-stack .balance-top .balance-copy li{padding-left:0;margin-bottom:8px}
+@media(max-width:760px){.pass-mockup-tile{height:620px;border-radius:24px}.balance-stack .balance-top .balance-copy{padding:26px}.balance-stack .balance-top .balance-copy p,.balance-stack .balance-top .balance-copy li{font-size:14px;line-height:22px}}
+@media(max-width:1050px){.management-panel{grid-template-columns:1fr}.management-copy{height:auto;min-height:350px}.management-mockup-tile{height:647px}.management-desktop-break{display:none}}
+@media(max-width:760px){.management-section{padding-top:16px}.management-copy,.management-mockup-tile{border-radius:28px}.management-copy{padding:26px;min-height:0}.management-copy h2{font-size:22px}.management-copy h3{font-size:18px}.management-copy p,.management-copy li{font-size:14px;line-height:22px}.management-mockup-tile{height:620px}}

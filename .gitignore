@@ -1,0 +1,18 @@
+# Local tooling, browser profiles, and audit output
+.local/
+.idea/
+node_modules/
+
+# Generated release archives
+transport-case-release*.tar.gz
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Operating system files
+.DS_Store
+Thumbs.db

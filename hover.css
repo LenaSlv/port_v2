@@ -1,0 +1,3 @@
+.zoom-dialog[open]{align-items:safe center;justify-content:safe center;overflow:auto}
+.zoom-dialog img{max-width:none;max-height:none;height:auto;flex:0 0 auto}
+.zoom-dialog img{mask-size:100% 100%;mask-repeat:no-repeat;mask-mode:alpha;-webkit-mask-size:100% 100%;-webkit-mask-repeat:no-repeat}

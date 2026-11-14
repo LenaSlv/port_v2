@@ -1,0 +1,107 @@
+/* Static portfolio sections aligned to Figma 2810:18183.
+   The management panel and pass-demo-block are deliberately excluded. */
+.site-header,.hero,.context,.journey-panel,.section-label,.section-title,.physical-section,.after-pass,.balance-bottom,.intercity-section,.transfer-section,.format-section{font-family:Montserrat,Arial,sans-serif}
+.section-label{color:#aecbee;font-weight:500}
+.section-title{color:#eef2f7;font-weight:600;letter-spacing:0}
+.hero h1{font-weight:600;letter-spacing:0;color:#eef2f7}
+.hero-subtitle{color:#7f8c9f}
+.hero-tags span{color:#7f8c9f;background:#1d2737;font-weight:500}
+.hero-stage{background:#04060e;border-radius:40px}
+.hero-artwork{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.context-card{background:#171717;border-radius:40px}
+.context-card h3{font-weight:500;color:#89b6ff}
+.context-card p,.context-card:nth-child(2) p{color:#a7b4c6}
+.journey-panel{background:#171717;border-color:rgba(143,153,178,.2);border-radius:40px;box-shadow:0 16px 40px #00000038}
+.journey-panel h3{font-weight:600;line-height:34px}
+.journey-panel>p{color:#9ba7c0;line-height:22px}
+.journey-group>span{display:block;color:#8f99b2;line-height:16px;font-weight:500}
+.journey-steps b{line-height:16px;background:#2f3136}
+.journey-group--new .journey-steps b{background:#1d2737}
+.journey-group--new .journey-steps i{background:#89b6ff}
+.physical-section{margin-top:28px;background:#171717;padding:8px;border-radius:48px}
+.physical-section .caption{margin-top:10px;padding:24px 32px;border-radius:40px;background:#1f1f1f}
+.physical-section .caption h3{font-size:24px;font-weight:600;line-height:26px;letter-spacing:-.36px;margin:0 0 8px;color:#f6f9ff}
+.physical-section .caption p{font-size:16px;line-height:22.4px;color:#9999a2}
+.physical-section .phone-grid{padding:40px 0}
+.balance-section .balance-stack{height:auto}
+.balance-bottom .large-phone-tile,.balance-bottom .balance-copy{background:#1f1f1f;border-radius:40px}
+.balance-bottom{background:#171717;border-radius:40px}
+.balance-bottom .balance-copy{padding:40px}
+.balance-bottom .balance-copy h3{font-size:24px;font-weight:600;line-height:26px;letter-spacing:-.36px;margin:0 0 8px;color:#f6f9ff}
+.balance-bottom .balance-copy h4{font-size:20px;font-weight:600;line-height:26px;letter-spacing:-.36px;margin:8px 0;color:#f6f9ff}
+.balance-bottom .balance-copy p,.balance-bottom .balance-copy li{font-size:16px;line-height:24px;color:#9999a2}
+.intercity-panel,.transfer-panel{border-radius:48px;background:#171717}
+.criteria,.trip-copy,.trip-phone,.transfer-intro,.transfer-copy,.transfer-phone{border-radius:40px;background:#1f1f1f}
+.criteria p,.transfer-intro p{font-size:18px;line-height:28px;color:#7f8c9f;max-width:1050px}
+.trip-copy h3,.transfer-copy h3,.transfer-intro h3{font-size:24px;font-weight:600;line-height:26px;letter-spacing:-.36px;color:#f6f9ff;margin:0 0 8px}
+.trip-copy p{font-size:16px;line-height:24px;color:#9999a2}
+.transfer-copy p{font-size:16px;line-height:25px;color:#7f8c9f}
+.criteria-tags span{background:#1d2737;font-weight:500;line-height:16px;padding-inline:28px}
+.format-card{border-radius:40px;background:#1f1f1f}
+.format-card h3{font-size:21px;font-weight:600;line-height:25px;margin:0 0 16px}
+.format-card p{font-size:15px;line-height:23px;color:#7f8c9f}
+.nda{color:#7f8c9f;line-height:26px}
+.footer{padding:88px 0 70px;border:0;background:#151515;font-family:Geist,Arial,sans-serif;color:#f6f9ff}
+.footer>.container{display:block}
+.footer h2{font-size:48px;font-weight:600;line-height:58px;margin:0 0 22px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.contact-card{display:flex;flex-direction:column;gap:8px;min-height:108px;padding:24px 32px;border-radius:40px;background:#1f1f1f}
+.contact-card span{font-size:13px;line-height:18px;color:#949eb8}
+.contact-card strong{font-size:18px;line-height:25px;font-weight:500}
+.contact-card:hover{background:#262626;color:#fff}
+.footer-meta{display:flex;align-items:center;justify-content:space-between;height:82px;margin-top:22px;font-size:13px;line-height:18px;color:#949eb8}
+.footer-route{height:12px;border-radius:6px;background:#2e6eeb;margin-top:22px}
+@media(min-width:761px){
+ .nav-pill{border-radius:48px;padding:12px 20px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);box-shadow:0 12px 24px #0003,0 1px 2px #0000001a}
+ .nav-pill nav{flex:1;justify-content:center;margin-left:0}
+ .identity{font-weight:500}.contact-cta{border-radius:40px;font-weight:600;background:#3f9bff}
+ .back-link{margin-top:24px;line-height:18px;color:#8f99b2}.site-header::after{background:#21293b}
+ .hero h1{font-size:58px;line-height:66px}.hero-subtitle{font-size:21px;line-height:31px}
+ .section-title{font-size:48px;line-height:56px}
+ .context{height:auto}.context-card{height:auto;min-height:343px;padding:28px 32px}
+ .context-card h3{font-size:28px;line-height:39px;margin-bottom:16px}.context-card p{font-size:19px;line-height:29px}
+ .card-section,.balance-section,.intercity-section,.transfer-section{height:auto}
+ .journey-panel{height:auto;min-height:338px;padding:31px}
+ .journey-panel>p{max-width:850px;min-height:44px;margin-top:8px}
+ .journey-group,.journey-group--new{margin-top:24px}
+ .journey-steps{margin-top:12px}.journey-steps b{flex:none;padding:0 28px}
+ .journey-steps b:last-child{background:rgba(143,153,178,.2)}
+ .journey-group--new .journey-steps b{flex:none!important;background:#1d2737}
+ .card-section .phone-section{height:802.3058px}
+ .card-section .phone-section .caption{height:127px;padding:24px 32px}
+ .physical-section .phone-grid{grid-template-columns:repeat(4,279px);gap:16px;justify-content:center;height:649.3058px}
+ .physical-section .caption{min-height:127px}
+ .balance-stack .after-pass{height:789.3058px}
+ .balance-stack .after-pass .caption{height:114px;padding:24px 32px}
+ .balance-stack .after-pass .caption p{color:#7f8c9f}
+ .balance-heading{margin-top:28px!important}
+ .intercity-panel{height:1108px}.criteria{height:154px;padding:24px 32px}
+ .trip-grid{margin-top:10px}.trip-copy{padding:24px 32px}
+ .transfer-panel{height:1044px}.transfer-intro{height:138px;padding:24px 32px}
+ .transfer-grid{margin-top:10px}.transfer-copy{height:132px;padding:24px 32px}
+ .format-section{height:auto;padding-bottom:48px}.format-section .section-title{font-size:42px;line-height:50px}
+ .format-card{height:auto;min-height:158px;padding:24px 32px}
+}
+@media(min-width:761px) and (max-width:1243px){
+ .physical-section .phone-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.physical-section .phone-tile .mockup{width:100%}
+ .journey-steps b{flex:1;padding:0 12px;white-space:normal}.journey-group--new .journey-steps b{flex:1!important}
+ .context-card p{font-size:17px;line-height:27px}
+ .criteria{height:auto;min-height:154px}.criteria-tags{flex-wrap:wrap}
+ .intercity-panel{height:auto}.trip-copy{height:auto;min-height:180px}
+ .transfer-panel{height:auto}.transfer-intro{height:auto;min-height:138px}.transfer-copy{height:auto;min-height:132px}
+ .trip-phone .mockup,.transfer-phone .mockup{max-width:90%}
+}
+@media(max-width:760px){
+ .hero-stage{border-radius:24px}.hero-artwork{object-fit:cover;object-position:center}
+ .context-card,.journey-panel,.physical-section,.balance-bottom,.intercity-panel,.transfer-panel,.format-card{border-radius:28px}
+ .physical-section{margin-top:16px}.physical-section .phone-grid{padding:20px 4px;gap:16px}
+ .physical-section .caption{padding:18px;border-radius:22px}.physical-section .caption h3{font-size:21px;line-height:26px}.physical-section .caption p{font-size:14px;line-height:22px}
+ .balance-bottom .balance-copy{padding:26px}.balance-bottom .large-phone-tile,.balance-bottom .balance-copy,.criteria,.trip-copy,.trip-phone,.transfer-intro,.transfer-copy,.transfer-phone{border-radius:24px}
+ .balance-bottom .balance-copy p,.balance-bottom .balance-copy li,.criteria p,.transfer-intro p{font-size:14px;line-height:22px}
+ .trip-copy h3,.transfer-copy h3,.transfer-intro h3{font-size:21px;line-height:26px}
+ .trip-copy p,.transfer-copy p{font-size:14px;line-height:22px}
+ .criteria-tags span{padding-inline:11px}.criteria-tags{flex-wrap:wrap}
+ .format-card{padding:24px}.format-card p{font-size:15px;line-height:23px}
+ .footer{padding:56px 0 48px}.footer h2{font-size:32px;line-height:40px}.contact-grid{grid-template-columns:1fr}.contact-card{border-radius:28px;padding:24px}.contact-card strong{font-size:17px}
+ .footer-meta{height:auto;min-height:82px;gap:12px;flex-wrap:wrap;font-size:12px}
+}

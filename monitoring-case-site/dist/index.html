@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Мониторинг бортовых систем общественного транспорта. UX/UI кейс Елены Сулоевой: от общего обзора оборудования к диагностике устройства.">
+  <title>Мониторинг бортовых систем — Елена Сулоева</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#case">К содержанию</a>
+<header class="site-header container">
+  <div class="nav-pill">
+    <a class="identity" href="#case"><img src="assets/avatar.png" alt="" width="48" height="48"><span>Елена Сулоева</span></a>
+    <nav aria-label="Разделы портфолио"><a href="#role">Обо мне</a><a href="#projects">Проекты</a><a href="#outcome">Опыт работы</a><a href="#contact">Контакты</a></nav>
+    <a class="contact-cta" href="#contact">Связаться со мной</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню"><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Разделы кейса" hidden><a href="#role">Моя роль и задача</a><a href="#overview">Обзор состояния</a><a href="#diagnostics">Диагностика устройства</a><a href="#administration">Администрирование</a><a href="#projects">Другие проекты</a><a href="#contact">Контакты</a></nav>
+  <a class="back-link" href="https://transport-design-case-2026.inni-re.chatgpt.site">← К первому кейсу</a>
+</header>
+<main id="case">
+  <section class="hero container" aria-labelledby="hero-title">
+    <h1 id="hero-title">Мониторинг бортовых систем</h1>
+    <p class="hero-subtitle">Интерфейс управления оборудованием системы автоматического выявления препятствий при движении общественного транспорта.</p>
+    <div class="hero-tags"><span>Роль · UX/UI Designer</span><span>Платформы · Web</span><span>B2B</span></div>
+    <p class="nda">*ОРБИТА — условное название интерфейса мониторинга.<br>Рабочий проект находится под NDA; визуальный стиль переработан для портфолио.</p>
+    <div class="hero-stage">
+      <div class="laptop"><div class="laptop-lid"><span class="camera"></span><img src="assets/overview.png" width="1248" height="832" alt="ОРБИТА: обзор системы мониторинга оборудования"><span class="laptop-label">MacBook Pro</span></div><div class="laptop-base"></div></div>
+    </div>
+  </section>
+  <section class="role container" id="role" aria-labelledby="role-title">
+    <p class="section-label">01 · Моя роль и задача</p>
+    <h2 id="role-title">Сделать сложные данные понятными для работы</h2>
+    <article class="panel"><h3>Моя роль — доработка интерфейса</h3><p>Моя задача — упорядочить большой объём технических данных: выделить главное, сделать статусы оборудования понятными и выстроить переход от общего обзора к диагностике устройства. Интерфейс нужно было адаптировать под ширины 1280, 1400 и 1920 px, сохранив читаемость таблиц и доступность действий.</p></article>
+  </section>
+  <section class="case-section container" id="overview" aria-labelledby="overview-title">
+    <p class="section-label">02 · Обзор состояния</p>
+    <h2 id="overview-title">Увидеть, что требует внимания</h2>
+    <p class="section-intro">Сводка показывает доступность оборудования и состояния, требующие внимания. Таблица ниже позволяет сопоставить устройства и выбрать нужное для дальнейшей аналитики.</p>
+    <div class="solution-panel">
+      <article class="solution-summary"><h3>Общая картина → устройство → подробности</h3><p>Сначала специалист оценивает состояние системы, затем находит устройство в таблице. Цветовые акценты выделяют проблемы, а текстовые статусы объясняют состояние.</p></article>
+      <div class="solution-grid"><article><h3>Прокрутка и пагинация</h3><p>Большие таблицы можно прокручивать, а записи — просматривать постранично. Это позволяет работать с большим объёмом данных, сохраняя читаемый размер текста.</p></article><article><h3>Фильтры — по кнопке</h3><p>Из-за ограничения разработки результаты не могли обновляться при каждом выборе. Поэтому пользователь сначала задаёт нужные параметры, затем нажимает «Применить» — весь набор фильтров применяется за один раз.</p></article></div>
+    </div>
+    <figure class="screen-figure"><button class="screen" data-zoom type="button" aria-label="Увеличить обзор системы"><img src="assets/overview.png" width="1248" height="832" alt="Обзор системы: сводка доступности, фильтры и таблица устройств" loading="lazy"><span class="zoom-hint">Рассмотреть экран ↗</span></button></figure>
+  </section>
+  <section class="case-section container" id="diagnostics" aria-labelledby="diagnostics-title">
+    <p class="section-label">03 · Диагностика устройства</p>
+    <h2 id="diagnostics-title">Разобраться в состоянии конкретного устройства</h2>
+    <p class="section-intro">Карточка объединяет сведения об устройстве, состояния компонентов и события. Сообщение о сбое выделено отдельно и направляет к журналу для проверки подробностей.</p>
+    <article class="panel caption"><h3>Состояние компонентов и события рядом</h3><p>Камеры, бортовой компьютер, видеоаналитика и хранилище представлены отдельными строками. События, видео и лог-файлы собраны во вкладки, чтобы сохранить контекст устройства.</p></article>
+    <figure class="screen-figure"><button class="screen" data-zoom type="button" aria-label="Увеличить карточку устройства"><img src="assets/device.png" width="1248" height="886" alt="Карточка устройства: статусы компонентов, диагностика и график событий" loading="lazy"><span class="zoom-hint">Рассмотреть экран ↗</span></button></figure>
+  </section>
+  <section class="case-section container" id="administration" aria-labelledby="administration-title">
+    <p class="section-label">04 · Администрирование</p>
+    <h2 id="administration-title">Управлять пользователями и доступом к системе</h2>
+    <p class="section-intro">Организация, роль и доступ пользователя определяют его место в системе. Один экран показывает общую логику работы с учётными записями.</p>
+    <figure class="screen-figure"><button class="screen" data-zoom type="button" aria-label="Увеличить экран из раздела администрирования"><img src="assets/overview.png" width="1248" height="832" alt="Демонстрационный экран из раздела администрирования в макете Figma" loading="lazy"><span class="zoom-hint">Рассмотреть экран ↗</span></button></figure>
+    <article class="panel caption"><h3>Знакомая структура для административных задач</h3><p>Поиск, фильтры и действия в строках повторяют логику реестра оборудования. Вкладки разделяют пользователей, роли и права.</p></article>
+  </section>
+  <section class="outcome container" id="outcome" aria-labelledby="outcome-title">
+    <p class="section-label">05 · Работа над версией для портфолио</p>
+    <h2 id="outcome-title">Сделать состояния и порядок действий яснее</h2>
+    <p class="section-intro">При подготовке кейса переработаны визуальная иерархия, представление статусов и компоновка карточки устройства. Основной сценарий показан последовательно: обзор → поиск → диагностика.</p>
+    <p class="note">В кейсе показана логика проектных решений, без количественных оценок влияния на скорость работы.</p>
+  </section>
+  <aside class="projects container" id="projects" aria-label="Другие проекты"><a class="project-link" href="https://transport-design-case-2026.inni-re.chatgpt.site"><span><small>Кейс 01 · Product design · iOS / Android</small><strong>Единый транспортный сервис</strong></span><span aria-hidden="true">↗</span></a></aside>
+</main>
+<footer id="contact"><div class="container"><h2>Открыта к сотрудничеству</h2><div class="contact-grid"><a href="https://t.me/Lena_Suloeva" target="_blank" rel="noopener noreferrer"><span>Telegram</span><strong>@Lena_Suloeva <span aria-hidden="true">→</span></strong></a><a href="mailto:lensuloeva@yandex.ru"><span>Почта</span><strong>lensuloeva@yandex.ru <span aria-hidden="true">→</span></strong></a></div><div class="footer-meta"><span>Елена Сулоева · Product designer</span><span>Портфолио · 2026</span></div><div class="route-line"></div></div></footer>
+<a class="back-top" href="#case" aria-label="Вернуться наверх">↑</a>
+<dialog class="lightbox" aria-label="Просмотр экрана"><div class="lightbox-toolbar"><p id="zoom-title"></p><div><button type="button" class="zoom-size" aria-label="Показать в исходном размере" aria-pressed="false">1:1</button><button class="zoom-close" type="button" aria-label="Закрыть просмотр">✕</button></div></div><div class="lightbox-content"><img src="assets/overview.png" alt=""></div></dialog>
+</body>
+</html>
