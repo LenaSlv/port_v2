@@ -1,0 +1,21 @@
+/* Shared contact ending, matching the approved unified transport case. */
+.portfolio-footer{padding:88px 0 70px;border:0;background:#151515;font-family:Geist,Arial,sans-serif;color:#f6f9ff}
+.portfolio-footer .container{width:1248px;max-width:calc(100% - 48px);margin-inline:auto}
+.portfolio-footer h2{font-size:48px;font-weight:600;line-height:58px;margin:0 0 22px}
+.portfolio-footer .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.portfolio-footer .contact-card{display:flex;flex-direction:column;gap:8px;min-height:108px;padding:24px 32px;border-radius:40px;background:#1f1f1f}
+.portfolio-footer .contact-card span{font-size:13px;line-height:18px;color:#949eb8}
+.portfolio-footer .contact-card strong{font-size:18px;line-height:25px;font-weight:500}
+.portfolio-footer .contact-card:hover{background:#262626;color:#fff}
+.portfolio-footer .footer-meta{display:flex;align-items:center;justify-content:space-between;height:82px;margin-top:22px;font-size:13px;line-height:18px;color:#949eb8}
+.portfolio-footer .footer-route{height:12px;border-radius:6px;background:#2e6eeb;margin-top:22px}
+@media(max-width:900px){
+ .portfolio-footer{padding:48px 0}
+ .portfolio-footer h2{font-size:26px;line-height:30px;margin:0 24px 24px}
+ .portfolio-footer .contact-grid{grid-template-columns:1fr;gap:8px}
+ .portfolio-footer .contact-card{min-height:108px;padding:24px;border-radius:32px}
+ .portfolio-footer .contact-card strong{font-size:16px;line-height:24px;overflow-wrap:anywhere}
+ .portfolio-footer .footer-meta{gap:12px;justify-content:flex-start;height:auto;min-height:0;margin:24px;font-size:12px;line-height:18px}
+ .portfolio-footer .footer-meta span{flex-basis:100%}
+ .portfolio-footer .footer-route{height:8px;margin:24px 24px 0}
+}

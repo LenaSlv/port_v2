@@ -1,0 +1,92 @@
+
+
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Мониторинг бортовых систем общественного транспорта. UX/UI кейс Елены Сулоевой: от общего обзора оборудования к диагностике устройства.">
+  <title>Мониторинг бортовых систем — Елена Сулоева</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Geist:wght@400;500;600&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./monitoring.css">
+  <link rel="stylesheet" href="./figma-case.css">
+  <link rel="stylesheet" href="./overview-prototype.css">
+  <link rel="stylesheet" href="../src/styles/portfolio-carousel.css">
+  <link rel="stylesheet" href="../src/styles/portfolio-footer.css">
+  <script src="./monitoring.js" defer></script>
+  <script src="../src/scripts/portfolio-carousel.js" defer></script>
+  <link rel="stylesheet" href="../src/styles/contact-dialog.css">
+  <script defer src="../src/scripts/contact-dialog.js"></script>
+<link rel="stylesheet" href="../src/styles/case-header.css"></head>
+<body>
+<a class="skip" href="#case">К содержанию</a>
+<header class="site-header container">
+  <div class="nav-pill">
+    <a class="identity" href="../index.html"><img src="./assets/avatar.png" alt="" width="48" height="48"><span>Елена Сулоева</span></a>
+    <nav aria-label="Разделы портфолио"><a href="../index.html#about">Обо мне</a><a href="../index.html#projects">Проекты</a><a href="../index.html#experience">Опыт работы</a><a href="#contact">Контакты</a></nav>
+    <a class="contact-cta" href="#contact">Связаться со мной</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню"><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Разделы кейса" hidden><a href="#role">Моя роль и задача</a><a href="#overview">Обзор состояния</a><a href="#diagnostics">Диагностика устройства</a><a href="#testing">Оценка результатов</a><a href="#administration">Администрирование</a><a href="#projects">Другие проекты</a><a href="#contact">Контакты</a></nav>
+  <a class="back-link" href="../index.html">← Назад на главную</a>
+</header>
+<main id="case">
+  <section class="hero container" aria-labelledby="hero-title">
+    <h1 id="hero-title">Мониторинг бортовых систем</h1>
+    <p class="hero-subtitle">Интерфейс управления оборудованием системы автоматического выявления препятствий при движении общественного транспорта.</p>
+    <div class="hero-tags"><span>Роль · UX/UI Designer</span><span>Платформы · Web</span><span>B2B</span></div>
+    <p class="nda">*ОРБИТА — условное название интерфейса мониторинга.<br>Рабочий проект находится под NDA; визуальный стиль переработан для портфолио.</p>
+    <div class="hero-stage">
+      <div class="laptop"><div class="laptop-lid"><span class="camera"></span><img src="./assets/figma-diagnostics.png" width="4096" height="2913" alt="ОРБИТА: мониторинг бортового оборудования"><span class="laptop-label">MacBook Pro</span></div><div class="laptop-base"></div></div>
+    </div>
+  </section>
+  <section class="role container" id="role" aria-labelledby="role-title">
+    <p class="section-label">1 · Моя роль и задача</p>
+    <h2 id="role-title">Сделать сложные данные понятными для работы</h2>
+    <article class="panel"><h3>Моя роль — доработка интерфейса</h3><p>Моя задача — упорядочить большой объём технических данных: выделить главное, сделать статусы оборудования понятными и выстроить переход от общего обзора к диагностике устройства. Интерфейс нужно было адаптировать под ширины 1280, 1400 и 1920 px, сохранив читаемость таблиц и доступность действий.</p></article>
+  </section>
+  <section class="case-section container" id="overview" aria-labelledby="overview-title">
+    <p class="section-label">2 · Обзор состояния</p>
+    <h2 id="overview-title">Увидеть, что требует внимания</h2>
+    <p class="section-intro">Сводка показывает доступность оборудования и состояния, требующие внимания. Таблица ниже позволяет сопоставить устройства и выбрать нужное для дальнейшей аналитики.</p>
+    <div class="solution-panel case-display overview-display">
+      <article class="solution-summary"><h3>Общая картина → устройство → подробности</h3><p>Сначала специалист оценивает состояние системы, затем находит устройство в таблице. Цветовые акценты выделяют проблемы, а текстовые статусы объясняют состояние.</p></article>
+      <figure class="screen-figure display-monitor overview-display"><div class="screen prototype-screen"><iframe src="./overview-prototype.html" title="Автоматическая демонстрация широкой и компактной навигации в обзоре системы" loading="lazy" scrolling="no" tabindex="-1" inert></iframe><button class="prototype-zoom-trigger" data-prototype-zoom type="button" aria-label="Увеличить анимированный обзор состояния системы"></button></div></figure>
+      <div class="solution-grid"><article><h3>Прокрутка и пагинация</h3><p>Большие таблицы можно прокручивать, а записи — просматривать постранично. Это позволяет работать с большим объёмом данных, сохраняя читаемый размер текста.</p></article><article><h3>Фильтры — по кнопке</h3><p>Из-за ограничения разработки результаты не могли обновляться при каждом выборе. Поэтому пользователь сначала задаёт нужные параметры, затем нажимает «Применить» — весь набор фильтров применяется за один раз.</p></article></div>
+    </div>
+  </section>
+  <section class="case-section container" id="diagnostics" aria-labelledby="diagnostics-title">
+    <p class="section-label">3 · Диагностика устройства</p>
+    <h2 id="diagnostics-title">Разобраться в состоянии конкретного устройства</h2>
+    <div class="case-display diagnostics-display">
+      <figure class="screen-figure display-monitor"><button class="screen" data-zoom type="button" aria-label="Увеличить карточку устройства"><img src="./assets/figma-diagnostics.png" data-zoom-src="./assets/figma-diagnostics.png" width="4096" height="2913" alt="Карточка устройства: статусы компонентов, диагностика и график событий" loading="lazy"><span class="zoom-hint">Рассмотреть экран ↗</span></button></figure>
+      <article class="solution-summary"><h3>Состояние компонентов и события рядом</h3><p>Карточка объединяет сведения об устройстве, состояния компонентов и события. Сообщение о сбое выделено отдельно и направляет к журналу для проверки подробностей. Камеры, бортовой компьютер, видеоаналитика и хранилище представлены отдельными строками. События, видео и лог-файлы собраны во вкладки, чтобы сохранить контекст устройства.</p></article>
+    </div>
+  </section>
+  <section class="case-section container" id="testing" aria-labelledby="testing-title">
+    <p class="section-label">3 · Оценка результатов</p>
+    <h2 id="testing-title">Сравнивать качество и результаты тестирования моделей</h2>
+    <div class="case-display testing-display">
+      <figure class="screen-figure display-monitor animation-monitor"><iframe src="./results-animation-embed.html" title="Автоматическая демонстрация фильтров и результатов тестирования моделей" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true" inert></iframe><button class="animation-zoom-trigger" data-animation-zoom type="button" aria-label="Увеличить анимированный экран результатов"></button></figure>
+      <article class="solution-summary"><h3>Все показатели моделей в одном месте</h3><p>Реестр объединяет версии моделей, классы объектов, объём выборки и ключевые метрики качества. Фильтры помогают быстро находить нужные данные, а единая таблица — сравнивать результаты тестирования, отслеживать различия между версиями и оценивать качество моделей без переходов между экранами.</p></article>
+    </div>
+  </section>
+  <section class="case-section container" id="administration" aria-labelledby="administration-title">
+    <p class="section-label">4 · Администрирование</p>
+    <h2 id="administration-title">Управлять пользователями и доступом<br class="desktop-break"> к системе</h2>
+    <div class="case-display administration-display">
+      <article class="solution-summary"><h3>Знакомая структура для административных задач</h3><p>Организация, роль и доступ пользователя определяют его место в системе. Один экран показывает общую логику работы с учётными записями.</p></article>
+      <figure class="screen-figure display-monitor animation-monitor"><iframe src="./admin-prototype.html" title="Автоматическая анимация добавления пользователя и настройки доступа в системе" loading="lazy" scrolling="no" tabindex="-1" inert></iframe><button class="animation-zoom-trigger" data-animation-zoom type="button" aria-label="Увеличить анимированный экран администрирования"></button></figure>
+      <div class="solution-grid"><article><h3>Прокрутка и пагинация</h3><p>Большие таблицы можно прокручивать, а записи — просматривать постранично. Это позволяет работать с большим объёмом данных, сохраняя читаемый размер текста.</p></article><article><h3>Фильтры — по кнопке</h3><p>Из-за ограничения разработки результаты не могли обновляться при каждом выборе. Поэтому пользователь сначала задаёт нужные параметры, затем нажимает «Применить» — весь набор фильтров применяется за один раз.</p></article></div>
+    </div>
+  </section>
+  <section class="portfolio-projects" id="projects" aria-labelledby="other-projects-title" data-portfolio-carousel data-current-case="monitoring"><div class="container"><div class="portfolio-heading"><h2 id="other-projects-title">Другие проекты</h2><div class="portfolio-controls" hidden><button type="button" data-project-direction="-1" aria-label="Предыдущий проект" aria-controls="portfolio-track" disabled><img src="../src/assets/portfolio/chevron-left.svg" width="20" height="20" alt=""></button><button type="button" data-project-direction="1" aria-label="Следующий проект" aria-controls="portfolio-track"><img src="../src/assets/portfolio/chevron-right.svg" width="20" height="20" alt=""></button></div></div><div class="portfolio-track" id="portfolio-track" tabindex="0" role="region" aria-label="Другие проекты — прокручиваемый список"></div></div></section>
+</main>
+<footer class="portfolio-footer" id="contact"><div class="container"><h2>Открыта к&nbsp;сотрудничеству</h2><div class="contact-grid"><a class="contact-card" href="https://t.me/Lena_Suloeva" target="_blank" rel="noopener noreferrer"><span>Telegram</span><strong>@Lena_Suloeva →</strong></a><a class="contact-card" href="mailto:lensuloeva@yandex.ru"><span>Почта</span><strong>lensuloeva@yandex.ru →</strong></a></div><div class="footer-meta"><span>Елена Сулоева · Product designer</span><span>Портфолио · 2026</span></div><div class="footer-route" aria-hidden="true"></div></div></footer>
+<button class="back-top" type="button" aria-label="Вернуться наверх" title="Наверх">↑</button>
+<dialog class="zoom-dialog" aria-label="Увеличенный мокап"><button class="zoom-close" type="button" aria-label="Закрыть увеличенный мокап">×</button><div class="zoom-dialog-content"><img class="zoom-image" alt=""><p class="zoom-hint">Нажмите Esc или на фон, чтобы закрыть</p></div></dialog>
+</body>
+</html>

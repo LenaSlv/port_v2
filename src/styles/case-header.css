@@ -1,0 +1,24 @@
+/* Shared desktop case header, based on the unified transport case. */
+@media (min-width: 901px) {
+  .header, .site-header { z-index: 80; padding-top: 28px; background: #101010; }
+  .header .nav, .site-header .nav-pill { height: 74px; display: flex; align-items: center; gap: 24px; padding: 12px 20px; border: 1px solid #ffffff1f; border-radius: 48px; background: #ffffff0f; box-shadow: 0 12px 24px #0003; backdrop-filter: blur(12px); }
+  .header .identity, .site-header .identity { display: flex; align-items: center; gap: 12px; white-space: nowrap; font-size: 16px; font-weight: 500; }
+  .header .identity img, .site-header .identity img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+  .header .nav nav, .site-header .nav-pill nav { display: flex; flex: 1; align-items: center; justify-content: center; gap: 32px; margin: 0; color: #8f99b2; font-size: 18px; }
+  .header .contact-button, .site-header .contact-cta { display: grid; place-items: center; height: 44px; min-height: 44px; padding: 0 18px; border-radius: 40px; background: #3f9bff; color: #fff; font-size: 16px; font-weight: 600; white-space: nowrap; }
+  .header .back, .site-header .back-link { display: block; margin-top: 24px; padding: 0 0 20px; border: 0; color: #8f99b2; font-size: 14px; line-height: 18px; }
+  .header .nav + .back { border-bottom: 1px solid #21293b; }
+  .header .container .back { border-bottom: 1px solid #21293b; }
+  .site-header .wrap:after { margin-top: 0; background: #21293b; }
+  .header.is-scrolled, .site-header.is-scrolled { padding-top: 8px; }
+  .header.is-scrolled .back, .site-header.is-scrolled .back-link { display: none; }
+}
+
+/* Shared back-to-top button: approved unified transport case design. */
+.to-top, .back-top { position: fixed; right: 28px; bottom: 28px; z-index: 70; display: grid; place-items: center; width: 54px; height: 54px; padding: 0; border: 1px solid #81bdff; border-radius: 16px; background: #3995ff; color: #fff; font: 400 28px/1 Manrope, Arial, sans-serif; box-shadow: 0 10px 30px #0008; cursor: pointer; transition: transform .25s ease, background .25s ease, box-shadow .25s ease, opacity .25s ease; }
+.to-top:hover, .back-top:hover { transform: translateY(-4px); background: #61aaff; box-shadow: 0 14px 32px #0009; }
+.to-top:active, .back-top:active { transform: translateY(-1px); }
+.to-top { visibility: hidden; opacity: 0; }
+.to-top.is-visible, .to-top.visible, .back-top.visible { visibility: visible; opacity: 1; }
+@media (max-width: 900px) { .to-top, .back-top { right: 16px; bottom: 16px; width: 44px; height: 44px; border-radius: 24px; font-size: 24px; box-shadow: 0 8px 24px #0006; } }
+@media (prefers-reduced-motion: reduce) { .to-top, .back-top { transition: none; } }

@@ -1,0 +1,93 @@
+.prototype-viewport{position:relative;container-type:inline-size;overflow:hidden;aspect-ratio:1280/832;border-radius:40px;background:#132c39;color:#213347}
+.animation-screen{display:block;width:100%;height:100%}
+.demo-filters{position:absolute;left:23.125%;top:24.278846%;width:72.5%;height:3.846154%;display:flex;gap:.9375cqw;background:white;font:400 1.09375cqw/1.40625cqw Montserrat,Arial,sans-serif}
+.demo-field{height:100%;display:flex;align-items:center;min-width:0;border:1px solid #c4d6e0;border-radius:.625cqw;background:white;color:#a7a9a9;overflow:hidden}
+.demo-field[data-filter=date]{width:10.15625cqw;flex-shrink:0}
+.demo-field[data-filter=classes]{width:14.765625cqw;flex-shrink:0}
+.demo-field[data-filter=quality]{width:14.84375cqw;flex-shrink:0}
+.demo-field[data-filter=version]{width:14.140625cqw;flex-shrink:0}
+.demo-value{padding-inline:1.171875cqw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.demo-field[data-filter=date]{background:white url('./assets/results-screen.png') no-repeat;background-size:100cqw 65cqw;background-position:-23.125cqw -15.78125cqw}
+.demo-field[data-filter=date] .demo-value{background:white;margin-left:2.6cqw;padding-left:0;padding-right:.5cqw}
+.demo-arrow{flex-shrink:0;display:grid;place-items:center;width:2.5cqw;align-self:stretch;border-left:1px solid #c4d6e0}
+.demo-arrow::after{content:'';width:1.25cqw;height:1.25cqw;background:url('./assets/filter-chevron.svg') center/contain no-repeat}
+.demo-field.is-selected{color:#213347}
+.demo-field.is-selected:not([data-filter=date]) .demo-value{display:flex;gap:.15625cqw;padding-left:.9375cqw;padding-right:.3125cqw}
+.demo-selected-tag{min-width:0;flex:0 1 auto;overflow:hidden;text-overflow:ellipsis;padding:.390625cqw .625cqw;border-radius:.3125cqw;background:#f1f4f7;font-size:.9375cqw;line-height:1.09375cqw}
+.demo-field.is-open{border-color:#117f72}
+.demo-field.is-open .demo-arrow::after{transform:rotate(180deg)}
+.demo-apply{display:grid;place-items:center;border-radius:.625cqw;width:14.53125cqw;flex-shrink:0;margin-left:.3125cqw;background:#ecf0f5;color:#213347}
+.demo-apply.is-ready{background:#117f72;color:white}
+.demo-apply.is-pressed{background:#08685e;box-shadow:0 0 0 .25cqw #117f7230}
+.demo-popup{position:absolute;top:28.605769%;padding:.625cqw 0;width:21.640625%;border:1px solid #dbe5ed;border-radius:1.171875cqw;background:white;box-shadow:0 .2734375cqw .4296875cqw #00000005;z-index:3;font:400 1.09375cqw/1.40625cqw Montserrat,Arial,sans-serif}
+.demo-popup[hidden],.demo-results[hidden],.demo-pagination[hidden],.demo-page-last[hidden],.demo-action-menu[hidden],.demo-dialog-backdrop[hidden]{display:none}
+.demo-popup[data-popup=classes]{left:34.21875%;border-radius:.46875cqw}
+.demo-popup[data-popup=quality]{left:49.960938%}
+.demo-popup[data-popup=version]{left:65.703125%}
+.demo-option{display:flex;align-items:center;gap:.625cqw;height:2.1875cqw;padding-inline:1.25cqw;white-space:nowrap}
+.demo-check{position:relative;flex:none;width:1.25cqw;height:1.25cqw;border:1px solid #c4d6e0;border-radius:.3125cqw;background:white}
+.demo-option.is-checked .demo-check{background:#117F72;border-color:#117F72}
+.demo-option.is-checked .demo-check::after{content:'';position:absolute;left:25%;top:23%;width:45%;height:28%;border-left:1px solid white;border-bottom:1px solid white;transform:rotate(-45deg)}
+.demo-calendar{left:23.125%;width:47.5%;padding:1.5625cqw 1.875cqw;border-radius:.625cqw;font-size:.9375cqw}
+.calendar-presets{display:flex;gap:.625cqw;margin-bottom:1.25cqw}
+.calendar-presets span{padding:.390625cqw .625cqw;border-radius:.3125cqw;background:#f1f4f7;white-space:nowrap}
+.calendar-presets .is-picked{color:white;background:#117f72}
+.calendar-months{display:grid;grid-template-columns:1fr 1fr;gap:2.5cqw}
+.calendar-month h4{font-size:1.09375cqw;font-weight:600;text-align:center;line-height:2.5cqw;margin:0 0 1.25cqw}
+.calendar-month h4{position:relative}
+.calendar-month h4 img{position:absolute;top:.625cqw;width:1.25cqw;height:1.25cqw}
+.calendar-previous{left:.625cqw}.calendar-next{right:.625cqw}
+.calendar-week,.calendar-days{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;gap:.15625cqw}
+.calendar-week{color:#a7a9a9;margin-bottom:.625cqw}
+.calendar-days span{height:2.5cqw;display:grid;place-items:center;border-radius:.625cqw}
+.calendar-days span{position:relative}
+.calendar-days span img{position:absolute;width:.9375cqw;height:.9375cqw;bottom:0;left:calc(50% - .46875cqw)}
+.calendar-days .is-unavailable{background:#ecf0f566;color:#a7a9a9}
+.calendar-days .is-unavailable img{width:.625cqw;height:.625cqw;left:calc(50% - .3125cqw)}
+.calendar-days .is-range{background:#e5f3ef;border-radius:0}
+.calendar-days .is-endpoint{color:white;background:#117f72;border-radius:.625cqw}
+.calendar-footer{display:flex;align-items:center;justify-content:space-between;margin-top:1.25cqw;font-size:1.09375cqw;line-height:1.40625cqw}
+.calendar-footer strong{display:block;font-weight:600}
+.calendar-actions{display:flex;gap:1.25cqw;align-items:center}
+.calendar-confirm{padding:.625cqw 1.25cqw;border-radius:.625cqw;background:#117f72;color:white}
+.demo-results{position:absolute;left:23.125%;top:30.048077%;width:72.5%;height:58.533654%;background:white;z-index:1;font:400 1.09375cqw/1.40625cqw Montserrat,Arial,sans-serif}
+.demo-results::after{content:'';position:absolute;left:100%;top:0;width:1.25cqw;height:100%;background:white}
+.results-scroll{width:65.3125cqw;height:37.265625cqw;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+.results-scroll::-webkit-scrollbar{display:none}
+.results-wide{display:flex;width:115.3125cqw;min-height:100%;background:white}
+.result-column{flex:none;width:calc(var(--column-width)*.078125cqw)}
+.result-heading{height:8.125cqw;padding:.9375cqw 1.25cqw;border-bottom:.5px solid #c4d6e0;position:relative;color:#a7a9a9;font-size:.78125cqw;line-height:.9375cqw;font-weight:600;text-transform:uppercase;white-space:nowrap}
+.result-heading::after{content:'';position:absolute;right:0;top:.9375cqw;bottom:.9375cqw;border-right:.5px solid #c4d6e0}
+.result-cell{height:4.0625cqw;padding:.625cqw 1.25cqw;display:flex;align-items:flex-start;gap:.625cqw;border-bottom:.5px solid #dce6ed;white-space:nowrap}
+.result-cell small{display:block;font-size:.9375cqw;line-height:1.09375cqw;color:#a7a9a9}
+.result-tag{padding:.390625cqw .625cqw;background:#f1f4f7;border-radius:.3125cqw;font-size:.9375cqw;line-height:1.09375cqw}
+.result-metrics{flex:none;width:60cqw}
+.result-metrics-title{height:4.0625cqw;display:flex;align-items:center;justify-content:flex-start;gap:.46875cqw;padding:0 1.25cqw;color:#213347;font-size:1.25cqw;font-weight:600;text-transform:none;border-bottom:.5px solid #c4d6e0}.result-model-count{display:inline-flex;align-items:center;justify-content:center;min-width:1.25cqw;height:1.5cqw;padding-inline:.3125cqw;border-radius:100px;background:#dfe5ec;color:#172b3a;font-size:.859375cqw;font-weight:500;letter-spacing:.0390625cqw}
+.result-metric-columns{display:flex}
+.result-metric-columns .result-heading{height:4.0625cqw;text-transform:none}
+.result-actions{position:absolute;top:0;right:0;width:7.1875cqw;height:37.265625cqw;background:white;box-shadow:-.625cqw 0 1.25cqw #ffffffcc}
+.result-actions .result-heading::after{display:none}
+.result-actions .result-cell{justify-content:flex-end;padding:.625cqw .3125cqw}
+.result-action-button{display:grid;place-items:center;width:2.1875cqw;height:2.5cqw;border-radius:.3125cqw;font-size:1.5625cqw;line-height:1}
+.result-action-button.is-pressed{background:#f1f4f7}
+.results-scroll-track{position:absolute;left:0;bottom:0;width:100%;height:.78125cqw;border-radius:.78125cqw;background:#f1f4f7}
+.results-scroll-thumb{display:block;width:41.0625cqw;height:100%;border-radius:inherit;background:#d2e0e9}
+.demo-action-menu{position:absolute;left:73.984375%;top:48.317308%;width:21.640625%;height:5.769231%;display:flex;align-items:center;gap:.625cqw;padding:.625cqw 1.25cqw;border-radius:.625cqw;background:white;box-shadow:0 .2734375cqw .4296875cqw #00000005;border:1px solid #f1f4f7;color:#d92d20;font:400 1.09375cqw/1.40625cqw 'Open Sans',Arial,sans-serif;z-index:4}
+.demo-action-menu img{width:1.25cqw;height:1.25cqw}
+.demo-dialog-backdrop{position:absolute;inset:0;background:#00000047;display:grid;place-items:center;z-index:4}
+.demo-delete-dialog{display:flex;flex-direction:column;align-items:center;gap:1.5625cqw;width:28.671875cqw;padding:1.5625cqw;border-radius:1.171875cqw;background:white;font:400 1.09375cqw/1.40625cqw Montserrat,Arial,sans-serif}
+.demo-delete-dialog>img{width:3.125cqw;height:3.125cqw}
+.demo-delete-dialog strong{font-size:1.40625cqw;line-height:1.71875cqw;font-weight:600;white-space:nowrap}
+.demo-dialog-actions{display:flex;flex-direction:column;gap:.625cqw;width:100%}
+.demo-dialog-actions span{height:2.5cqw;display:grid;place-items:center;border-radius:.625cqw}
+.demo-delete-confirm{background:#d92d20;color:white}
+.demo-delete-cancel.is-pressed{background:#f1f4f7}
+.demo-pagination{position:absolute;left:61%;top:91.466346%;width:7.8125%;height:3.846154%;background:white;display:grid;place-items:center;font:400 .9375cqw/1.4 Montserrat,Arial,sans-serif;color:#7c7e80}
+.demo-page-last{position:absolute;left:93.75%;top:91.466346%;width:2.5%;height:3.846154%;background:white}
+.animation-cursor{position:absolute;width:1.875%;height:3.60577%;left:57%;top:51%;opacity:0;filter:drop-shadow(0 2px 2px #0003);z-index:5;transition:left .45s ease-in-out,top .45s ease-in-out,opacity .2s}
+.animation-cursor.is-dragging{transition:opacity .2s}
+.overview-prototype figcaption{margin-top:16px;color:var(--muted);font-size:14px;line-height:22px}
+@media(max-width:850px){.prototype-viewport{border-radius:24px}}
+@media(max-width:480px){.prototype-viewport{border-radius:18px}.overview-prototype figcaption{font-size:12px;line-height:20px}}
+@media(prefers-reduced-motion:reduce){.animation-cursor{transition:none}}
+.demo-model-heading{position:absolute;left:23.125%;top:10.6%;width:72.5%;height:3.6%;display:flex;align-items:center;gap:.3125cqw;padding:0 1.5625cqw;background:#fff;color:#213347;font:600 1.25cqw/1 Montserrat,Arial,sans-serif;z-index:2}.demo-model-heading span{display:inline-flex;min-width:1.5625cqw;height:1.25cqw;align-items:center;justify-content:center;padding:0 .3125cqw;border-radius:100px;background:#dfe5ec;color:#172b3a;font:500 .859375cqw/1 Montserrat,Arial,sans-serif;letter-spacing:.0390625cqw}.result-metrics-title{justify-content:flex-start;padding-left:1.25cqw;color:#a7a9a9;font-size:.78125cqw;text-transform:uppercase}

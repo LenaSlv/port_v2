@@ -1,0 +1,38 @@
+﻿(() => {
+  const shade = document.querySelector('.shade');
+  const modal = document.querySelector('.modal');
+  const personal = document.querySelector('[data-tab="personal"]');
+  const access = document.querySelector('[data-tab="access"]');
+  const trigger = document.createElement('button');
+  trigger.className = 'add-user-trigger';
+  trigger.type = 'button';
+  trigger.textContent = '';
+  trigger.setAttribute('aria-hidden', 'true');
+  trigger.tabIndex = -1;
+  document.body.append(trigger);
+  const cursor = document.createElement('span');
+  cursor.className = 'prototype-cursor';
+  cursor.setAttribute('aria-hidden', 'true');
+  document.body.append(cursor);
+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+  const moveTo = async (x, y) => { cursor.style.left = `${x}%`; cursor.style.top = `${y}%`; await wait(750); cursor.classList.add('is-pressed'); await wait(140); cursor.classList.remove('is-pressed'); };
+  const run = async () => {
+    shade.hidden = true;
+    modal.style.display = 'flex';
+    personal.click();
+    cursor.style.opacity = '0';
+    await wait(900);
+    cursor.style.opacity = '1';
+    await moveTo(88, 16);
+    shade.hidden = false;
+    await wait(1450);
+    await moveTo(32, 17);
+    access.click();
+    await wait(2800);
+    cursor.style.opacity = '0';
+    await wait(1000);
+    run();
+  };
+  run();
+})();
+
