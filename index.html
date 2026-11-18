@@ -1,100 +1,83 @@
-
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#101010">
-  <meta name="description" content="Единый транспортный сервис для городских и междугородних поездок — кейс Елены Сулоевой.">
-  <title>Единый транспортный сервис — Елена Сулоева</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="src/styles/style.css"><link rel="stylesheet" href="src/styles/hover.css"><link rel="stylesheet" href="src/styles/layout.css"><link rel="stylesheet" href="src/styles/figma-alignment.css"><link rel="stylesheet" href="src/styles/mobile.css"><script defer src="src/scripts/index.js"></script><script defer src="src/scripts/mobile.js"></script>
-  <link rel="stylesheet" href="src/styles/portfolio-carousel.css">
-  <script defer src="src/scripts/portfolio-carousel.js"></script>
+  <meta name="description" content="Елена Сулоева, Product designer. Превращаю сложную бизнес-логику в понятные интерфейсы. Проекты, опыт и контакты.">
+  <title>Елена Сулоева — Product designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/home.css">
+  <link rel="stylesheet" href="src/styles/contact-dialog.css">
+  <script defer src="src/scripts/contact-dialog.js"></script>
 </head>
 <body>
-<a class="skip" href="#case">К содержанию</a>
-<header class="site-header">
-  <div class="nav-pill"><a class="identity" href="#case"><img src="src/assets/avatar.png" alt="" width="48" height="48"><span>Елена Сулоева</span></a><nav aria-label="Разделы портфолио"><a href="#context">Обо мне</a><a href="#card">Проекты</a><a href="#format">Опыт работы</a><a href="#contact">Контакты</a></nav><a class="contact-cta" href="#contact">Связаться со мной</a></div>
-  <a class="back-link" href="#case" aria-label="Назад к началу кейса">← Назад на главную</a>
-<button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню разделов"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9h14M5 15h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><div class="mobile-menu-panel" id="mobile-menu" hidden><nav aria-label="Разделы кейса"><a href="#context">Контекст и задача</a><a href="#card">Транспортная карта</a><a href="#balance">Абонемент и баланс</a><a href="#intercity">Междугородние поездки</a><a href="#transfer">Единый билет</a><a href="#format">Формат проекта</a></nav><a class="mobile-contact-link" href="#contact">Связаться со мной</a></div></header><button class="mobile-menu-backdrop" type="button" aria-label="Закрыть меню" tabindex="-1" hidden></button>
-<main id="case">
-  <section class="hero" aria-labelledby="hero-title"><div class="container"><h1 id="hero-title">Единый транспортный сервис <br>для городских и междугородних <br>поездок</h1><p class="hero-subtitle">Как объединить городские поездки и межгород в одном сервисе</p><div class="hero-tags"><span>Роль · Product designer</span><span>Платформы · iOS / Android</span><span>B2C</span></div><div class="hero-stage" aria-label="Ключевые экраны транспортного приложения"><img class="hero-artwork" src="src/assets/figma-audit/hero.png" alt="Четыре ключевых экрана транспортного приложения"></div></div></section>
-
-  <section class="context" id="context" aria-labelledby="context-title"><div class="container"><span class="section-label reveal">01 · Контекст и проблема</span><h2 class="section-title reveal" id="context-title">Частые поездки по городу и области <br>остаются двумя разными сценариями</h2><div class="context-grid"><article class="context-card reveal"><h3>Контекст</h3><p>Жители Калининградской области регулярно перемещаются между городом и областью — на работу, учёбу или отдых.<br>Но городские и междугородние поездки требуют разных способов оплаты: в городе — транспортная карта, на межгороде — отдельные билеты.<br>Единого цифрового сервиса для покупки и оплаты поездок не было.</p></article><article class="context-card reveal"><h3>Проблема и задача</h3><p>Разрозненные способы покупки и оплаты проезда усложняют поездки и отнимают время пассажиров. Задача — объединить городской и междугородний транспорт в одном приложении, упростить планирование и оплату поездок, сделать весь процесс понятнее и прозрачнее.</p></article></div></div></section>
-
-  <section class="case-section card-section" id="card" aria-labelledby="card-title"><div class="container"><span class="section-label reveal">Решение 1 · Виртуальная транспортная карта</span><h2 class="section-title reveal" id="card-title">Убрать офлайн-барьер перед первой <br>поездкой</h2><div class="journey-panel reveal"><h3>Как изменился путь пользователя</h3><p>Тарифы и способы пополнения доступны сразу — оформить и пополнить карту можно без поездки в офис.</p><div class="journey-group"><span>Как реализовано сейчас</span><div class="journey-steps"><b>Найти пункт выдачи</b><i></i><b>Приехать в офис</b><i></i><b>Получить карту</b><i></i><b>Выбрать тариф и пополнить</b><i></i><b>Повторить после окончания срока</b></div></div><div class="journey-group journey-group--new"><span>Новое решение</span><div class="journey-steps"><b>Выпустить виртуальную карту или привязать физическую карту</b><i></i><b>Выбрать абонемент/ пополнить баланс</b><i></i><b>Оплатить</b></div></div></div><div class="phone-section reveal"><div class="phone-grid phone-grid--four"><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить главный экран без карты"><img src="src/assets/card-1.png" alt="Главный экран до выпуска виртуальной карты" loading="lazy"></button></div><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить выбор типа карты"><img src="src/assets/card-2.png" alt="Выбор типа карты" loading="lazy"></button></div><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить экран выпуска карты"><img src="src/assets/card-3.png" alt="Выбор абонемента при выпуске карты" loading="lazy"></button></div><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить выпущенную карту"><img src="src/assets/card-4.png" alt="Выпущенная виртуальная карта" loading="lazy"></button></div></div><div class="caption"><h3>Выпуск виртуальной карты</h3><p>Пользователь может выпустить карту прямо в приложении, выбрать абонемент или пополнить баланс. При этом покупка абонемента необязательна — карту можно выпустить без него и пополнить позже. Выпуск не блокируется дополнительными действиями.</p></div></div><div class="physical-section reveal"><div class="phone-grid phone-grid--four"><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить: Главный экран до привязки карты"><img src="src/assets/figma-audit/physical-1.png" data-zoom-src="src/assets/figma-audit/physical-1.png" alt="Главный экран до привязки карты" loading="lazy"></button></div><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить: Выбор физической карты"><img src="src/assets/figma-audit/physical-2.png" data-zoom-src="src/assets/figma-audit/physical-2.png" alt="Выбор физической карты" loading="lazy"></button></div><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить: Привязка карты по NFC или номеру"><img src="src/assets/figma-audit/physical-3.png" data-zoom-src="src/assets/figma-audit/physical-3.png" alt="Привязка карты по NFC или номеру" loading="lazy"></button></div><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить: Главный экран с привязанной картой"><img src="src/assets/figma-audit/physical-4.png" data-zoom-src="src/assets/figma-audit/physical-4.png" alt="Главный экран с привязанной картой" loading="lazy"></button></div></div><div class="caption"><h3>Привязка физической карты</h3><p>Приложение объединяет разные сценарии использования транспортных карт. Пользователь может привязать уже имеющиеся физические карты, удобно пополнять их и отслеживать расходы на поездки — например, всей семьи.</p></div></div></div></section>
-
-  <section class="management-section" id="management" aria-labelledby="management-title">
-    <div class="container">
-      <div class="management-panel">
-        <div class="management-copy">
-          <h2 id="management-title">Управление картой</h2>
-          <p>Пользователь может добавить несколько виртуальных<br class="management-desktop-break"> и физических карт и переключаться между ними на главном экране.</p>
-          <h3>Что предусмотрено:</h3>
-          <ul>
-            <li>Управление каждой картой всегда доступно с главного экрана.</li>
-            <li>Пользователь может купить несколько абонементов заранее, не дожидаясь окончания текущего. Они будут активироваться последовательно: каждый следующий — после завершения предыдущего.</li>
-            <li>Пользователь может изменить настройки карты, переименовать ее или удалить из приложения.</li>
-          </ul>
-        </div>
-        <div class="management-mockup-tile">
-          <div class="management-phone" aria-label="Интерактивный сценарий управления картой">
-            <div class="management-phone-screen">
-              <iframe src="src/prototypes/card-management.html?embed=1&amp;autoplay=1" title="Автоматический сценарий: Все 4 карты, управление картой и текущий абонемент" loading="lazy" scrolling="no" tabindex="-1" style="pointer-events:none"></iframe>
-            </div>
-            <img class="management-phone-frame" src="src/assets/management/phone-frame.png" alt="" draggable="false">
-            <span class="management-phone-island" aria-hidden="true"><img src="src/assets/management/camera.png" alt=""></span>
-          </div>
-        </div>
-      </div>
+<a class="home-skip" href="#about">К содержанию</a>
+<header class="home-header home-wrap">
+  <div class="home-nav">
+    <a class="home-identity" href="index.html"><img src="src/assets/home/avatar.png" width="48" height="48" alt=""><span>Елена Сулоева</span></a>
+    <nav aria-label="Разделы портфолио"><a href="#about">Обо мне</a><a href="#projects">Проекты</a><a href="#experience">Опыт работы</a><a href="#contact">Контакты</a></nav>
+    <a class="home-contact" href="#contact" data-contact-dialog>Связаться со мной</a>
+  </div>
+</header>
+<main>
+  <section class="home-hero home-wrap" id="about" aria-labelledby="home-title">
+    <div class="home-channels">
+      <a href="https://t.me/Lena_Suloeva" target="_blank" rel="noopener noreferrer"><img src="src/assets/home/telegram.svg" width="20" height="20" alt="">@Lena_Suloeva</a>
+      <a href="mailto:lensuloeva@yandex.ru"><img src="src/assets/home/email.svg" width="24" height="24" alt="">lensuloeva@yandex.ru</a>
+    </div>
+    <h1 id="home-title"><span>Елена Сулоева, Product designer - </span>превращаю сложную бизнес-логику в&nbsp;понятные интерфейсы</h1>
+    <div class="home-skills" aria-label="Компетенции">
+      <div class="home-skill"><div><h2>UX-исследования</h2><p>Интервью, JTBD, CJM, анализ конкурентов</p></div><img src="src/assets/home/research.svg" width="32" height="32" alt=""></div>
+      <div class="home-skill"><div><h2>User flows &amp; wireframes</h2><p>Сценарии, информационная архитектура, edge cases, прототипы</p></div><img src="src/assets/home/flows.svg" width="32" height="32" alt=""></div>
+      <div class="home-skill"><div><h2>UI-дизайн</h2><p>Web, Mobile,CRM, адаптивный дизайн, iOS/Android, дизайн-системы и&nbsp;UI-kit, хендофф</p></div><img src="src/assets/home/ui.svg" width="32" height="32" alt=""></div>
+      <div class="home-skill"><div><h2>AI</h2><p>Прототипы, UX-тексты и&nbsp;контент, проработка продуктовых решений</p></div><img src="src/assets/home/ai.svg" width="32" height="32" alt=""></div>
     </div>
   </section>
-
-  <section class="case-section balance-section" id="balance" aria-labelledby="balance-title"><div class="container"><span class="section-label reveal">Решение 2 · Разные сценарии для оплаты проезда</span><h2 class="section-title reveal" id="balance-title">Абонемент — для постоянных поездок</h2><div class="balance-stack"><div class="balance-top reveal" id="pass-demo-block"><div class="pass-mockup-tile"><div class="management-phone"><div class="management-phone-screen"><iframe src="src/prototypes/pass.html" title="Зацикленная анимация выбора абонемента" loading="lazy" scrolling="no" tabindex="-1" style="pointer-events:none"></iframe></div><img class="management-phone-frame" src="src/assets/management/phone-frame.png" alt="" draggable="false"><span class="management-phone-island" aria-hidden="true"><img src="src/assets/management/camera.png" alt=""></span></div></div><article class="balance-copy"><h3>Абонемент</h3><p>Предсказуемые расходы для ежедневных маршрутов и регулярных поездок.</p><h4>Что предусмотрено:</h4><ul><li>Ранее купленные абонементы вынесены в отдельный блок для быстрой повторной покупки.</li><li>Фильтры по транспорту, сроку действия и количеству поездок помогают подобрать другой вариант.</li><li>Пользователь не ограничен покупкой абонемента: в любой момент можно перейти на вкладку «С балансом», пополнить карту и оплачивать отдельные поездки.</li></ul></article></div><div class="after-pass reveal"><div class="caption"><h3>После покупки абонемента</h3><p>Статус и оставшиеся поездки видны на карте. Приложение заранее предупреждает, когда абонемент скоро закончится.</p></div><div class="phone-grid phone-grid--four"><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить карту с абонементом"><img src="src/assets/pass-1.png" alt="Карта с действующим абонементом" loading="lazy"></button></div><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить предупреждение об окончании абонемента"><img src="src/assets/pass-2.png" alt="Предупреждение о скором окончании абонемента" loading="lazy"></button></div><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить оплату поездки"><img src="src/assets/pass-3.png" alt="Экран успешной оплаты поездки" loading="lazy"></button></div><div class="phone-tile"><button class="mockup" type="button" data-zoom aria-label="Увеличить карту после окончания абонемента"><img src="src/assets/pass-4.png" alt="Карта после окончания абонемента" loading="lazy"></button></div></div></div></div><section class="balance-refill reveal" aria-labelledby="balance-refill-title">
-  <header class="balance-refill-heading">
-    <h2 id="balance-refill-title">Пополнение баланса транспортной карты</h2>
-    <p>Для разовых и нерегулярных поездок карту можно пополнить на нужную сумму без покупки абонемента</p>
-  </header>
-  <div class="balance-refill-grid">
-    <div class="balance-refill-tile">
-      <div class="management-phone" role="img" aria-label="Пополнение транспортной карты: готовые суммы и поле для ввода другой суммы">
-        <div class="management-phone-screen"><img class="balance-refill-screen" src="src/assets/balance-screen.png" alt="" loading="lazy" draggable="false"></div>
-        <img class="management-phone-frame" src="src/assets/management/phone-frame.png" alt="" draggable="false">
-        <span class="management-phone-island" aria-hidden="true"><img src="src/assets/management/camera.png" alt=""></span>
-      </div>
+  <section class="home-projects home-wrap" id="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title">Проекты, над&nbsp;которыми я работала</h2>
+    <div class="home-project-list">
+      <article class="home-project" data-case-id="transport">
+        <div class="home-project-copy"><span class="home-badge">iOS / Android B2C</span><h3>Единый транспортный сервис</h3><p class="home-project-description">Как объединить городские поездки и&nbsp;межгород в&nbsp;одном сервисе</p><p class="home-project-tags">Product concept · Information architecture · User flows · Edge cases</p><a class="home-case-link" href="transport-case/index.html" aria-label="Смотреть кейс: Единый транспортный сервис">Смотреть кейс&nbsp; →</a></div>
+        <a class="home-project-image" href="transport-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/transport.png" width="560" height="356" loading="lazy" alt="Экраны единого транспортного сервиса"></a>
+      </article>
+      <article class="home-project" data-case-id="monitoring">
+        <div class="home-project-copy"><span class="home-badge">Web B2B</span><h3>Мониторинг бортовых систем</h3><p class="home-project-description">Интерфейс управления оборудованием системы</p><p class="home-project-tags">UX design</p><a class="home-case-link" href="monitoring-case/index.html" aria-label="Смотреть кейс: Мониторинг бортовых систем">Смотреть кейс&nbsp; →</a></div>
+        <a class="home-project-image" href="monitoring-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/monitoring.png" width="560" height="356" loading="lazy" alt="Мониторинг оборудования на экране ноутбука"></a>
+      </article>
+      <article class="home-project" data-case-id="soul">
+        <div class="home-project-copy"><span class="home-badge">Telegram MiniApp B2C</span><h3>Платформа для&nbsp;поиска компании и&nbsp;активностей в&nbsp;путешествиях</h3><p class="home-project-description">Как исследование помогло перестроить поиск и&nbsp;выбор встреч</p><p class="home-project-tags">UX Research · Synthesis · Product hypotheses · User Flow · Mobile UX/UI</p><a class="home-case-link" href="soul-case/index.html" aria-label="Смотреть кейс: Платформа для поиска компании и активностей в путешествиях">Смотреть кейс&nbsp; →</a></div>
+        <a class="home-project-image" href="soul-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/soul.png" width="560" height="356" loading="lazy" alt="Приложение Soul для поиска встреч в путешествиях"></a>
+      </article>
+      <article class="home-project" data-case-id="corporate">
+        <div class="home-project-copy"><span class="home-badge">iOS / Android B2B2E</span><h3>Сервис по&nbsp;заказу корпоративного транспорта</h3><p class="home-project-description">Как объединить регулярные и&nbsp;нерегулярные поездки сотрудников в&nbsp;одном продукте</p><p class="home-project-tags">Product logic · User flows · Mobile UX/UI</p><a class="home-case-link" href="corporate-transport/index.html" aria-label="Смотреть кейс: Сервис по заказу корпоративного транспорта">Смотреть кейс&nbsp; →</a></div>
+        <a class="home-project-image" href="corporate-transport/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/corporate.png" width="560" height="356" loading="lazy" alt="QR-билет для корпоративной поездки"></a>
+      </article>
+      <article class="home-project" data-case-id="cashier">
+        <div class="home-project-copy"><span class="home-badge">Web B2B</span><h3>АРМ Кассира</h3><p class="home-project-description">Интерфейс продажи билетов и&nbsp;оформления заказов</p><p class="home-project-tags">Complex B2B flows · Payment scenarios · Edge cases</p><a class="home-case-link" href="cashier-case/index.html" aria-label="Смотреть кейс: АРМ Кассира">Смотреть кейс&nbsp; →</a></div>
+        <a class="home-project-image" href="cashier-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/cashier.png" width="560" height="356" loading="lazy" alt="Рабочее место кассира"></a>
+      </article>
     </div>
-    <div class="balance-refill-copy">
-      <p>Оплата по факту использования для нерегулярных поездок и пользователей без абонемента.</p>
-      <h3>Что предусмотрено:</h3>
-      <ul>
-        <li><img src="src/assets/balance-bullet.svg" alt="" width="4" height="11"><p><strong>Выбор суммы без лишнего ввода</strong><br>Готовые суммы ускоряют пополнение, а поле «Другая сумма» позволяет указать свою.</p></li>
-        <li><img src="src/assets/balance-bullet.svg" alt="" width="4" height="11"><p><strong>Два способа оплаты поездок</strong><br>Баланс и абонементы собраны в одном окне — пользователь может переключиться между ними перед оплатой.</p></li>
-      </ul>
-    </div>
-  </div>
-</section></div></section>
-
-  <section class="case-section intercity-section" id="intercity" aria-labelledby="intercity-title"><div class="container"><span class="section-label reveal">Решение 3 · Междугородние поездки</span><h2 class="section-title reveal" id="intercity-title">Найти междугородний рейс <br>и спланировать всю поездку до оплаты</h2><div class="intercity-panel reveal"><div class="criteria"><p>Эти параметры доступны прямо в результатах поиска — чтобы выбрать подходящий рейс без перехода в каждую карточку.</p><div class="criteria-tags"><span>Время</span><span>Цена</span><span>Место отправления</span><span>Есть ли пересадка</span><span>Длительность</span></div></div><div class="trip-grid"><div class="trip-column"><div class="trip-copy"><h3>Поиск маршрута</h3><p>Недавние маршруты помогают быстро повторить поиск.</p></div><div class="trip-phone"><button class="mockup" type="button" data-zoom aria-label="Увеличить поиск маршрута"><img src="src/assets/search.png" alt="Поиск маршрута и недавние поездки" loading="lazy"></button></div></div><div class="trip-column"><div class="trip-copy"><h3>Результаты поиска <br>и сравнение билетов</h3><p>Можно сравнить варианты <br>и выбрать подходящий по времени и цене.</p></div><div class="trip-phone"><button class="mockup" type="button" data-zoom aria-label="Увеличить результаты поиска"><img src="src/assets/results.png" alt="Результаты поиска рейсов" loading="lazy"></button></div></div><div class="trip-column"><div class="trip-copy"><h3>Детали маршрута</h3><p>Понятно, как будет проходить поездка и где нужно пересесть. Для деталей поездки не нужно возвращаться к поиску.</p></div><div class="trip-phone"><button class="mockup" type="button" data-zoom aria-label="Увеличить детали маршрута"><img src="src/assets/details.png" alt="Детали маршрута и пересадки" loading="lazy"></button></div></div></div></div></div></section>
-
-  <section class="case-section transfer-section" id="transfer" aria-labelledby="transfer-title"><div class="container"><span class="section-label reveal">Решение 4 · Единый билет</span><h2 class="section-title reveal" id="transfer-title">Маршрут с пересадкой остаётся одной <br>поездкой</h2><div class="transfer-panel reveal"><div class="transfer-intro caption"><h3>Один билет на весь маршрут — даже с пересадками.</h3><p>Технически маршрут состоит из нескольких рейсов и сегментов, но для пассажира это одна поездка из точки А в точку Б. Поэтому все участки объединены в единый маршрут, который можно оформить одним билетом.</p></div><div class="transfer-grid"><div class="transfer-column"><div class="transfer-copy"><h3>Для пользователя:</h3><p>Легче сравнивать варианты, понятнее общая длительность, меньше риска купить несовместимые рейсы.</p></div><div class="transfer-phone"><button class="mockup" type="button" data-zoom aria-label="Увеличить список билетов"><img src="src/assets/transfer.png" alt="Список билетов с маршрутом и пересадкой" loading="lazy"></button></div></div><div class="transfer-column"><div class="transfer-copy"><h3>Для продукта</h3><p>Покупка остаётся единым сценарием, заказ проще сопровождать при изменении одного из сегментов.</p></div><div class="transfer-phone"><button class="mockup" type="button" data-zoom aria-label="Увеличить единый билет с QR-кодом"><img src="src/assets/unified-ticket.png" alt="Единый билет с QR-кодом" loading="lazy"></button></div></div></div></div></div></section>
-
-  <section class="format-section" id="format" aria-labelledby="format-title"><div class="container"><span class="section-label reveal">Формат проекта</span><h2 class="section-title reveal" id="format-title">Переосмысление транспортного приложения</h2><div class="format-grid"><article class="format-card reveal"><h3>Сохранила</h3><p>Учла реальные пользовательские сценарии, особенности оплаты и ограничения транспортной системы.</p></article><article class="format-card reveal"><h3>Переработала логику</h3><p>Переосмыслила структуру приложения, навигацию и связь между ключевыми сценариями.</p></article><article class="format-card reveal"><h3>Создала интерфейс</h3><p>Разработала визуальную систему, экраны и тексты для представленных сценариев.</p></article></div><p class="nda">Самостоятельный концепт. Оригинальные интерфейсы и материалы рабочих проектов не используются в связи с NDA.</p></div></section>
-  <section class="portfolio-projects" id="other-projects" aria-labelledby="other-projects-title" data-portfolio-carousel data-current-case="transport">
-    <div class="container">
-      <div class="portfolio-heading">
-        <h2 id="other-projects-title">Другие проекты</h2>
-        <div class="portfolio-controls" hidden>
-          <button type="button" data-project-direction="-1" aria-label="Предыдущий проект" aria-controls="portfolio-track" disabled><img src="src/assets/portfolio/chevron-left.svg" alt="" width="20" height="20"></button>
-          <button type="button" data-project-direction="1" aria-label="Следующий проект" aria-controls="portfolio-track"><img src="src/assets/portfolio/chevron-right.svg" alt="" width="20" height="20"></button>
-        </div>
-      </div>
-      <div class="portfolio-track" id="portfolio-track" tabindex="0" role="region" aria-label="Другие проекты — прокручиваемый список"></div>
-      <noscript><p><a href="https://lenaslv.github.io/portfolio_v2/site/">Посмотреть другие проекты портфолио →</a></p></noscript>
+  </section>
+  <section class="home-experience home-wrap" id="experience" aria-labelledby="experience-title">
+    <div class="home-experience-intro"><h2 id="experience-title">Опыт в&nbsp;продуктовых и&nbsp;проектных командах</h2><p>Работаю на&nbsp;стыке продуктовой логики, пользовательских сценариев и&nbsp;визуальной системы.</p></div>
+    <div class="home-jobs">
+      <div class="home-job"><div><h3>Технезис · UX/UI-дизайнер</h3><p>B2B и&nbsp;B2C-продукты</p></div><time datetime="2024-11">Ноябрь 2024 — настоящее время</time></div>
+      <div class="home-job"><div><h3>Soul · Product-дизайнер</h3><p>B2C-стартап</p></div><time datetime="2025-05">Май 2025 — июнь 2026</time></div>
+      <div class="home-job"><div><h3>Проектная работа · UX/UI-дизайнер</h3><p>WEB и&nbsp;Mobile app</p></div><time datetime="2023-12">Декабрь 2023 — Ноябрь 2024</time></div>
+      <div class="home-education"><h3>Профильное обучение</h3><p>Яндекс Практикум · Дизайнер интерфейсов · 2023</p><p>Логомашина · Нейросети для&nbsp;дизайнеров · 2024</p></div>
     </div>
   </section>
 </main>
-<footer class="footer" id="contact"><div class="container"><h2>Открыта к сотрудничеству</h2><div class="contact-grid"><a class="contact-card" href="https://t.me/Lena_Suloeva"><span>Telegram</span><strong>@Lena_Suloeva →</strong></a><a class="contact-card" href="mailto:lensuloeva@yandex.ru"><span>Почта</span><strong>lensuloeva@yandex.ru →</strong></a></div><div class="footer-meta"><span>Елена Сулоева · Product designer</span><span>Портфолио · 2026</span></div><div class="footer-route" aria-hidden="true"></div></div></footer>
-<button class="to-top" type="button" aria-label="Вернуться наверх" title="Наверх">↑</button>
-<dialog class="zoom-dialog" aria-label="Увеличенный мокап"><button class="zoom-close" type="button" aria-label="Закрыть увеличенный мокап">×</button><img alt=""><p class="zoom-hint">Нажмите Esc или на фон, чтобы закрыть</p></dialog>
-</body></html>
+<footer class="home-footer" id="contact">
+  <div class="home-wrap">
+    <h2>Открыта к&nbsp;сотрудничеству</h2>
+    <div class="home-footer-links"><a href="https://t.me/Lena_Suloeva" target="_blank" rel="noopener noreferrer"><small>Telegram</small><strong>@Lena_Suloeva →</strong></a><a href="mailto:lensuloeva@yandex.ru"><small>Почта</small><strong>lensuloeva@yandex.ru →</strong></a></div>
+    <div class="home-footer-meta"><span>Елена Сулоева · Product designer</span><span>Портфолио · 2026</span></div>
+    <div class="home-footer-line" aria-hidden="true"></div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,11 +1,11 @@
 (() => {
 // Shared catalogue: each case carousel excludes its own stable id.
 const portfolioCases = [
-  { id: 'transport', title: 'Единый транспортный сервис для городских и междугородних поездок', badge: 'Мобильное приложение · B2C', tags: 'iOS / Android', href: 'index.html', image: 'src/assets/figma-audit/hero.png', alt: 'Экраны единого транспортного приложения' },
-  { id: 'corporate', title: 'Сервис по заказу корпоративного транспорта', badge: 'Внутренний продукт · B2B2E', tags: 'iOS / Android · NDA', href: 'https://lenaslv.github.io/portfolio_v2/site/corporate-transport.html', image: 'src/assets/portfolio/corporate.png', alt: 'Оплата корпоративной поездки по QR-коду на телефоне' },
-  { id: 'soul', title: 'Платформа для поиска компании и активностей в путешествиях', badge: 'Telegram MiniApp · B2C', tags: 'iOS / Android · MVP', href: 'https://lenaslv.github.io/portfolio_v2/site/soul.html', image: 'src/assets/portfolio/soul.png', alt: 'Приложение Soul для путешествий рядом с посадочным талоном' },
-  { id: 'cashier', title: 'АРМ Кассира', description: 'Рабочее пространство с функционалом продажи билетов, формирования отчетов кассовой смены', badge: 'Внутренний продукт · B2B', tags: 'WEB · B2B · NDA', href: 'https://lenaslv.github.io/portfolio_v2/site/cashier.html', image: 'src/assets/portfolio/cashier.png', alt: 'Рабочее пространство кассира для продажи билетов' },
-  { id: 'monitoring', title: 'Мониторинг бортовых систем общественного транспорта', badge: 'Внутренний продукт · B2B', tags: 'WEB · NDA', href: 'src/pages/monitoring.html', image: 'src/assets/monitoring/overview.png', alt: 'Обзор состояния оборудования общественного транспорта' }
+  { id: 'transport', title: 'Единый транспортный сервис для городских и междугородних поездок', badge: 'Мобильное приложение · B2C', tags: 'iOS / Android', href: 'transport-case/index.html', image: 'src/assets/figma-audit/hero.png', alt: 'Экраны единого транспортного приложения' },
+  { id: 'corporate', title: 'Сервис по заказу корпоративного транспорта', badge: 'Внутренний продукт · B2B2E', tags: 'iOS / Android · NDA', href: 'corporate-transport/index.html', image: 'src/assets/portfolio/corporate.png', alt: 'Оплата корпоративной поездки по QR-коду на телефоне' },
+  { id: 'soul', title: 'Платформа для поиска компании и активностей в путешествиях', badge: 'Telegram MiniApp · B2C', tags: 'iOS / Android · MVP', href: 'soul-case/index.html', image: 'src/assets/home/soul.png', alt: 'Приложение Soul для путешествий рядом с посадочным талоном' },
+  { id: 'cashier', title: 'АРМ Кассира', description: 'Рабочее пространство с функционалом продажи билетов, формирования отчетов кассовой смены', badge: 'Внутренний продукт · B2B', tags: 'WEB · B2B · NDA', href: 'cashier-case/index.html', image: 'src/assets/portfolio/cashier.png', alt: 'Рабочее пространство кассира для продажи билетов' },
+  { id: 'monitoring', title: 'Мониторинг бортовых систем общественного транспорта', badge: 'Внутренний продукт · B2B', tags: 'WEB · NDA', href: 'monitoring-case/index.html', image: 'monitoring-case/assets/overview.png', alt: 'Обзор состояния оборудования общественного транспорта' }
 ];
 
 // Resolve paths from this script so the component can be used on nested case pages.
