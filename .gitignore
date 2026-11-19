@@ -2,6 +2,7 @@
 .local/
 .idea/
 node_modules/
+dist/
 
 # Generated release archives
 transport-case-release*.tar.gz

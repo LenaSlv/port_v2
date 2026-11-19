@@ -11,6 +11,7 @@
 | Единый транспортный сервис | [2810:18183](https://www.figma.com/design/ZGvSZcFNYGG8ePhMb3iuk0/?node-id=2810-18183) | `transport-case/index.html`, стили и скрипты в `src/`, изображения в `src/assets/`. |
 | Корпоративный транспорт | [2905:27022](https://www.figma.com/design/ZGvSZcFNYGG8ePhMb3iuk0/?node-id=2905-27022) | `corporate-transport/index.html`, локальная ссылка в каталоге и на главной. |
 | «Орбита»: мониторинг бортовых систем | [2883:26896](https://www.figma.com/design/ZGvSZcFNYGG8ePhMb3iuk0/?node-id=2883-26896) | `monitoring-case/index.html`, ресурсы в `monitoring-case/assets/`. |
+| «Орбита»: увеличенная диагностика устройства | [3169:28878](https://www.figma.com/design/ZGvSZcFNYGG8ePhMb3iuk0/?node-id=3169-28878) | Полный экран для увеличенного просмотра: `monitoring-case/assets/diagnostics-detail.png`. |
 | Soul | [3181:30837](https://www.figma.com/design/ZGvSZcFNYGG8ePhMb3iuk0/?node-id=3181-30837) | `soul-case/index.html`, экраны в `src/assets/soul/`. |
 | «Другие проекты» | [3181:32861](https://www.figma.com/design/ZGvSZcFNYGG8ePhMb3iuk0/?node-id=3181-32861) | Общая карусель: `src/scripts/portfolio-carousel.js`, `src/styles/portfolio-carousel.css`. Подключена в транспортном кейсе. |
 | Покупка абонемента | [2835:17450](https://www.figma.com/design/ZGvSZcFNYGG8ePhMb3iuk0/?node-id=2835-17450) | Дополнительный референс блока абонемента, указан в комментарии `src/styles/layout.css`. |

@@ -25,12 +25,16 @@ document.querySelectorAll('[data-zoom]').forEach(button => {
     lastZoomTrigger = button;
     zoomImage.src = image.dataset.zoomSrc || image.src;
     zoomImage.alt = image.alt;
-    zoomImage.style.width = `${Math.round(image.naturalWidth * 1.25)}px`;
+    const scrollVertically = button.hasAttribute('data-zoom-scroll');
+    lightbox.classList.toggle('is-image-scroll', scrollVertically);
+    if (scrollVertically) zoomImage.style.removeProperty('width');
+    else zoomImage.style.width = `${Math.round(image.naturalWidth * 1.25)}px`;
     zoomImage.hidden = false;
     zoomContent.classList.remove('has-prototype');
     zoomContent.querySelector('.zoom-hint').hidden = false;
     document.body.classList.add('modal-open');
     lightbox.showModal();
+    lightbox.scrollTop = 0;
     zoomClose.focus();
   });
 });
@@ -39,6 +43,7 @@ lightbox.addEventListener('click', event => { if (event.target === lightbox) lig
 let activePrototypeStage = null;
 lightbox.addEventListener('close', () => {
   document.body.classList.remove('modal-open');
+  lightbox.classList.remove('is-image-scroll');
   zoomImage.removeAttribute('src');
   zoomImage.removeAttribute('alt');
   zoomImage.style.removeProperty('width');

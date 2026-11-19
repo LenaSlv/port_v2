@@ -22,6 +22,16 @@
   let opener = null;
   const sizeZoom = () => {
     if (!zoom.open) return;
+    if (zoom.classList.contains('is-image-zoom')) {
+      const image = stage.querySelector('img');
+      if (!image?.naturalWidth) return;
+      const width = innerWidth > 900
+        ? Math.round(image.naturalWidth * 1.25)
+        : Math.min(image.naturalWidth * 1.25, innerWidth - 40, (innerHeight - 100) * image.naturalWidth / image.naturalHeight);
+      stage.style.width = `${width}px`;
+      stage.style.height = 'auto';
+      return;
+    }
     const scale = Math.min(1.6, (innerWidth - 32) / 244, (innerHeight - 80) / 499);
     stage.style.width = `${244 * scale}px`;
     stage.style.height = `${499 * scale}px`;
@@ -41,11 +51,30 @@
       zoom.querySelector('.zoom-close').focus();
     });
   });
+  document.querySelectorAll('.flow-zoom[data-zoom]').forEach(button => {
+    button.addEventListener('click', () => {
+      opener = button;
+      const source = button.querySelector('img');
+      const image = document.createElement('img');
+      image.alt = source.alt;
+      image.addEventListener('load', sizeZoom, {once: true});
+      image.src = source.dataset.zoomSrc || source.currentSrc || source.src;
+      stage.replaceChildren(image);
+      zoom.classList.add('is-image-zoom');
+      zoom.setAttribute('aria-label', 'Карта пользовательских сценариев Soul — увеличенный просмотр');
+      zoom.showModal();
+      sizeZoom();
+      zoom.scrollTo(0, 0);
+      zoom.querySelector('.zoom-close').focus({preventScroll: true});
+    });
+  });
   zoom.querySelector('.zoom-close').addEventListener('click', () => zoom.close());
   zoom.addEventListener('click', event => { if (event.target === zoom) zoom.close(); });
   zoom.addEventListener('close', () => {
     stage.replaceChildren();
     stage.removeAttribute('style');
+    zoom.classList.remove('is-image-zoom');
+    zoom.setAttribute('aria-label', 'Увеличенный экран Soul');
     opener?.focus({preventScroll: true});
   });
   addEventListener('resize', sizeZoom);

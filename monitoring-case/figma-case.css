@@ -68,6 +68,12 @@ main [id],footer[id]{scroll-margin-top:110px}
 .zoom-dialog .zoom-hint{position:fixed;right:0;bottom:18px;left:0;width:max-content;margin-inline:auto;color:#aab4c2;font-size:12px;pointer-events:none;opacity:1;transform:none}
 @media(max-width:760px){.zoom-dialog{padding:60px 16px 48px}.zoom-dialog .zoom-image{width:auto!important;max-width:calc(100vw - 32px);max-height:calc(100svh - 120px);height:auto;flex:0 1 auto;object-fit:contain}.zoom-dialog .zoom-close{top:12px;right:16px}.zoom-dialog .zoom-hint{bottom:12px;font-size:11px}}
 @media(prefers-reduced-motion:reduce){.zoom-dialog,.zoom-dialog .zoom-close{transition:none!important}}
+/* Full diagnostics from Figma 3169:28878: fit width and scroll vertically as needed. */
+.zoom-dialog.is-image-scroll{height:100svh;padding:80px 32px 56px;align-items:flex-start;overflow-x:hidden;overflow-y:auto}
+.zoom-dialog.is-image-scroll .zoom-dialog-content{width:min(1440px,100%);height:auto;margin-block:auto;flex:0 0 auto;flex-direction:column}
+.zoom-dialog.is-image-scroll .zoom-image{width:100%!important;height:auto;max-width:100%;max-height:none;flex:0 0 auto}
+.zoom-dialog.is-image-scroll .zoom-hint{position:static;max-width:100%;margin:16px auto 0;flex:0 0 auto}
+@media(max-width:760px){.zoom-dialog.is-image-scroll{padding:60px 16px 48px}}
 .animation-zoom-trigger{position:absolute;top:6.12%;left:3.18%;width:93.26%;height:88.68%;z-index:2;padding:0;border:0;border-radius:20px;background:transparent;cursor:zoom-in}
 .animation-zoom-trigger:focus-visible{outline:3px solid #89b6ff;outline-offset:-5px}
 @media(max-width:850px){.animation-zoom-trigger{border-radius:12px}}
