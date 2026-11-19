@@ -15,7 +15,7 @@
 }
 
 /* Shared back-to-top button: approved unified transport case design. */
-.to-top, .back-top { position: fixed; right: 28px; bottom: 28px; z-index: 70; display: grid; place-items: center; width: 54px; height: 54px; padding: 0; border: 1px solid #81bdff; border-radius: 16px; background: #3995ff; color: #fff; font: 400 28px/1 Manrope, Arial, sans-serif; box-shadow: 0 10px 30px #0008; cursor: pointer; transition: transform .25s ease, background .25s ease, box-shadow .25s ease, opacity .25s ease; }
+.to-top, .back-top { position: fixed; right: 28px; bottom: 28px; z-index: 70; display: grid; place-items: center; width: 54px; height: 54px; padding: 0; border: 1px solid #81bdff; border-radius: 16px; background: #3995ff; color: #fff; font: 400 28px/1 Montserrat, Arial, sans-serif; box-shadow: 0 10px 30px #0008; cursor: pointer; transition: transform .25s ease, background .25s ease, box-shadow .25s ease, opacity .25s ease; }
 .to-top:hover, .back-top:hover { transform: translateY(-4px); background: #61aaff; box-shadow: 0 14px 32px #0009; }
 .to-top:active, .back-top:active { transform: translateY(-1px); }
 .to-top.is-visible, .to-top.visible, .back-top.visible { visibility: visible; opacity: 1; }

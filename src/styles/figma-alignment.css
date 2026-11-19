@@ -2,7 +2,7 @@
    The management panel and pass-demo-block are deliberately excluded. */
 .site-header,.hero,.context,.journey-panel,.section-label,.section-title,.physical-section,.after-pass,.balance-bottom,.intercity-section,.transfer-section,.format-section{font-family:Montserrat,Arial,sans-serif}
 .section-label{color:#aecbee;font-weight:500}
-.section-title{color:#eef2f7;font-weight:600;letter-spacing:0}
+.section-title{color:#f6f9fo;font-weight:600;letter-spacing:0}
 .hero h1{font-weight:600;letter-spacing:0;color:#eef2f7}
 .hero-subtitle{color:#7f8c9f}
 .hero-tags span{color:#7f8c9f;background:#1d2737;font-weight:500}
@@ -76,7 +76,7 @@
 .format-card h3{font-size:21px;font-weight:600;line-height:25px;margin:0 0 16px}
 .format-card p{font-size:15px;line-height:23px;color:#7f8c9f}
 .nda{color:#7f8c9f;line-height:26px}
-.footer{padding:88px 0 70px;border:0;background:#151515;font-family:Geist,Arial,sans-serif;color:#f6f9ff}
+.footer{padding:88px 0 70px;border:0;background:#151515;font-family:Montserrat,Arial,sans-serif;color:#f6f9ff}
 .footer>.container{display:block}
 .footer h2{font-size:48px;font-weight:600;line-height:58px;margin:0 0 22px}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}

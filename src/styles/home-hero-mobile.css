@@ -5,7 +5,7 @@
   .home-channels { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 16px; }
   .home-channels a { min-height: 40px; padding: 9px 13px; gap: 8px; border-radius: 18px; background: #171717; font-size: 14px; line-height: 20px; }
   .home-channels img { width: 20px; height: 20px; }
-  .home-hero h1 { font-family: Geist, Arial, sans-serif; font-size: 32px; line-height: 42.88px; font-weight: 700; letter-spacing: 0; text-wrap: balance; }
+  .home-hero h1 { font-family: Montserrat, Arial, sans-serif; font-size: 32px; line-height: 42.88px; font-weight: 700; letter-spacing: 0; text-wrap: balance; }
   .home-title-desktop-dash { display: none; }
   .home-title-mobile-dash { display: inline; }
   .home-skill-mobile-break { display: initial; }

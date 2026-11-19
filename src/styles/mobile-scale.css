@@ -22,7 +22,7 @@
     --mobile-subtitle-color: #7f8c9f;
   }
 
-  /* WEB-068: use corporate transport's semantic text colors on case pages. */
+  /* WEB-069: use corporate transport's semantic text colors on case pages. */
   body.portfolio-case-page main h1,
   body.portfolio-case-page main h2,
   body.portfolio-case-page main h3,

@@ -11,6 +11,8 @@
 .case-display .solution-grid article{min-height:251px}
 .case-display .solution-grid h3{font-size:26px;line-height:34px}
 .case-display .solution-grid p{color:#eef2f7}
+/* WEB-062: explanatory panel headings match the approved Figma white. */
+.case-display .solution-grid h3{color:#fff}
 .case-display .screen-figure{margin:0}
 .display-monitor{position:relative;flex:none;width:min(100%,1173.284px);aspect-ratio:1173.284/775;border:2.876px solid #4a5568;border-radius:40px 40px 43px 36px;background:#101010;overflow:hidden}
 .overview-display{aspect-ratio:1173.284/802}

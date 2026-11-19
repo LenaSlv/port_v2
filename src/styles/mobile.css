@@ -10,7 +10,7 @@
  .site-header,.site-header.is-scrolled{height:0;padding:0;background:none;border:0;backdrop-filter:none;pointer-events:none}
  .site-header::after,.site-header.is-scrolled::after,.nav-pill{display:none}
  .site-header .back-link,.site-header.is-scrolled .back-link{position:absolute;left:16px;top:16px;display:grid;place-items:center;width:64px;height:44px;max-width:none;margin:0;border-radius:28px;background:#202020;box-shadow:0 4px 20px #0003;font-size:0;color:#eef2f7;pointer-events:auto}
- .back-link::before{content:'←';font:22px/1 Arial,sans-serif}
+ .back-link::before{content:'←';font:22px/1 Montserrat,Arial,sans-serif}
  .mobile-menu-toggle{position:absolute;right:16px;top:16px;display:grid;place-items:center;width:64px;height:44px;border:1px solid #ffffff0a;border-radius:28px;background:#202020;color:#eef2f7;pointer-events:auto;cursor:pointer;box-shadow:0 4px 20px #0003}
  .mobile-menu-toggle svg{width:22px;height:22px}
  .mobile-menu-toggle[aria-expanded="true"]{background:#303030}
