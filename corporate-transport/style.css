@@ -46,3 +46,7 @@ main section[id],#contact{scroll-margin-top:110px}
 }
 
 .showcase-image{display:block;width:100%;height:100%;object-fit:cover}
+/* WEB-043: обложка кейса уменьшена по запросу — на всю ширину, высота 520 вместо 630. */
+@media(min-width:801px){
+ .showcase{width:100%;height:auto;aspect-ratio:1248/520;margin-inline:0}
+}

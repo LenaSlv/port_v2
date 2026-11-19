@@ -22,7 +22,7 @@
 | Управление картой | Отдельный интерактивный прототип и автоматический режим в кейсе. | `src/prototypes/card-management.html`. |
 | Выбор абонемента | Автоматический сценарий в мокапе. | `src/prototypes/pass.html`. |
 | Главная портфолио | Реализована по фрейму `3169:28182`, пять проектов, компетенции, опыт и контакты. | `index.html`, `src/styles/home.css`, `src/assets/home/`. |
-| Контактное окно | Реализовано по фрейму `3169:28399` на главной и четырёх локальных кейсах. | `src/scripts/contact-dialog.js`, `src/styles/contact-dialog.css`. |
+| Контактное окно | Реализовано по фрейму `3169:28399` на главной и всех пяти локальных кейсах. | `src/scripts/contact-dialog.js`, `src/styles/contact-dialog.css`. |
 | Корпоративный транспорт | Локальная страница подключена к главной. | `corporate-transport/index.html`. |
 | Soul | Локальный кейс по фрейму `3181:30837`, подключён к главной и карусели. | `soul-case/index.html`, `src/assets/soul/`. |
 | АРМ Кассира | Локальный кейс по фрейму `3181:31620`. | `cashier-case/index.html`, `cashier-case/assets/`; превью главной в `src/assets/home/`. |

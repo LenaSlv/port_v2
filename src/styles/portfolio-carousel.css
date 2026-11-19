@@ -8,6 +8,9 @@
 .portfolio-controls button:disabled{opacity:.45;cursor:default}
 .portfolio-controls button:not(:disabled):hover{background:#303030}
 .portfolio-controls img{width:20px;height:20px}
+.portfolio-noscript{margin:0;color:#9ba7c0;font-size:16px;line-height:1.6}
+.portfolio-noscript ul{display:flex;flex-wrap:wrap;gap:8px 28px;margin:0;padding:0;list-style:none}
+.portfolio-noscript a{color:#89b6ff;text-decoration:underline;text-underline-offset:4px}
 .portfolio-track{display:flex;gap:24px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none}
 .portfolio-track::-webkit-scrollbar{display:none}
 .portfolio-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;flex:0 0 680px;height:300px;padding:24px;border-radius:20px;background:#1f1f1f;scroll-snap-align:start;scroll-margin-inline:4px}

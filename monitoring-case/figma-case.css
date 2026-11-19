@@ -78,3 +78,8 @@ main [id],footer[id]{scroll-margin-top:110px}
 .animation-zoom-trigger:focus-visible{outline:3px solid #89b6ff;outline-offset:-5px}
 @media(max-width:850px){.animation-zoom-trigger{border-radius:12px}}
 @media(max-width:480px){.animation-zoom-trigger{border-radius:7px}}
+/* WEB-043: обложка кейса уменьшена по запросу — на всю ширину, высота 520 вместо 630. */
+@media(min-width:901px){
+.hero-stage{width:100%;height:auto;aspect-ratio:1248/520;margin-inline:0}
+.laptop{left:11.635%;width:75.128%}
+}

@@ -140,3 +140,9 @@
  .footer{padding:56px 0 48px}.footer h2{font-size:32px;line-height:40px}.contact-grid{grid-template-columns:1fr}.contact-card{border-radius:28px;padding:24px}.contact-card strong{font-size:17px}
  .footer-meta{height:auto;min-height:82px;gap:12px;flex-wrap:wrap;font-size:12px}
 }
+
+/* WEB-043: обложка кейса уменьшена по запросу — на всю ширину, высота 520 вместо 630. */
+@media (min-width: 901px) {
+  .hero { height: auto; padding-bottom: 105px; }
+  .hero-stage { width: 100%; height: auto; aspect-ratio: 1248 / 520; margin-inline: 0; }
+}
