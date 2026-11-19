@@ -9,8 +9,41 @@ main{padding-top:169px}main section[id],#contact{scroll-margin-top:110px}.hero{p
 @media(max-width:900px){.container{width:auto;max-width:none;margin-inline:8px}.header{height:130px;padding-top:16px}.header.is-scrolled{height:74px;padding-top:8px}.nav{height:66px;padding:0 12px}.nav nav{display:none}.identity{font-size:13px}.identity img{width:42px;height:42px}.contact-button{height:40px;padding:0 10px;font-size:11px}.back{margin-top:14px;font-size:12px}main{padding-top:130px}main section[id],#contact{scroll-margin-top:92px}.hero{padding:32px 0 60px}.hero h1{font-size:clamp(36px,8vw,58px);line-height:1.1}.subtitle{font-size:16px;line-height:1.45}.tags{gap:6px}.tags span{font-size:10px}.showcase{height:clamp(300px,55vw,530px)}.laptop{top:16%;width:110%}.laptop-lid{border-radius:18px 18px 3px 3px}.laptop-bottom{height:18px}.case-section{padding-top:72px}.first-section{padding-top:0}.case-section h2{font-size:clamp(30px,7vw,48px);line-height:1.17}.panel{border-radius:32px}.card{padding:24px;border-radius:28px}.card h3{font-size:23px;line-height:1.2}.card p{font-size:16px;line-height:1.5}.two-col{grid-template-columns:1fr}.image-stage{min-height:360px;padding:16px}.image-stage img{max-height:360px}.legacy-stage{min-height:300px}.legacy-payments{flex-direction:column}.legacy-payments .legacy-window{width:100%}.to-top{right:16px;bottom:16px;width:44px;height:44px;border-radius:24px;font-size:24px;box-shadow:0 8px 24px #0006}.to-top:not(.is-visible){visibility:hidden;pointer-events:none}.zoom-trigger:hover,.zoom-trigger:focus-visible{transform:none;filter:none}.zoom-dialog img{max-width:calc(100vw - 32px);max-height:calc(100svh - 120px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.header,.to-top,.zoom-trigger,.js .reveal{transition:none}.js .reveal{opacity:1;transform:none}}
 /* WEB-043: обложка кейса уменьшена по запросу — на всю ширину, высота 520 вместо 630. */
+/* WEB-061: keep the order screenshots within the mobile panel. */
+@media(max-width:900px){
+  #order .image-stage{min-width:0;grid-template-columns:minmax(0,1fr)}
+  #order .zoom-trigger{min-width:0;justify-self:center}
+  #order .zoom-trigger img{max-width:100%;height:auto}
+  #order .legacy-window{container-type:inline-size;min-width:0}
+  #order .legacy-title{font-size:1.765cqw;padding:1.176cqw 1.471cqw}
+  #order .legacy-body{padding:2.647cqw;font-size:1.765cqw}
+  #order .legacy-alert{margin:2.353cqw 0}
+  #order .legacy-columns{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.471cqw}
+  #order .legacy-columns>div{min-width:0;padding:2.353cqw;overflow-wrap:anywhere}
+}
 @media(min-width:901px){
 .showcase{width:100%;height:auto;aspect-ratio:1248/520;margin-inline:0}
 .laptop{top:14.603%;width:75.128%}
 .laptop-bottom{height:auto;aspect-ratio:1136/34;margin-top:-0.352%}
+}
+
+/* WEB-063: mobile cover from Figma 3350:41461 (357 × 180). */
+.cashier-mobile-cover{display:none}
+@media(max-width:900px){
+  main .hero .showcase:has(>.cashier-mobile-cover){container-type:inline-size;background:#04060e;border-radius:var(--mobile-cover-radius,16px)}
+  main .hero .showcase>.laptop{display:none}
+  .cashier-mobile-cover{display:block;position:absolute;inset:0;overflow:hidden}
+  .cashier-mobile-cover>div{position:absolute}
+  .cashier-cover-glow:before{content:"";position:absolute;background-position:center;background-repeat:no-repeat;background-size:100% 100%}
+  .cashier-cover-glow--blue{left:calc(-14000% / 357);top:calc(-6000% / 180);width:calc(70000% / 357);height:calc(60000% / 180)}
+  .cashier-cover-glow--blue:before{inset:-23.333333% -20%;background-image:url('assets/hero-mobile-blue.svg')}
+  .cashier-cover-glow--purple{left:calc(90000% / 357);top:calc(-10000% / 180);width:calc(60000% / 357);height:calc(48000% / 180)}
+  .cashier-cover-glow--purple:before{inset:-25% -20%;background-image:url('assets/hero-mobile-purple.svg')}
+  .cashier-cover-shadow{left:calc(5092.3895% / 357);top:calc(19873.9365% / 180);width:calc(25972.1741% / 357);height:calc(286.9853% / 180)}
+  .cashier-cover-shadow:before{content:"";position:absolute;inset:-440% -4.86%;background:url('assets/hero-mobile-shadow.svg') center/100% 100% no-repeat}
+  .cashier-cover-lid{left:calc(6412.4615% / 357);top:calc(3200% / 180);width:calc(23418.0054% / 357);height:calc(15898.9883% / 180);background:#1a202c;border:.160784cqw solid #4a5568;border-radius:2.25098cqw 2.25098cqw .32157cqw .32157cqw}
+  .cashier-cover-bezel{left:calc(6555.9107% / 357);top:calc(3343.4492% / 180);width:calc(23131.0196% / 357);height:calc(15152.8259% / 180);background:#000;border-radius:1.76863cqw 1.76863cqw 0 0}
+  .cashier-cover-screen{left:calc(7063.647% / 357);top:calc(4473.2344% / 180);width:calc(22097.8729% / 357);height:calc(13775.2975% / 180);overflow:hidden;border-radius:1.42661cqw}
+  .cashier-cover-screen img{display:block;position:absolute;left:0;top:.06%;width:100%;height:98.03%;max-width:none}
+  .cashier-cover-bottom{left:calc(3600% / 357);top:calc(18984.1919% / 180);width:calc(28928.125% / 357);height:calc(860.7887% / 180);background:url('assets/hero-mobile-bottom.svg') center/100% 100% no-repeat}
 }

@@ -2,7 +2,7 @@
 
 <!doctype html>
 <html lang="ru">
-<head>
+<head><script defer src="../src/scripts/mobile-header.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101010">
@@ -10,7 +10,7 @@
   <title>Мониторинг бортовых систем — Елена Сулоева</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Geist:wght@400;500;600&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Geist:wght@400;500;600&family=Manrope:wght@400&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./monitoring.css">
   <link rel="stylesheet" href="./figma-case.css">
   <link rel="stylesheet" href="./overview-prototype.css">
@@ -20,8 +20,8 @@
   <script src="../src/scripts/portfolio-carousel.js" defer></script>
   <link rel="stylesheet" href="../src/styles/contact-dialog.css">
   <script defer src="../src/scripts/contact-dialog.js"></script>
-<link rel="stylesheet" href="../src/styles/case-header.css"></head>
-<body>
+<link rel="stylesheet" href="../src/styles/case-header.css"><link rel="stylesheet" href="../src/styles/mobile-scale.css"><link rel="stylesheet" href="../src/styles/header-surface.css"><link rel="stylesheet" href="../src/styles/mobile-header.css"><link rel="stylesheet" href="../src/styles/collaboration-footer-mobile.css"></head>
+<body class="portfolio-case-page">
 <a class="skip" href="#case">К содержанию</a>
 <header class="site-header container">
   <div class="nav-pill">
@@ -41,6 +41,13 @@
     <p class="nda">*ОРБИТА — условное название интерфейса мониторинга.<br>Рабочий проект находится под NDA; визуальный стиль переработан для портфолио.</p>
     <div class="hero-stage">
       <div class="laptop"><div class="laptop-lid"><span class="camera"></span><img src="./assets/figma-diagnostics.png" width="4096" height="2913" alt="ОРБИТА: мониторинг бортового оборудования"><span class="laptop-label">MacBook Pro</span></div><div class="laptop-base"></div></div>
+      <div class="mobile-hero-art" role="img" aria-label="ОРБИТА: мониторинг бортового оборудования на экране ноутбука">
+        <div class="mobile-hero-glow mobile-hero-glow--blue" aria-hidden="true"></div>
+        <div class="mobile-hero-glow mobile-hero-glow--purple" aria-hidden="true"></div>
+        <div class="mobile-hero-lid" aria-hidden="true"></div>
+        <div class="mobile-hero-bezel" aria-hidden="true"></div>
+        <div class="mobile-hero-screen"><img src="./assets/hero-mobile-screen.png" alt="" decoding="async"></div>
+      </div>
     </div>
   </section>
   <section class="role container" id="role" aria-labelledby="role-title">
@@ -85,8 +92,8 @@
   </section>
   <section class="portfolio-projects" id="projects" aria-labelledby="other-projects-title" data-portfolio-carousel data-current-case="monitoring"><div class="container"><div class="portfolio-heading"><h2 id="other-projects-title">Другие проекты</h2><div class="portfolio-controls" hidden><button type="button" data-project-direction="-1" aria-label="Предыдущий проект" aria-controls="portfolio-track" disabled><img src="../src/assets/portfolio/chevron-left.svg" width="20" height="20" alt=""></button><button type="button" data-project-direction="1" aria-label="Следующий проект" aria-controls="portfolio-track"><img src="../src/assets/portfolio/chevron-right.svg" width="20" height="20" alt=""></button></div></div><div class="portfolio-track" id="portfolio-track" tabindex="0" role="region" aria-label="Другие проекты — прокручиваемый список"></div><noscript><div class="portfolio-noscript"><ul><li><a href="../transport-case/index.html">Единый транспортный сервис</a></li><li><a href="../corporate-transport/index.html">Корпоративный транспорт</a></li><li><a href="../soul-case/index.html">Soul</a></li><li><a href="../cashier-case/index.html">АРМ Кассира</a></li></ul></div></noscript></div></section>
 </main>
-<footer class="portfolio-footer" id="contact"><div class="container"><h2>Открыта к&nbsp;сотрудничеству</h2><div class="contact-grid"><a class="contact-card" href="https://t.me/Lena_Suloeva" target="_blank" rel="noopener noreferrer"><span>Telegram</span><strong>@Lena_Suloeva →</strong></a><a class="contact-card" href="mailto:lensuloeva@yandex.ru"><span>Почта</span><strong>lensuloeva@yandex.ru →</strong></a></div><div class="footer-meta"><span>Елена Сулоева · Product designer</span><span>Портфолио · 2026</span></div><div class="footer-route" aria-hidden="true"></div></div></footer>
-<button class="back-top" type="button" aria-label="Вернуться наверх" title="Наверх">↑</button>
+<footer class="portfolio-footer collaboration-footer" id="contact"><div class="container"><h2><span>Открыта</span> <span>к&nbsp;сотрудничеству</span></h2><div class="contact-grid"><a class="contact-card" href="https://t.me/Lena_Suloeva" target="_blank" rel="noopener noreferrer"><span>Telegram</span><strong>@Lena_Suloeva →</strong></a><a class="contact-card" href="mailto:lensuloeva@yandex.ru"><span>Почта</span><strong>lensuloeva@yandex.ru →</strong></a></div><div class="footer-meta"><span>Елена Сулоева · Product designer</span><span>Портфолио · 2026</span></div><div class="footer-route" aria-hidden="true"></div></div></footer>
+<button class="to-top" type="button" aria-label="Вернуться наверх" title="Наверх">↑</button>
 <dialog class="zoom-dialog" aria-label="Увеличенный мокап"><button class="zoom-close" type="button" aria-label="Закрыть увеличенный мокап">×</button><div class="zoom-dialog-content"><img class="zoom-image" alt=""><p class="zoom-hint">Нажмите Esc или на фон, чтобы закрыть</p></div></dialog>
 </body>
 </html>

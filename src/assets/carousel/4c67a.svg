@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="463.044" height="5.51242" viewBox="0 0 463.044 5.51242" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Bottom Curve">
+<use xlink:href="#stroke0_0_5" fill="#647279"/>
+<use xlink:href="#stroke0_0_5" fill="url(#paint0_linear_0_5)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_5" x1="231.522" y1="0" x2="231.522" y2="5.51242" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7A7F83"/>
+<stop offset="1" stop-color="#0B0B0E"/>
+</linearGradient>
+<path id="stroke0_0_5" d="M0 0H463.044L453.694 1.88572C441.735 4.29753 429.566 5.51242 417.367 5.51242H44.9763C31.5696 5.51242 18.2033 4.04517 5.11585 1.13686L0 0Z"/>
+</defs>
+</svg>

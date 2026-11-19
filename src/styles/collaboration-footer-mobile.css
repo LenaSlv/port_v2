@@ -1,0 +1,71 @@
+/* WEB-061 · Shared mobile ending from Figma 3336:41408. */
+@media (max-width: 900px) {
+  footer.collaboration-footer {
+    padding: 40px 16px 48px;
+    border: 0;
+    background: #151515;
+    color: #f6f9ff;
+    font-family: Montserrat, Arial, sans-serif;
+  }
+  footer.collaboration-footer > :is(.container, .home-wrap) {
+    display: block;
+    width: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  footer.collaboration-footer h2 {
+    max-width: 980px;
+    margin: 0 0 18px;
+    font: 600 32px/40px Montserrat, Arial, sans-serif;
+    letter-spacing: 0;
+    color: #f6f9ff;
+  }
+  footer.collaboration-footer h2 span { display: block; }
+  footer.collaboration-footer :is(.contact-grid, .home-footer-links) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  footer.collaboration-footer :is(.contact-card, .home-footer-links a) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 0;
+    padding: 12px 24px;
+    border-radius: 18px;
+    background: #1f1f1f;
+    color: #f6f9ff;
+    text-decoration: none;
+  }
+  footer.collaboration-footer :is(.contact-card span, .home-footer-links small) {
+    color: #949eb8;
+    font: 400 13px/19.5px Montserrat, Arial, sans-serif;
+  }
+  footer.collaboration-footer :is(.contact-card strong, .home-footer-links strong) {
+    color: #f6f9ff;
+    font: 500 18px/27px Montserrat, Arial, sans-serif;
+    overflow-wrap: anywhere;
+  }
+  footer.collaboration-footer :is(.footer-meta, .home-footer-meta) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    height: auto;
+    min-height: 0;
+    margin: 28px 0 0;
+    padding: 20px 0;
+    color: #949eb8;
+    font: 400 13px/19.5px Montserrat, Arial, sans-serif;
+  }
+  footer.collaboration-footer .footer-meta span { flex-basis: auto; }
+  footer.collaboration-footer :is(.footer-route, .home-footer-line) {
+    width: 100%;
+    height: 8px;
+    margin: 0;
+    border-radius: 6px;
+    background: #2e6eeb;
+  }
+}

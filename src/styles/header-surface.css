@@ -1,0 +1,27 @@
+/* WEB-050: the rounded navigation carries the surface; header margins stay clear. */
+body > .header,
+body > .header.is-scrolled,
+body > .site-header,
+body > .site-header.is-scrolled {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  pointer-events: none;
+}
+body > .header .nav,
+body > .site-header .nav-pill {
+  background: #1e1e1ef2;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+body > .header a,
+body > .header button,
+body > .header .nav,
+body > .header .mobile-menu,
+body > .site-header a,
+body > .site-header button,
+body > .site-header .nav-pill,
+body > .site-header .mobile-menu,
+body > .site-header .mobile-menu-panel {
+  pointer-events: auto;
+}

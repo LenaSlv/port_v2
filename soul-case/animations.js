@@ -21,9 +21,9 @@
   const viewport = zoom.querySelector('.zoom-viewport');
   const stage = zoom.querySelector('.zoom-stage');
   const tools = zoom.querySelector('[data-zoom-tools]');
-  const imageModes = ['fit', '1', '2', '3'];
+  const imageModes = ['fit', '1', '1.5', '2'];
   let opener = null;
-  let imageMode = '2';
+  let imageMode = '1.5';
   let pan = null;
   let panMoved = false;
   let imageClick = false;
@@ -34,8 +34,9 @@
     const image = stage.querySelector('img');
     if (!image?.naturalWidth) return;
     const naturalWidth = image.naturalWidth;
+    const fitWidth = Math.min(naturalWidth, Math.max(280, innerWidth - 40));
     const width = imageMode === 'fit'
-      ? Math.min(naturalWidth, Math.max(280, innerWidth - 40))
+      ? fitWidth
       : Math.round(naturalWidth * Number(imageMode));
     stage.style.width = `${width}px`;
     stage.style.height = 'auto';
@@ -55,6 +56,17 @@
     stage.style.width = `${244 * scale}px`;
     stage.style.height = `${499 * scale}px`;
     stage.firstElementChild.style.transform = `scale(${scale})`;
+  };
+  const changeImageMode = (mode, x = viewport.clientWidth / 2, y = viewport.clientHeight / 2) => {
+    const before = stage.getBoundingClientRect();
+    const bounds = viewport.getBoundingClientRect();
+    const pointX = (bounds.left + x - before.left) / before.width;
+    const pointY = (bounds.top + y - before.top) / before.height;
+    imageMode = mode;
+    sizeImage();
+    const after = stage.getBoundingClientRect();
+    viewport.scrollLeft += after.left + pointX * after.width - bounds.left - x;
+    viewport.scrollTop += after.top + pointY * after.height - bounds.top - y;
   };
   document.querySelectorAll('.soul-phone[data-zoom]').forEach(button => {
     button.addEventListener('click', () => {
@@ -77,16 +89,36 @@
       const image = document.createElement('img');
       image.alt = source.alt;
       image.draggable = false;
-      image.addEventListener('load', sizeZoom, {once: true});
+      image.decoding = 'async';
+      zoom.classList.add('is-loading');
+      zoom.setAttribute('aria-busy', 'true');
+      const showStart = () => {
+        if (!zoom.open || stage.firstElementChild !== image || !image.naturalWidth) return;
+        zoom.classList.remove('is-loading');
+        zoom.setAttribute('aria-busy', 'false');
+        sizeZoom();
+        // Start at the entry/onboarding branch, beyond the empty left margin.
+        viewport.scrollTo(stage.offsetLeft + stage.offsetWidth * 0.24, 0);
+      };
+      image.addEventListener('load', async () => {
+        try { await image.decode(); } catch { /* load succeeded; use the loaded image */ }
+        showStart();
+      }, {once: true});
+      image.addEventListener('error', () => {
+        if (stage.firstElementChild !== image) return;
+        zoom.classList.remove('is-loading');
+        zoom.setAttribute('aria-busy', 'false');
+        stage.textContent = 'Не удалось загрузить карту. Закройте окно и попробуйте снова.';
+      }, {once: true});
       image.src = source.dataset.zoomSrc || source.currentSrc || source.src;
       stage.replaceChildren(image);
-      imageMode = '2';
+      imageMode = '1.5';
       zoom.classList.add('is-image-zoom');
       zoom.setAttribute('aria-label', 'Карта пользовательских сценариев Soul — увеличенный просмотр');
       tools.hidden = false;
       zoom.showModal();
       sizeZoom();
-      viewport.scrollTo(0, 0);
+      if (image.complete && image.naturalWidth) image.decode().then(showStart, showStart);
       zoom.querySelector('.zoom-close').focus({preventScroll: true});
     });
   });
@@ -94,8 +126,7 @@
   tools.addEventListener('click', event => {
     const button = event.target.closest('[data-zoom-mode]');
     if (!button || !isImageZoom()) return;
-    imageMode = button.dataset.zoomMode;
-    sizeImage();
+    changeImageMode(button.dataset.zoomMode);
   });
 
   viewport.addEventListener('wheel', event => {
@@ -104,8 +135,8 @@
     const index = imageModes.indexOf(imageMode);
     const next = imageModes[Math.min(imageModes.length - 1, Math.max(0, index + (event.deltaY < 0 ? 1 : -1)))];
     if (next === imageMode) return;
-    imageMode = next;
-    sizeImage();
+    const bounds = viewport.getBoundingClientRect();
+    changeImageMode(next, event.clientX - bounds.left, event.clientY - bounds.top);
   }, {passive: false});
 
   viewport.addEventListener('pointerdown', event => {
@@ -154,7 +185,8 @@
     panMoved = false;
     imageClick = false;
     tools.hidden = true;
-    zoom.classList.remove('is-image-zoom', 'is-pixelated', 'is-panning');
+    zoom.classList.remove('is-image-zoom', 'is-pixelated', 'is-panning', 'is-loading');
+    zoom.setAttribute('aria-busy', 'false');
     zoom.setAttribute('aria-label', 'Увеличенный экран Soul');
     opener?.focus({preventScroll: true});
   });

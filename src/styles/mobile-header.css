@@ -1,0 +1,39 @@
+/* WEB-052: one mobile header for the home page and all five cases. */
+.portfolio-mobile-header, .portfolio-mobile-menu { display: none; }
+@media (max-width: 900px) {
+  html.has-mobile-header { scroll-padding-top: 106px; }
+  .has-mobile-header body > .home-header,
+  .has-mobile-header body > .site-header,
+  .has-mobile-header body > .header { display: none; }
+  .has-mobile-header body > main { padding-top: 106px; }
+  /* WEB-054: keep the header clearance, reduce the first section's extra space. */
+  .has-mobile-header body > main > .hero,
+  .has-mobile-header body > main > .home-hero { padding-top: 8px; }
+  .has-mobile-header main section[id], .has-mobile-header footer[id] { scroll-margin-top: 0; }
+  .has-mobile-header .portfolio-mobile-header {
+    position: fixed; inset: 16px 16px auto; z-index: 80;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    height: 74px; padding: 12px 16px;
+    border: 1px solid #ffffff1f; border-radius: 48px;
+    background: #1e1e1ef2; color: #f6f9ff;
+    box-shadow: 0 12px 24px #0003; backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .portfolio-mobile-identity { display: flex; align-items: center; gap: 12px; min-width: 0; font-size: 16px; line-height: 20px; font-weight: 500; white-space: nowrap; text-decoration: none; color: inherit; }
+  .portfolio-mobile-identity img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex: none; }
+  .portfolio-mobile-toggle, .portfolio-mobile-close { display: grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0; border: 1px solid #ffffff1f; border-radius: 50%; background: #ffffff0f; color: #f6f9ff; cursor: pointer; }
+  .portfolio-mobile-menu[open] { display: block; position: fixed; inset: 102px 16px auto; width: calc(100% - 32px); max-width: none; max-height: calc(100dvh - 118px); box-sizing: border-box; margin: 0; padding: 16px; overflow: auto; overscroll-behavior: contain; border: 1px solid #ffffff1f; border-radius: 28px; background: #202020; color: #f6f9ff; font-family: Montserrat, Arial, sans-serif; box-shadow: 0 24px 60px #0008; }
+  .portfolio-mobile-menu::backdrop { background: #0008; }
+  .portfolio-mobile-menu-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-left: 12px; margin-bottom: 8px; font-size: 18px; line-height: 24px; font-weight: 600; }
+  .portfolio-mobile-menu nav { display: grid; gap: 4px; }
+  .portfolio-mobile-menu nav a { display: flex; align-items: center; min-height: 48px; padding: 12px; border-radius: 16px; color: inherit; font-size: 16px; line-height: 24px; text-decoration: none; }
+  .portfolio-mobile-menu nav a:hover { background: #ffffff0a; }
+  .portfolio-mobile-menu .portfolio-mobile-contact { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 12px 16px; margin-top: 12px; border-radius: 40px; background: #3f9bff; color: #fff; font-size: 16px; line-height: 22px; font-weight: 600; text-align: center; text-decoration: none; }
+  .portfolio-mobile-header :focus-visible, .portfolio-mobile-menu :focus-visible { outline: 2px solid #89b6ff; outline-offset: 3px; }
+  html.mobile-header-menu-open, html.mobile-header-menu-open body { overflow: hidden; }
+}
+@media (max-width: 359px) {
+  .portfolio-mobile-identity { gap: 8px; font-size: 14px; }
+  .portfolio-mobile-identity img { width: 40px; height: 40px; }
+  .has-mobile-header .portfolio-mobile-header { padding-inline: 12px; gap: 8px; }
+}

@@ -67,7 +67,11 @@ sizeOverviewEmbed();
 function sizePrototypeZoom() {
   if (!activePrototypeStage) return;
   const { width, height, frame } = activePrototypeStage.zoomDimensions;
-  const scale = Math.min(1.6, (lightbox.clientWidth - 32) / width, (lightbox.clientHeight - 120) / height);
+  const dialogStyle = getComputedStyle(lightbox);
+  const contentStyle = getComputedStyle(zoomContent);
+  const availableWidth = lightbox.clientWidth - parseFloat(dialogStyle.paddingLeft) - parseFloat(dialogStyle.paddingRight) - parseFloat(contentStyle.paddingLeft) - parseFloat(contentStyle.paddingRight);
+  const availableHeight = lightbox.clientHeight - parseFloat(dialogStyle.paddingTop) - parseFloat(dialogStyle.paddingBottom) - parseFloat(contentStyle.paddingTop) - parseFloat(contentStyle.paddingBottom);
+  const scale = Math.max(.01, Math.min(1.6, availableWidth / width, availableHeight / height));
   activePrototypeStage.style.width = `${width * scale}px`;
   activePrototypeStage.style.height = `${height * scale}px`;
   frame.style.transform = `scale(${scale})`;
@@ -105,7 +109,7 @@ function openPrototypeZoom(button) {
 }
 document.querySelectorAll('[data-prototype-zoom], [data-animation-zoom]').forEach(button => button.addEventListener('click', () => openPrototypeZoom(button)));
 window.addEventListener('resize', sizePrototypeZoom);
-const backTop = document.querySelector('.back-top');
+const backTop = document.querySelector('.to-top');
 (() => {
   const header = document.querySelector('.site-header');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');

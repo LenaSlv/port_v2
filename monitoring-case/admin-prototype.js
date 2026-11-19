@@ -1,4 +1,17 @@
 ﻿(() => {
+  const canvas = document.querySelector('.admin-canvas');
+  const fitCanvas = () => {
+    const width = innerWidth < 900 ? 1094 : innerWidth;
+    const height = innerWidth < 900 ? 604 : innerHeight;
+    const scale = Math.min(innerWidth / width, innerHeight / height);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    canvas.style.transform = `scale(${scale})`;
+    canvas.style.left = `${(innerWidth - width * scale) / 2}px`;
+    canvas.style.top = `${(innerHeight - height * scale) / 2}px`;
+  };
+  addEventListener('resize', fitCanvas);
+  fitCanvas();
   const shade = document.querySelector('.shade');
   const modal = document.querySelector('.modal');
   const personal = document.querySelector('[data-tab="personal"]');
@@ -9,11 +22,11 @@
   trigger.textContent = '';
   trigger.setAttribute('aria-hidden', 'true');
   trigger.tabIndex = -1;
-  document.body.append(trigger);
+  canvas.append(trigger);
   const cursor = document.createElement('span');
   cursor.className = 'prototype-cursor';
   cursor.setAttribute('aria-hidden', 'true');
-  document.body.append(cursor);
+  canvas.append(cursor);
   const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
   const moveTo = async (x, y) => { cursor.style.left = `${x}%`; cursor.style.top = `${y}%`; await wait(750); cursor.classList.add('is-pressed'); await wait(140); cursor.classList.remove('is-pressed'); };
   const run = async () => {

@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="76.6844" height="6.43116" viewBox="0 0 76.6844 6.43116" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Groove">
+<use xlink:href="#stroke0_0_7" fill="#96A1A8"/>
+<use xlink:href="#stroke0_0_7" fill="url(#paint0_linear_0_7)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_7" x1="7.56455" y1="3.90462" x2="70.4981" y2="3.90462" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3C3C3C"/>
+<stop offset="0.317518" stop-color="#3C3C3C" stop-opacity="0"/>
+<stop offset="0.660584" stop-color="#3C3C3C" stop-opacity="0"/>
+<stop offset="1" stop-color="#444444"/>
+</linearGradient>
+<path id="stroke0_0_7" d="M0 0C0.236385 3.59136 3.22429 6.43116 6.87546 6.43116H69.809C73.4601 6.43116 76.448 3.59136 76.6844 0H0Z" fill-rule="evenodd" clip-rule="evenodd"/>
+</defs>
+</svg>

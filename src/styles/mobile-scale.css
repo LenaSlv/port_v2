@@ -1,0 +1,249 @@
+/* WEB-062: corporate-transport/ is the mobile size and spacing reference.
+   Original base scale: WEB-051, Figma 2346:4584.
+   Keep each page's existing fonts, colors, surfaces, radii and artwork. */
+@media (max-width: 900px) {
+  :root {
+    --mobile-title: 32px;
+    --mobile-title-line: 42.88px;
+    --mobile-heading: 32px;
+    --mobile-heading-line: 40px;
+    --mobile-card-title: 20px;
+    --mobile-card-line: 26px;
+    --mobile-body: 16px;
+    --mobile-body-line: 22.4px;
+    --mobile-gutter: 16px;
+    --mobile-card-padding: 16px;
+    --mobile-section-space: 40px;
+    --mobile-group-gap: 8px;
+    --mobile-paragraph-gap: 20px;
+    --mobile-cover-radius: 16px;
+    --mobile-heading-color: #eef2f7;
+    --mobile-copy-color: #9999a2;
+    --mobile-subtitle-color: #7f8c9f;
+  }
+
+  /* WEB-068: use corporate transport's semantic text colors on case pages. */
+  body.portfolio-case-page main h1,
+  body.portfolio-case-page main h2,
+  body.portfolio-case-page main h3,
+  body.portfolio-case-page main h4 { color: var(--mobile-heading-color); }
+  body.portfolio-case-page main p:not(.section-label):not(.eyebrow):not(.nda):not(.note):not(.steps):not(.hero-subtitle):not(.hero-sub):not(.subtitle),
+  body.portfolio-case-page main li { color: var(--mobile-copy-color); }
+  body.portfolio-case-page main .hero-subtitle,
+  body.portfolio-case-page main .hero-sub,
+  body.portfolio-case-page main .subtitle { color: var(--mobile-subtitle-color); }
+
+  /* Outer gutters; transport headings previously added a second inset. */
+  body > main > .container,
+  main .container, main > .wrap,
+  .portfolio-projects .container, .portfolio-footer .container,
+  .footer > .container {
+    width: calc(100% - 32px);
+    max-width: none;
+    margin-inline: auto;
+  }
+  .hero h1, .hero-subtitle, .hero-tags,
+  .context .section-label, .context .section-title,
+  .case-section > .container > .section-label,
+  .case-section > .container > .section-title,
+  .format-section .section-label, .format-section .section-title {
+    margin-inline: 0;
+  }
+
+  main .hero h1 { font-size: var(--mobile-title); line-height: var(--mobile-title-line); overflow-wrap: anywhere; }
+  main .hero-subtitle, main .hero-sub, main .subtitle {
+    font-size: var(--mobile-body); line-height: var(--mobile-body-line);
+    margin-top: 16px;
+  }
+  main .hero h1 { margin-bottom: 16px; }
+  main .hero { padding-top: 40px; padding-bottom: 0; }
+  main .hero-tags, main .tags, main .chips { gap: 8px; margin-top: 24px; margin-bottom: 24px; }
+  main .hero-tags span, main .tags span, main .chips span { font-size: 12px; line-height: 16px; padding: 6px 12px; white-space: normal; }
+
+  /* WEB-060: match the monitoring cover's 357 × 180 mobile canvas. */
+  main .hero .hero-stage:has(> .hero-artwork),
+  main .hero .showcase,
+  main .hero .hero-art {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    aspect-ratio: 357 / 180;
+    margin-inline: 0;
+    border-radius: 16px;
+    overflow: hidden !important;
+    touch-action: pan-y;
+    cursor: default;
+  }
+  main .hero .hero-artwork,
+  main .hero .showcase-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  main .hero .hero-art { object-fit: contain; object-position: center; }
+  /* WEB-066: one radius for case covers and their project previews. */
+  main .hero .hero-stage,
+  main .hero .showcase,
+  main .hero .hero-art,
+  main .home-project .home-project-image,
+  .portfolio-projects .portfolio-card-image {
+    border-radius: var(--mobile-cover-radius);
+  }
+  main .hero .showcase > .laptop {
+    left: 50%;
+    top: 50%;
+    width: 78%;
+    transform: translate(-50%, -50%);
+  }
+
+  main .case-section, main .section, main .context, main .role,
+  main .hero + .case-section { padding-top: var(--mobile-section-space); }
+  main .first-section, main .section.problem-section { padding-top: 40px; }
+  main .case-section > .container, main .format-section .container { padding-top: 0; }
+  main .format-section { padding-top: 40px; }
+
+  main .case-section h2, main .section > h2, main .role > h2, main .section-title,
+  main .format-section .section-title {
+    font-size: var(--mobile-heading) !important;
+    line-height: var(--mobile-heading-line);
+    margin-top: 16px !important;
+    margin-bottom: 24px;
+    overflow-wrap: anywhere;
+  }
+  main .section-label, main .eyebrow, main .logic-section .eyebrow {
+    font-size: 12px; line-height: 16px; margin-bottom: 16px;
+  }
+
+  main .context-card, main .journey-panel, main .management-copy,
+  main .balance-refill-heading, main .balance-refill-copy,
+  main .balance-stack .balance-top .balance-copy, main .balance-bottom .balance-copy,
+  main .criteria, main .transfer-intro, main .trip-copy, main .transfer-copy,
+  main .format-card, main .card, main .panel-grid article, main .wide-panel,
+  main .logic-section .wide-panel, main .board-intro, main .solution-hypothesis,
+  main .solution-details, main .solution-summary, main .solution-grid article,
+  main .phone-section .caption, main .physical-section .caption,
+  main .balance-stack .after-pass .caption, main .card-section .phone-section .caption {
+    padding: var(--mobile-card-padding);
+  }
+  main .panel:not(:has(> .card, > .two-col)) { padding: 16px; }
+  main .context-card h3, main .journey-panel h3, main .management-copy h2,
+  main .balance-copy h3, main .criteria h3, main .transfer-intro h3,
+  main .balance-stack .balance-top .balance-copy h3, main .balance-bottom .balance-copy h3,
+  main .trip-copy h3, main .transfer-copy h3, main .format-card h3,
+  main .card h3, main .panel h3, main .panel-grid h3, main .wide-panel h3,
+  main .solution-hypothesis h3, main .solution-details h3,
+  main .solution-summary h3, main .solution-grid h3,
+  main .case-display .solution-summary h3, main .case-display .solution-grid h3,
+  main .phone-section .caption h3, main .physical-section .caption h3,
+  main .balance-stack .after-pass .caption h3, main .card-section .phone-section .caption h3 {
+    font-size: var(--mobile-card-title); line-height: var(--mobile-card-line);
+    margin: 0 0 12px; overflow-wrap: anywhere;
+  }
+  /* WEB-057: these h2 elements introduce cards, rather than page sections. */
+  main .case-section .management-copy h2, main .case-section .balance-refill-heading h2 {
+    font-size: var(--mobile-card-title) !important; line-height: var(--mobile-card-line);
+    margin: 0 0 12px !important;
+  }
+  main .context-card p, main .context-card:nth-child(2) p, main .journey-panel > p,
+  main .management-copy p, main .management-copy li, main .balance-copy p, main .balance-copy li,
+  main .balance-stack .balance-top .balance-copy p, main .balance-stack .balance-top .balance-copy li,
+  main .criteria p, main .transfer-intro p, main .trip-copy p, main .transfer-copy p,
+  main .format-card p, main .card p, main .details p, main .panel p, main .panel-grid p,
+  main .wide-panel p, main .board-intro, main .solution-hypothesis p,
+  main .solution-details ul, main .section-intro, main .outcome .lead,
+  main .solution-summary p, main .solution-grid p, main .caption p,
+  main .phone-section .caption p, main .physical-section .caption p,
+  main .balance-stack .after-pass .caption p {
+    font-size: var(--mobile-body); line-height: var(--mobile-body-line);
+  }
+  main .management-copy h3, main .balance-refill-copy h3 {
+    font-size: var(--mobile-card-title); line-height: var(--mobile-card-line); margin: 20px 0 12px;
+  }
+  main .balance-copy h4 { font-size: 18px; line-height: 24px; margin: 16px 0 12px; }
+  main .balance-refill-heading p, main .balance-refill-copy p, main .balance-refill-copy li,
+  main .case-display .solution-summary p, main .logic-section .wide-panel p {
+    font-size: var(--mobile-body); line-height: var(--mobile-body-line);
+  }
+  main .case-display .solution-summary p, main .panel > p,
+  main .solution-grid article > p, main .solution-hypothesis > p { margin-top: 0; }
+  main .case-display .solution-summary p + p, main .panel > p + p,
+  main .solution-grid article > p + p, main .solution-hypothesis > p + p,
+  main .wide-panel > p + p, main .context-card > p + p { margin-top: var(--mobile-paragraph-gap); }
+  main .panel:has(> .card, > .two-col), main .case-display, main .section-board {
+    padding: var(--mobile-group-gap); gap: var(--mobile-group-gap);
+  }
+  main .case-display { margin-top: 0; }
+  /* WEB-065: separate the overview introduction from its first card. */
+  main #overview > .section-intro + .case-display { margin-top: 24px; }
+  /* WEB-067: keep a consistent 24px gap before monitoring screen images. */
+  main .case-display .screen-figure { margin-top: 24px; }
+  /* WEB-068: diagnostics starts with the screen; put its spacing below it. */
+  main .diagnostics-display .screen-figure { margin-top: 0; margin-bottom: 24px; }
+  main .case-display .solution-grid, main .panel-grid, main .context-grid, main .two-col {
+    gap: var(--mobile-group-gap);
+  }
+  main .outcome { padding-bottom: 40px; }
+
+  .portfolio-projects { padding-block: 40px; }
+  .portfolio-heading { gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+  .portfolio-heading h2 { font-size: 32px; line-height: 40px; }
+  .portfolio-card { padding: 16px; gap: 20px; }
+  .portfolio-card-title { font-size: 24px; line-height: 30px; }
+  .portfolio-card[data-case-id="soul"] .portfolio-card-title { font-size: 22px; line-height: 27.5px; }
+  .portfolio-card-tags { font-size: 12px; line-height: 16.8px; }
+  .portfolio-badge { font-size: 12px; line-height: 16px; padding: 6px 12px; }
+  .portfolio-card-description { font-size: 16px; line-height: 22.4px; }
+  .portfolio-card-link { font-size: 15px; line-height: 22px; }
+
+  .portfolio-footer, .footer { padding-block: 40px 48px; }
+  .portfolio-footer h2, .footer h2 { font-size: 32px; line-height: 40px; margin: 0 0 18px; overflow-wrap: anywhere; }
+  .portfolio-footer .contact-grid, .footer .contact-grid { gap: 12px; }
+  .portfolio-footer .contact-card, .footer .contact-card { min-height: 0; padding: 12px 24px; gap: 8px; }
+  .portfolio-footer .contact-card strong, .footer .contact-card strong { font-size: 18px; line-height: 27px; overflow-wrap: anywhere; }
+  .portfolio-footer .footer-meta, .footer .footer-meta { font-size: 13px; line-height: 19.5px; margin: 28px 0; gap: 12px; }
+}
+
+@media (max-width: 359px) {
+  .header .nav, .site-header .nav-pill { gap: 6px; padding-inline: 8px; }
+  .header .identity, .site-header .identity { gap: 6px; font-size: 11px; }
+  .header .identity img, .site-header .identity img { width: 32px; height: 32px; }
+  .header .contact-button { padding-inline: 8px; font-size: 11px; }
+}
+
+@media (max-width: 760px) {
+  .home-header { padding-top: 42px; }
+  .home-hero { padding-top: 40px; padding-bottom: 40px; }
+  .home-hero h1 { font-size: 32px; line-height: 42.88px; overflow-wrap: anywhere; }
+  .home-channels { gap: 8px; margin-bottom: 16px; }
+  .home-channels a { padding: 9px 13px; font-size: 14px; line-height: 20px; }
+  .home-skills { margin-top: 28px; }
+  .home-skill { padding: 16px 16px 48px; gap: 8px; }
+  .home-skill h2 { min-height: 0; font-size: 14px; line-height: 20px; margin-bottom: 8px; }
+  .home-skill p { font-size: 13px; line-height: 18px; }
+  .home-skill img { width: 24px; height: 24px; }
+  .home-projects { padding-block: 40px 20px; }
+  .home-projects > h2, .home-experience h2, .home-footer h2 { font-size: 32px; line-height: 40px; overflow-wrap: anywhere; }
+  .home-projects > h2 { margin-bottom: 24px; }
+  .home-project-list { gap: 16px; }
+  .home-project { padding: 16px; gap: 20px; }
+  .home-project-copy { gap: 12px; }
+  .home-project h3 { font-size: 24px; line-height: 30px; }
+  .home-project[data-case-id="soul"] h3 { font-size: 22px; line-height: 27.5px; }
+  .home-project .home-project-description { font-size: 16px; line-height: 22.4px; }
+  .home-project-tags { font-size: 12px; line-height: 16.8px; margin-top: 4px; }
+  .home-case-link { font-size: 15px; line-height: 22px; margin-top: 4px; }
+  .home-experience { padding-top: 40px; padding-bottom: 20px; gap: 24px; }
+  .home-experience-intro p { margin-top: 20px; font-size: 16px; line-height: 22.4px; }
+  .home-job { padding-block: 20px; gap: 8px; }
+  .home-education { padding-top: 24px; gap: 14px; }
+  .home-education h3 { font-size: 16px; line-height: 18px; }
+  .home-footer { padding-block: 40px 48px; }
+  .home-footer h2 { margin-bottom: 18px; }
+  .home-footer-links { gap: 12px; }
+  .home-footer-links a { min-height: 0; padding: 12px 24px; }
+  .home-footer-links strong { font-size: 18px; line-height: 27px; }
+  .home-footer-meta { margin-block: 28px; padding-block: 20px; min-height: 0; font-size: 13px; line-height: 19.5px; }
+}

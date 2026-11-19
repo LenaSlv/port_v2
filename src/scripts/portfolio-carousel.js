@@ -1,11 +1,11 @@
 (() => {
 // Shared catalogue: each case carousel excludes its own stable id.
 const portfolioCases = [
-  { id: 'transport', title: 'Единый транспортный сервис для городских и междугородних поездок', badge: 'Мобильное приложение · B2C', tags: 'iOS / Android', href: 'transport-case/index.html', image: 'src/assets/home/transport.png', alt: 'Экраны единого транспортного сервиса' },
-  { id: 'corporate', title: 'Сервис по заказу корпоративного транспорта', badge: 'Внутренний продукт · B2B2E', tags: 'iOS / Android · NDA', href: 'corporate-transport/index.html', image: 'src/assets/home/corporate-transit.png', alt: 'Телефон с QR-билетом рядом с зелёным валидатором' },
-  { id: 'soul', title: 'Платформа для поиска компании и активностей в путешествиях', badge: 'Telegram MiniApp · B2C', tags: 'iOS / Android · MVP', href: 'soul-case/index.html', image: 'src/assets/home/soul.png', alt: 'Приложение Soul для путешествий рядом с посадочным талоном' },
-  { id: 'cashier', title: 'АРМ Кассира', description: 'Рабочее пространство с функционалом продажи билетов, формирования отчетов кассовой смены', badge: 'Внутренний продукт · B2B', tags: 'WEB · B2B · NDA', href: 'cashier-case/index.html', image: 'src/assets/home/cashier.png', alt: 'Рабочее место кассира' },
-  { id: 'monitoring', title: 'Мониторинг бортовых систем общественного транспорта', badge: 'Внутренний продукт · B2B', tags: 'WEB · NDA', href: 'monitoring-case/index.html', image: 'src/assets/home/monitoring.png', alt: 'Мониторинг оборудования на экране ноутбука' }
+  { id: 'transport', title: 'Единый транспортный сервис для городских\nи междугородних поездок', badge: 'IOS/Android B2B2E', tags: 'Product concept · Information architecture · User flows · Mobile UX/UI · Edge cases', href: 'transport-case/index.html', image: 'src/assets/carousel/a1ecb.png', alt: 'Экраны единого транспортного сервиса' },
+  { id: 'corporate', title: 'Сервис заказа\nкорпоративного транспорта', badge: 'iOS / Android B2B2E', tags: 'Product logic · User flows · Mobile UX/UI', href: 'corporate-transport/index.html', image: 'src/assets/carousel/6fd54.png', alt: 'Телефон с QR-билетом рядом с зелёным валидатором' },
+  { id: 'soul', title: 'Платформа\nдля поиска компании\nи активностей\nв путешествиях', badge: 'Telegram MiniApp', tags: 'UX Research · Synthesis · Product hypotheses · User Flow · Mobile UX/UI', href: 'soul-case/index.html', image: 'src/assets/carousel/ad0b2.png', alt: 'Приложение Soul для путешествий рядом с посадочным талоном' },
+  { id: 'cashier', title: 'АРМ Кассира', badge: 'Web B2B', tags: 'Complex B2B flows · Payment scenarios · Edge cases · Web UI', href: 'cashier-case/index.html', image: 'src/assets/carousel/ca50c.png', alt: 'Рабочее место кассира' },
+  { id: 'monitoring', title: 'Мониторинг бортовых систем', badge: 'Web B2B', tags: 'UX design', href: 'monitoring-case/index.html', image: 'src/assets/carousel/3d395.png', alt: 'Мониторинг оборудования на экране ноутбука' }
 ];
 
 // Resolve paths from this script so the component can be used on nested case pages.
@@ -34,14 +34,50 @@ document.querySelectorAll('[data-portfolio-carousel]').forEach(carousel => {
     add('p', 'portfolio-card-tags', project.tags);
     add('span', 'portfolio-card-link', 'Смотреть кейс →');
     const image = document.createElement('img');
-    image.className = 'portfolio-card-image';
+    image.className = 'portfolio-preview-image';
     image.src = new URL(project.image, portfolioBase).href;
     image.alt = project.alt;
     image.width = 305;
     image.height = 252;
     image.loading = 'lazy';
     image.decoding = 'async';
-    card.append(copy, image);
+    const preview = document.createElement('div');
+    preview.className = 'portfolio-card-image';
+    if (project.id === 'monitoring') {
+      preview.setAttribute('role', 'img');
+      preview.setAttribute('aria-label', project.alt);
+      image.alt = '';
+      const scene = document.createElement('div');
+      scene.className = 'portfolio-monitoring-scene';
+      const layer = (className, asset) => {
+        const element = document.createElement(asset ? 'img' : 'div');
+        element.className = className;
+        if (asset) {
+          element.src = new URL(`src/assets/carousel/${asset}`, portfolioBase).href;
+          element.alt = '';
+          element.loading = 'lazy';
+          element.decoding = 'async';
+        }
+        scene.append(element);
+        return element;
+      };
+      layer('monitoring-glow monitoring-glow-blue', '9a308.svg');
+      layer('monitoring-glow monitoring-glow-violet', 'd05b7.svg');
+      layer('monitoring-device-shadow', '7ba71.svg');
+      layer('monitoring-device-lid');
+      layer('monitoring-device-dark');
+      const screen = layer('monitoring-device-screen');
+      screen.append(image);
+      const label = layer('monitoring-device-label');
+      label.textContent = 'Macbook Pro';
+      layer('monitoring-device-base', '40f2e.png');
+      layer('monitoring-device-curve', '4c67a.svg');
+      layer('monitoring-device-groove', 'e2732.svg');
+      preview.append(scene);
+    } else {
+      preview.append(image);
+    }
+    card.append(copy, preview);
     track.append(card);
   }
   const update = () => {

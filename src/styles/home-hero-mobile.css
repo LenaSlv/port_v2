@@ -1,0 +1,17 @@
+/* WEB-053: mobile introduction, Figma 3336:41267. */
+.home-title-mobile-dash, .home-skill-mobile-break { display: none; }
+@media (max-width: 760px) {
+  .home-hero { padding-block: 40px; }
+  .home-channels { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 16px; }
+  .home-channels a { min-height: 40px; padding: 9px 13px; gap: 8px; border-radius: 18px; background: #171717; font-size: 14px; line-height: 20px; }
+  .home-channels img { width: 20px; height: 20px; }
+  .home-hero h1 { font-family: Geist, Arial, sans-serif; font-size: 32px; line-height: 42.88px; font-weight: 700; letter-spacing: 0; text-wrap: balance; }
+  .home-title-desktop-dash { display: none; }
+  .home-title-mobile-dash { display: inline; }
+  .home-skill-mobile-break { display: initial; }
+  .home-skills { grid-template-columns: minmax(0, 1fr); gap: 12px; margin-top: 28px; border: 0; border-radius: 0; background: transparent; overflow: visible; }
+  .home-skill, .home-skill + .home-skill, .home-skill:nth-child(n+3) { display: block; position: relative; padding: 16px; border: 1px solid #949eb833; border-radius: 20px; background: #171717; }
+  .home-skill h2 { display: flex; align-items: center; min-height: 24px; padding-right: 36px; margin: 0 0 8px; font-size: 14px; line-height: 20px; font-weight: 500; }
+  .home-skill p { font-size: 13px; line-height: 18px; }
+  .home-skill img { position: absolute; top: 16px; right: 16px; bottom: auto; display: block; width: 24px; height: 24px; }
+}

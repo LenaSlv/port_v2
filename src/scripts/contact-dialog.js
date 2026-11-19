@@ -52,7 +52,7 @@
   });
   dialog.addEventListener('close', () => {
     document.documentElement.classList.remove('portfolio-contact-open');
-    const target = opener?.getClientRects().length ? opener : document.querySelector('.mobile-menu-toggle, .menu-toggle');
+    const target = opener?.getClientRects().length ? opener : [...document.querySelectorAll('.portfolio-mobile-toggle, .mobile-menu-toggle, .menu-toggle, .home-contact, .contact-button, .contact-cta')].find(element => element.getClientRects().length);
     target?.focus({preventScroll: true});
   });
 })();

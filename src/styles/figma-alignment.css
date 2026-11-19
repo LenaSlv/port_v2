@@ -86,6 +86,12 @@
 .contact-card:hover{background:#262626;color:#fff}
 .footer-meta{display:flex;align-items:center;justify-content:space-between;height:82px;margin-top:22px;font-size:13px;line-height:18px;color:#949eb8}
 .footer-route{height:12px;border-radius:6px;background:#2e6eeb;margin-top:22px}
+/* WEB-062: shared transport copy colors from the approved Figma frame. */
+.journey-panel h3,.after-pass .caption h3,.outcome h3{color:#eef2f7}
+.journey-steps b,.journey-group--new .journey-steps b{color:#fff}
+.balance-section .balance-copy p{color:#8f99b2}
+.balance-section .physical-section .caption p{color:#9999a2}
+.criteria-tags span{color:#f6f9ff}
 @media(min-width:761px){
  .nav-pill{border-radius:48px;padding:12px 20px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);box-shadow:0 12px 24px #0003,0 1px 2px #0000001a}
  .nav-pill nav{flex:1;justify-content:center;margin-left:0}

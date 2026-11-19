@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ru">
-<head>
+<head><script defer src="src/scripts/mobile-header.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#101010">
@@ -8,11 +8,11 @@
   <title>Елена Сулоева — Product designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/styles/home.css">
   <link rel="stylesheet" href="src/styles/contact-dialog.css">
   <script defer src="src/scripts/contact-dialog.js"></script>
-</head>
+<link rel="stylesheet" href="src/styles/mobile-scale.css"><link rel="stylesheet" href="src/styles/mobile-header.css"><link rel="stylesheet" href="src/styles/home-hero-mobile.css"><link rel="stylesheet" href="src/styles/collaboration-footer-mobile.css"></head>
 <body>
 <a class="home-skip" href="#about">К содержанию</a>
 <header class="home-header home-wrap">
@@ -28,11 +28,11 @@
       <a href="https://t.me/Lena_Suloeva" target="_blank" rel="noopener noreferrer"><img src="src/assets/home/telegram.svg" width="20" height="20" alt="">@Lena_Suloeva</a>
       <a href="mailto:lensuloeva@yandex.ru"><img src="src/assets/home/email.svg" width="24" height="24" alt="">lensuloeva@yandex.ru</a>
     </div>
-    <h1 id="home-title"><span>Елена Сулоева, Product designer - </span>превращаю сложную бизнес-логику в&nbsp;понятные интерфейсы</h1>
+    <h1 id="home-title"><span>Елена Сулоева, Product designer <span class="home-title-desktop-dash">-</span><span class="home-title-mobile-dash">—</span> </span>превращаю сложную бизнес-логику в&nbsp;понятные интерфейсы</h1>
     <div class="home-skills" aria-label="Компетенции">
       <div class="home-skill"><div><h2>UX-исследования</h2><p>Интервью, JTBD, CJM, анализ конкурентов</p></div><img src="src/assets/home/research.svg" width="32" height="32" alt=""></div>
-      <div class="home-skill"><div><h2>User flows &amp; wireframes</h2><p>Сценарии, информационная архитектура, edge cases, прототипы</p></div><img src="src/assets/home/flows.svg" width="32" height="32" alt=""></div>
-      <div class="home-skill"><div><h2>UI-дизайн</h2><p>Web, Mobile,CRM, адаптивный дизайн, iOS/Android, дизайн-системы и&nbsp;UI-kit, хендофф</p></div><img src="src/assets/home/ui.svg" width="32" height="32" alt=""></div>
+      <div class="home-skill"><div><h2>User flows &amp; wireframes</h2><p>Сценарии, информационная архитектура, <br class="home-skill-mobile-break">edge cases, прототипы</p></div><img src="src/assets/home/flows.svg" width="32" height="32" alt=""></div>
+      <div class="home-skill"><div><h2>UI-дизайн</h2><p>Web, Mobile, CRM, адаптивный дизайн, <br class="home-skill-mobile-break">iOS/Android, дизайн-системы и&nbsp;UI-kit, хендофф</p></div><img src="src/assets/home/ui.svg" width="32" height="32" alt=""></div>
       <div class="home-skill"><div><h2>AI</h2><p>Прототипы, UX-тексты и&nbsp;контент, проработка продуктовых решений</p></div><img src="src/assets/home/ai.svg" width="32" height="32" alt=""></div>
     </div>
   </section>
@@ -53,7 +53,7 @@
       </article>
       <article class="home-project" data-case-id="corporate">
         <div class="home-project-copy"><span class="home-badge">iOS / Android B2B2E</span><h3>Сервис по&nbsp;заказу корпоративного транспорта</h3><p class="home-project-description">Как объединить регулярные и&nbsp;нерегулярные поездки сотрудников в&nbsp;одном продукте</p><p class="home-project-tags">Product logic · User flows · Mobile UX/UI</p><a class="home-case-link" href="corporate-transport/index.html" aria-label="Смотреть кейс: Сервис по заказу корпоративного транспорта">Смотреть кейс&nbsp; →</a></div>
-        <a class="home-project-image home-project-image--corporate" href="corporate-transport/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/corporate-transit.png" width="1670" height="941" loading="lazy" alt="Телефон с QR-билетом рядом с зелёным валидатором"></a>
+        <a class="home-project-image" href="corporate-transport/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/corporate-preview.png" width="560" height="356" loading="lazy" alt="Телефон с QR-билетом рядом с зелёным валидатором"></a>
       </article>
       <article class="home-project" data-case-id="cashier">
         <div class="home-project-copy"><span class="home-badge">Web B2B</span><h3>АРМ Кассира</h3><p class="home-project-description">Интерфейс продажи билетов и&nbsp;оформления заказов</p><p class="home-project-tags">Complex B2B flows · Payment scenarios · Edge cases</p><a class="home-case-link" href="cashier-case/index.html" aria-label="Смотреть кейс: АРМ Кассира">Смотреть кейс&nbsp; →</a></div>
@@ -71,9 +71,9 @@
     </div>
   </section>
 </main>
-<footer class="home-footer" id="contact">
+<footer class="home-footer collaboration-footer" id="contact">
   <div class="home-wrap">
-    <h2>Открыта к&nbsp;сотрудничеству</h2>
+    <h2><span>Открыта</span> <span>к&nbsp;сотрудничеству</span></h2>
     <div class="home-footer-links"><a href="https://t.me/Lena_Suloeva" target="_blank" rel="noopener noreferrer"><small>Telegram</small><strong>@Lena_Suloeva →</strong></a><a href="mailto:lensuloeva@yandex.ru"><small>Почта</small><strong>lensuloeva@yandex.ru →</strong></a></div>
     <div class="home-footer-meta"><span>Елена Сулоева · Product designer</span><span>Портфолио · 2026</span></div>
     <div class="home-footer-line" aria-hidden="true"></div>

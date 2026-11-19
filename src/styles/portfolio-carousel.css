@@ -1,4 +1,4 @@
-/* Figma 3181:32861: shared ending for portfolio case pages. */
+/* Cards: Figma 3169:28818. Carousel geometry and controls are preserved. */
 .portfolio-projects{padding:88px 0;background:#090909;color:#fff;font-family:Montserrat,Arial,sans-serif}
 .portfolio-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:36px}
 .portfolio-heading h2{margin:0;font-size:44px;font-weight:600;line-height:52px;letter-spacing:-.88px}
@@ -13,27 +13,47 @@
 .portfolio-noscript a{color:#89b6ff;text-decoration:underline;text-underline-offset:4px}
 .portfolio-track{display:flex;gap:24px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none}
 .portfolio-track::-webkit-scrollbar{display:none}
-.portfolio-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;flex:0 0 680px;height:300px;padding:24px;border-radius:20px;background:#1f1f1f;scroll-snap-align:start;scroll-margin-inline:4px}
+.portfolio-card{display:grid;grid-template-columns:minmax(0,1fr) 305px;gap:20px;flex:0 0 680px;height:300px;padding:24px;border-radius:20px;background:#1f1f1f;scroll-snap-align:start;scroll-margin-inline:4px}
 .portfolio-card:focus-visible{outline-offset:-3px}
-.portfolio-card-copy{display:flex;flex-direction:column;align-items:flex-start;gap:20px;min-width:0}
-.portfolio-badge{padding:6px 12px;border-radius:54px;background:#2e6eeb;color:#fff;font-size:12px;font-weight:500;line-height:12px;white-space:nowrap}
-.portfolio-card-title{margin:0;font-size:22px;font-weight:600;line-height:1.25}
+.portfolio-card-copy{display:flex;flex-direction:column;align-items:flex-start;gap:20px;min-width:0;height:252px}
+.portfolio-badge{padding:6px 12px;border-radius:54px;background:#2e6eeb;color:#fff;font-size:12px;font-weight:500;line-height:16px;white-space:nowrap}
+.portfolio-card-title{margin:0;font-size:22px;font-weight:600;line-height:1.25;white-space:pre-line}
 .portfolio-card-description{margin:0;color:#7f8c9f;font-size:14px;line-height:1.45}
-.portfolio-card-tags{margin:0;margin-top:auto;color:#7f8c9f;font-size:12px;font-weight:500;line-height:14px}
-.portfolio-card-link{font-size:15px;font-weight:500;line-height:18px}
+.portfolio-card-tags{margin:0;margin-top:auto;color:#949eb8;font-size:14px;font-weight:500;line-height:18px}
+.portfolio-card[data-case-id="soul"] .portfolio-card-tags{font-family:Geist,Arial,sans-serif}
+.portfolio-card-link{color:#2e6eeb;font-size:15px;font-weight:500;line-height:18px}
 .portfolio-card:hover .portfolio-card-link{text-decoration:underline;text-underline-offset:4px}
-.portfolio-card-image{display:block;width:100%;min-width:0;height:252px;object-fit:cover;object-position:center;border-radius:16px;background:#22242d}
+.portfolio-card-image{position:relative;display:block;width:100%;min-width:0;height:252px;overflow:hidden;border-radius:16px;background:#22242d}
+.portfolio-preview-image{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center}
+.portfolio-card[data-case-id="corporate"] .portfolio-card-image{background:linear-gradient(130.23deg,#1d1f27 0.98%,#69708d 100%)}
+.portfolio-card[data-case-id="corporate"] .portfolio-preview-image{position:absolute;width:113.83%;height:103.32%;left:-13.77%;top:-.15%}
+.portfolio-card[data-case-id="transport"] .portfolio-preview-image{position:absolute;width:109.12%;height:100%;left:-2.92%;top:0}
+.portfolio-monitoring-scene{position:absolute;top:50%;left:0;width:305px;height:407.022px;transform:translateY(-50%);background:#04060e}
+.portfolio-monitoring-scene>img,.portfolio-monitoring-scene>div{position:absolute;max-width:none}
+.monitoring-glow-blue{left:-284.26px;top:-142.12px;width:949.7px;height:801.13px}
+.monitoring-glow-violet{left:490.99px;top:-232.59px;width:762.41px;height:633.15px}
+.monitoring-device-shadow{left:12.73px;top:356.51px;width:456.14px;height:45.02px}
+.monitoring-device-lid{left:54.06px;top:109.83px;width:374.845px;height:254.49px;background:#1a202c;border:.919px solid #4a5568;border-radius:12.862px 12.862px 1.837px 1.837px}
+.monitoring-device-dark{left:56.36px;top:112.12px;width:370.251px;height:242.547px;background:#000;border-radius:10.106px 10.106px 0 0}
+.monitoring-device-screen{left:63.7px;top:124.06px;width:353.714px;height:220.497px;overflow:hidden;border-radius:5.512px}
+.monitoring-device-screen .portfolio-preview-image{position:absolute;top:.04%;left:0;width:100%;height:114.09%;object-fit:fill}
+.monitoring-device-label{left:54.06px;top:355.13px;width:374.845px;text-align:center;font:600 5.972px/.9 Arial,sans-serif;color:#a0aec0}
+.monitoring-device-base{left:9.04px;top:362.48px;width:463.044px;height:8.269px;background:#a3acb1;border-radius:.919px .919px 0 0}
+.monitoring-device-curve{left:9.04px;top:370.74px;width:463.044px;height:5.512px}
+.monitoring-device-groove{left:202.45px;top:362.48px;width:76.684px;height:6.431px}
+.portfolio-card[data-case-id="cashier"] .portfolio-card-copy,.portfolio-card[data-case-id="monitoring"] .portfolio-card-copy{gap:12px}
 .portfolio-card:has(.portfolio-card-description) .portfolio-card-copy{gap:12px}
 @media(max-width:900px){
  .portfolio-projects{padding:40px 0}
  .portfolio-projects .container{width:auto;max-width:none;margin-inline:8px}
  .portfolio-heading{gap:12px;margin-bottom:24px}
  .portfolio-heading h2{font-size:28px;line-height:34px;letter-spacing:-.56px}
- .portfolio-controls{gap:8px}
+ /* WEB-059: keep arrows at the right edge, including on a wrapped row. */
+ .portfolio-controls{gap:8px;margin-left:auto}
  .portfolio-controls button{width:40px;height:40px}
  .portfolio-track{gap:16px}
  .portfolio-card{flex-basis:min(343px,100%);grid-template-columns:minmax(0,1fr);height:auto;min-height:520px;padding:20px;gap:20px}
- .portfolio-card-copy{min-height:240px;gap:16px}
+ .portfolio-card-copy{height:auto;min-height:240px;gap:16px}
  .portfolio-card-title{font-size:21px}
  .portfolio-card-image{height:214px}
 }
