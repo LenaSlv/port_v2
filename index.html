@@ -8,11 +8,11 @@
   <title>Елена Сулоева — Product designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/styles/home.css">
   <link rel="stylesheet" href="src/styles/contact-dialog.css">
   <script defer src="src/scripts/contact-dialog.js"></script>
-<link rel="stylesheet" href="src/styles/mobile-scale.css"><link rel="stylesheet" href="src/styles/mobile-header.css"><link rel="stylesheet" href="src/styles/home-hero-mobile.css"><link rel="stylesheet" href="src/styles/collaboration-footer-mobile.css"></head>
+<link rel="stylesheet" href="src/styles/mobile-scale.css"><link rel="stylesheet" href="src/styles/mobile-header.css"><link rel="stylesheet" href="src/styles/home-hero-mobile.css"><link rel="stylesheet" href="src/styles/collaboration-footer-mobile.css"><link rel="stylesheet" href="src/styles/home-skills.css"></head>
 <body>
 <a class="home-skip" href="#about">К содержанию</a>
 <header class="home-header home-wrap">
@@ -30,34 +30,69 @@
     </div>
     <h1 id="home-title"><span>Елена Сулоева, Product designer <span class="home-title-desktop-dash">-</span><span class="home-title-mobile-dash">—</span> </span>превращаю сложную бизнес-логику в&nbsp;понятные интерфейсы</h1>
     <div class="home-skills" aria-label="Компетенции">
-      <div class="home-skill"><div><h2>UX-исследования</h2><p>Интервью, JTBD, CJM, анализ конкурентов</p></div><img src="src/assets/home/research.svg" width="32" height="32" alt=""></div>
-      <div class="home-skill"><div><h2>User flows &amp; wireframes</h2><p>Сценарии, информационная архитектура, <br class="home-skill-mobile-break">edge cases, прототипы</p></div><img src="src/assets/home/flows.svg" width="32" height="32" alt=""></div>
-      <div class="home-skill"><div><h2>UI-дизайн</h2><p>Web, Mobile, CRM, адаптивный дизайн, <br class="home-skill-mobile-break">iOS/Android, дизайн-системы и&nbsp;UI-kit, хендофф</p></div><img src="src/assets/home/ui.svg" width="32" height="32" alt=""></div>
-      <div class="home-skill"><div><h2>AI</h2><p>Прототипы, UX-тексты и&nbsp;контент, проработка продуктовых решений</p></div><img src="src/assets/home/ai.svg" width="32" height="32" alt=""></div>
+      <div class="home-skill"><div><h2>UX-исследования</h2><p>Интервью, JTBD, CJM, анализ конкурентов</p></div><picture><source media="(max-width: 900px)" srcset="src/assets/home/skill-research-mobile.svg" width="24" height="24"><img src="src/assets/home/skill-research-desktop.svg" width="32" height="32" alt=""></picture></div>
+      <div class="home-skill"><div><h2>UI-дизайн</h2><p>Web, Mobile,CRM, адаптивный дизайн, iOS/Android, дизайн-системы и UI-kit, хендофф</p></div><picture><source media="(max-width: 900px)" srcset="src/assets/home/skill-ui-mobile.svg" width="24" height="24"><img src="src/assets/home/skill-ui-desktop.svg" width="32" height="32" alt=""></picture></div>
+      <div class="home-skill"><div><h2>User flows &amp; wireframes</h2><p>Сценарии, информационная архитектура, edge cases, прототипы</p></div><picture><source media="(max-width: 900px)" srcset="src/assets/home/skill-flows-mobile.svg" width="24" height="24"><img src="src/assets/home/skill-flows-desktop.svg" width="32" height="32" alt=""></picture></div>
+      <div class="home-skill"><div><h2>AI</h2><p>Прототипы, UX-тексты<br>и контент, проработка продуктовых решений</p></div><picture><source media="(max-width: 900px)" srcset="src/assets/home/skill-ai-mobile.svg" width="24" height="24"><img src="src/assets/home/skill-ai-desktop.svg" width="32" height="32" alt=""></picture></div>
     </div>
   </section>
   <section class="home-projects home-wrap" id="projects" aria-labelledby="projects-title">
-    <h2 id="projects-title">Проекты, над&nbsp;которыми я работала</h2>
+    <h2 id="projects-title">Проекты, над которыми я работала</h2>
     <div class="home-project-list">
       <article class="home-project" data-case-id="transport">
-        <div class="home-project-copy"><span class="home-badge">iOS / Android B2C</span><h3>Единый транспортный сервис</h3><p class="home-project-description">Как объединить городские поездки и&nbsp;межгород в&nbsp;одном сервисе</p><p class="home-project-tags">Product concept · Information architecture · User flows · Edge cases</p><a class="home-case-link" href="transport-case/index.html" aria-label="Смотреть кейс: Единый транспортный сервис">Смотреть кейс&nbsp; →</a></div>
-        <a class="home-project-image" href="transport-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/transport.png" width="560" height="356" loading="lazy" alt="Экраны единого транспортного сервиса"></a>
+        <a class="home-project-image" href="transport-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/projects-transport.png" width="596" height="356" loading="lazy" alt="Два телефона с билетами и транспортными картами"></a>
+        <span class="home-badge">iOS / Android B2C</span>
+        <div class="home-project-panel">
+          <div class="home-project-copy">
+            <div class="home-project-heading"><h3>Единый транспортный сервис</h3><p class="home-project-description">Как объединить городские поездки и межгород в одном сервисе</p></div>
+            <p class="home-project-tags">Product concept · Information architecture · User flows · Edge cases</p>
+          </div>
+          <a class="home-case-link" href="transport-case/index.html" aria-label="Смотреть кейс: Единый транспортный сервис"><img src="src/assets/home/project-chevron.svg" width="20" height="20" alt=""></a>
+        </div>
       </article>
       <article class="home-project" data-case-id="monitoring">
-        <div class="home-project-copy"><span class="home-badge">Web B2B</span><h3>Мониторинг бортовых систем</h3><p class="home-project-description">Интерфейс управления оборудованием системы</p><p class="home-project-tags">UX design</p><a class="home-case-link" href="monitoring-case/index.html" aria-label="Смотреть кейс: Мониторинг бортовых систем">Смотреть кейс&nbsp; →</a></div>
-        <a class="home-project-image" href="monitoring-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/monitoring.png" width="560" height="356" loading="lazy" alt="Мониторинг оборудования на экране ноутбука"></a>
+        <a class="home-project-image" href="monitoring-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/projects-monitoring.png" width="596" height="356" loading="lazy" alt="Мониторинг бортовых систем на экране ноутбука"></a>
+        <span class="home-badge">Web B2B</span>
+        <div class="home-project-panel">
+          <div class="home-project-copy">
+            <div class="home-project-heading"><h3>Мониторинг бортовых систем</h3><p class="home-project-description">Интерфейс управления оборудованием системы</p></div>
+            <p class="home-project-tags">Product concept · Information architecture · User flows · Edge cases</p>
+          </div>
+          <a class="home-case-link" href="monitoring-case/index.html" aria-label="Смотреть кейс: Мониторинг бортовых систем"><img src="src/assets/home/project-chevron.svg" width="20" height="20" alt=""></a>
+        </div>
       </article>
       <article class="home-project" data-case-id="soul">
-        <div class="home-project-copy"><span class="home-badge">Telegram MiniApp B2C</span><h3>Платформа для&nbsp;поиска компании и&nbsp;активностей в&nbsp;путешествиях</h3><p class="home-project-description">Как исследование помогло перестроить поиск и&nbsp;выбор встреч</p><p class="home-project-tags">UX Research · Synthesis · Product hypotheses · User Flow · Mobile UX/UI</p><a class="home-case-link" href="soul-case/index.html" aria-label="Смотреть кейс: Платформа для поиска компании и активностей в путешествиях">Смотреть кейс&nbsp; →</a></div>
-        <a class="home-project-image" href="soul-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/soul.png" width="560" height="356" loading="lazy" alt="Приложение Soul для поиска встреч в путешествиях"></a>
+        <a class="home-project-image" href="soul-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/projects-soul.png" width="596" height="356" loading="lazy" alt="Приложение Soul на телефоне среди вещей для путешествия"></a>
+        <span class="home-badge">Telegram MiniApp B2C</span>
+        <div class="home-project-panel">
+          <div class="home-project-copy">
+            <div class="home-project-heading"><h3>Платформа для поиска компаний и активностей в путешествиях</h3><p class="home-project-description">Как исследования помогли перестроить поиск и выбор встреч</p></div>
+            <p class="home-project-tags">UX Research · Product hypotheses · User Flow · Mobile UX/UI</p>
+          </div>
+          <a class="home-case-link" href="soul-case/index.html" aria-label="Смотреть кейс: Платформа для поиска компаний и активностей в путешествиях"><img src="src/assets/home/project-chevron.svg" width="20" height="20" alt=""></a>
+        </div>
       </article>
       <article class="home-project" data-case-id="corporate">
-        <div class="home-project-copy"><span class="home-badge">iOS / Android B2B2E</span><h3>Сервис по&nbsp;заказу корпоративного транспорта</h3><p class="home-project-description">Как объединить регулярные и&nbsp;нерегулярные поездки сотрудников в&nbsp;одном продукте</p><p class="home-project-tags">Product logic · User flows · Mobile UX/UI</p><a class="home-case-link" href="corporate-transport/index.html" aria-label="Смотреть кейс: Сервис по заказу корпоративного транспорта">Смотреть кейс&nbsp; →</a></div>
-        <a class="home-project-image" href="corporate-transport/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/corporate-preview.png" width="560" height="356" loading="lazy" alt="Телефон с QR-билетом рядом с зелёным валидатором"></a>
+        <a class="home-project-image" href="corporate-transport/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/projects-corporate.png" width="596" height="356" loading="lazy" alt="Телефоны с QR-билетом и маршрутом корпоративного транспорта"></a>
+        <span class="home-badge">iOS / Android B2B2E</span>
+        <div class="home-project-panel">
+          <div class="home-project-copy">
+            <div class="home-project-heading"><h3>Сервис по заказу корпоративного транспорта</h3><p class="home-project-description">Как объединить регулярные и нерегулярные поездки сотрудников в одном продукте</p></div>
+            <p class="home-project-tags">Product logic · User flows · Mobile UX/UI</p>
+          </div>
+          <a class="home-case-link" href="corporate-transport/index.html" aria-label="Смотреть кейс: Сервис по заказу корпоративного транспорта"><img src="src/assets/home/project-chevron.svg" width="20" height="20" alt=""></a>
+        </div>
       </article>
       <article class="home-project" data-case-id="cashier">
-        <div class="home-project-copy"><span class="home-badge">Web B2B</span><h3>АРМ Кассира</h3><p class="home-project-description">Интерфейс продажи билетов и&nbsp;оформления заказов</p><p class="home-project-tags">Complex B2B flows · Payment scenarios · Edge cases</p><a class="home-case-link" href="cashier-case/index.html" aria-label="Смотреть кейс: АРМ Кассира">Смотреть кейс&nbsp; →</a></div>
-        <a class="home-project-image" href="cashier-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/cashier.png" width="560" height="356" loading="lazy" alt="Рабочее место кассира"></a>
+        <a class="home-project-image" href="cashier-case/index.html" tabindex="-1" aria-hidden="true"><img src="src/assets/home/projects-cashier.png" width="596" height="356" loading="lazy" alt="Рабочее место кассира на фоне табло аэропорта"></a>
+        <span class="home-badge">Web B2B</span>
+        <div class="home-project-panel">
+          <div class="home-project-copy">
+            <div class="home-project-heading"><h3>АРМ Кассира</h3><p class="home-project-description">Интерфейс продажи билетов и оформления заказов</p></div>
+            <p class="home-project-tags">Complex B2B flows · Payment scenarios · Edge cases</p>
+          </div>
+          <a class="home-case-link" href="cashier-case/index.html" aria-label="Смотреть кейс: АРМ Кассира"><img src="src/assets/home/project-chevron.svg" width="20" height="20" alt=""></a>
+        </div>
       </article>
     </div>
   </section>

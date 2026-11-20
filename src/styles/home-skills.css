@@ -1,0 +1,52 @@
+/* WEB-078: Figma 3373:52224 (desktop), 3336:41281 (mobile). */
+@font-face { font-family: "Skills Geist"; font-style: normal; font-weight: 400; font-display: swap; src: url("../assets/home/fonts/geist-400.ttf") format("truetype"); }
+@font-face { font-family: "Skills Geist"; font-style: normal; font-weight: 500; font-display: swap; src: url("../assets/home/fonts/geist-500.ttf") format("truetype"); }
+@font-face { font-family: "Skills Montserrat"; font-style: normal; font-weight: 400; font-display: swap; src: url("../assets/home/fonts/montserrat-400.ttf") format("truetype"); }
+@font-face { font-family: "Skills Montserrat"; font-style: normal; font-weight: 500; font-display: swap; src: url("../assets/home/fonts/montserrat-500.ttf") format("truetype"); }
+.home-skills {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 48px;
+  padding: 8px;
+  border-radius: 40px;
+  background: #17171733;
+  color: #fff;
+  font-family: "Skills Geist", Arial, sans-serif;
+}
+.home-skill {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  min-width: 0;
+  min-height: 163px;
+  padding: 24px;
+  border-radius: 40px;
+  background: #1f1f1f;
+}
+.home-skill > div { flex: 1; min-width: 0; align-self: stretch; }
+.home-skill h2 {
+  min-height: 45px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+  overflow-wrap: anywhere;
+}
+.home-skill p { font-size: 14px; font-weight: 400; line-height: 22.4px; overflow-wrap: anywhere; }
+.home-skill picture { display: block; flex: 0 0 32px; line-height: 0; }
+.home-skill img { display: block; }
+.home-skill:last-child { padding-block: 20px; }
+@media (min-width: 1440px) {
+  .home-skill { height: 163px; }
+}
+/* Keep four cards readable between the supplied desktop and mobile widths. */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .home-skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .home-skills { grid-template-columns: minmax(0, 1fr); margin-top: 28px; font-family: "Skills Montserrat", Arial, sans-serif; }
+  .home-skill, .home-skill:last-child { min-height: 0; padding: 16px; border-radius: 20px; }
+  .home-skill h2 { min-height: 0; margin-bottom: 8px; }
+  .home-skill picture { flex-basis: 24px; }
+}

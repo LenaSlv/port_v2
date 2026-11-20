@@ -3,7 +3,7 @@
   if (!original) return;
   const identity = original.querySelector('.home-identity, .identity');
   if (!identity) return;
-  const mobile = matchMedia('(max-width: 900px)');
+  const mobile = matchMedia('(max-width: 1200px)');
   const header = document.createElement('header');
   header.className = 'portfolio-mobile-header';
   header.setAttribute('aria-label', 'Мобильная навигация');
@@ -15,14 +15,17 @@
   toggle.setAttribute('aria-label', 'Открыть меню');
   toggle.setAttribute('aria-expanded', 'false');
   toggle.setAttribute('aria-controls', 'portfolio-mobile-menu');
-  toggle.setAttribute('aria-haspopup', 'dialog');
   toggle.innerHTML = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
-  header.append(author, toggle);
-  const menu = document.createElement('dialog');
+  const icon = toggle.querySelector('path');
+  const row = document.createElement('div');
+  row.className = 'portfolio-mobile-header-row';
+  row.append(author, toggle);
+  header.append(row);
+  const menu = document.createElement('div');
   menu.id = 'portfolio-mobile-menu';
   menu.className = 'portfolio-mobile-menu';
-  menu.setAttribute('aria-labelledby', 'portfolio-mobile-menu-title');
-  menu.innerHTML = '<div class="portfolio-mobile-menu-heading"><span id="portfolio-mobile-menu-title">Меню</span><button type="button" class="portfolio-mobile-close" aria-label="Закрыть меню"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div><nav aria-label="Разделы страницы"></nav>';
+  menu.hidden = true;
+  menu.innerHTML = '<nav aria-label="Разделы портфолио"></nav>';
   const nav = menu.querySelector('nav');
   // WEB-056: the same portfolio navigation on every page, per the approved screenshot.
   const home = new URL('../../index.html', document.currentScript.src);
@@ -45,30 +48,30 @@
   contact.dataset.contactDialog = '';
   contact.textContent = 'Связаться со мной';
   menu.append(contact);
+  header.append(menu);
   document.body.prepend(header);
-  document.body.append(menu);
   document.documentElement.classList.add('has-mobile-header');
 
-  const close = () => { if (menu.open) menu.close(); };
+  const setOpen = open => {
+    menu.hidden = !open;
+    header.classList.toggle('is-menu-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    icon.setAttribute('d', open ? 'M6 6l12 12M18 6 6 18' : 'M4 6h16M4 12h16M4 18h16');
+  };
+  const close = (restoreFocus = true) => {
+    if (menu.hidden) return;
+    setOpen(false);
+    if (restoreFocus) (mobile.matches ? toggle : identity).focus({ preventScroll: true });
+  };
   toggle.addEventListener('click', () => {
-    menu.showModal();
-    toggle.setAttribute('aria-expanded', 'true');
-    document.documentElement.classList.add('mobile-header-menu-open');
+    setOpen(menu.hidden);
   });
-  menu.querySelector('button').addEventListener('click', close);
-  menu.addEventListener('keydown', event => {
-    if (event.key !== 'Tab') return;
-    const targets = [...menu.querySelectorAll('a, button')];
-    if (event.shiftKey && document.activeElement === targets[0]) {
-      event.preventDefault(); targets.at(-1).focus();
-    } else if (!event.shiftKey && document.activeElement === targets.at(-1)) {
-      event.preventDefault(); targets[0].focus();
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !menu.hidden) {
+      event.preventDefault();
+      close();
     }
-  });
-  menu.addEventListener('close', () => {
-    toggle.setAttribute('aria-expanded', 'false');
-    document.documentElement.classList.remove('mobile-header-menu-open');
-    (mobile.matches ? toggle : identity).focus({ preventScroll: true });
   });
   menu.addEventListener('click', event => {
     if (event.target.closest('a')) {
@@ -86,12 +89,10 @@
       }
     }
   });
-  let backdropDown = false;
-  const outside = event => {
-    const box = menu.getBoundingClientRect();
-    return event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom;
-  };
-  menu.addEventListener('pointerdown', event => { backdropDown = event.target === menu && outside(event); });
-  menu.addEventListener('click', event => { if (backdropDown && event.target === menu && outside(event)) close(); backdropDown = false; });
+  author.addEventListener('click', () => close(false));
+  document.addEventListener('pointerdown', event => { if (!header.contains(event.target)) close(false); });
+  header.addEventListener('focusout', event => {
+    if (!header.contains(event.relatedTarget)) close(false);
+  });
   mobile.addEventListener('change', event => { if (!event.matches) close(); });
 })();

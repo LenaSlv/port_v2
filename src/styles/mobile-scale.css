@@ -5,7 +5,7 @@
   :root {
     --mobile-title: 32px;
     --mobile-title-line: 42.88px;
-    --mobile-heading: 32px;
+    --mobile-heading: 28px;
     --mobile-heading-line: 40px;
     --mobile-card-title: 20px;
     --mobile-card-line: 26px;
@@ -219,22 +219,12 @@
   .home-hero h1 { font-size: 32px; line-height: 42.88px; overflow-wrap: anywhere; }
   .home-channels { gap: 8px; margin-bottom: 16px; }
   .home-channels a { padding: 9px 13px; font-size: 14px; line-height: 20px; }
-  .home-skills { margin-top: 28px; }
-  .home-skill { padding: 16px 16px 48px; gap: 8px; }
-  .home-skill h2 { min-height: 0; font-size: 14px; line-height: 20px; margin-bottom: 8px; }
-  .home-skill p { font-size: 13px; line-height: 18px; }
-  .home-skill img { width: 24px; height: 24px; }
   .home-projects { padding-block: 40px 20px; }
   .home-projects > h2, .home-experience h2, .home-footer h2 { font-size: 32px; line-height: 40px; overflow-wrap: anywhere; }
   .home-projects > h2 { margin-bottom: 24px; }
   .home-project-list { gap: 16px; }
-  .home-project { padding: 16px; gap: 20px; }
-  .home-project-copy { gap: 12px; }
-  .home-project h3 { font-size: 24px; line-height: 30px; }
-  .home-project[data-case-id="soul"] h3 { font-size: 22px; line-height: 27.5px; }
   .home-project .home-project-description { font-size: 16px; line-height: 22.4px; }
-  .home-project-tags { font-size: 12px; line-height: 16.8px; margin-top: 4px; }
-  .home-case-link { font-size: 15px; line-height: 22px; margin-top: 4px; }
+  .home-project-tags { font-size: 12px; line-height: 16.8px; margin-top: 0; }
   .home-experience { padding-top: 40px; padding-bottom: 20px; gap: 24px; }
   .home-experience-intro p { margin-top: 20px; font-size: 16px; line-height: 22.4px; }
   .home-job { padding-block: 20px; gap: 8px; }

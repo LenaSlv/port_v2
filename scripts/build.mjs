@@ -14,7 +14,7 @@ const entries = [
   ['cashier-case', 'cashier-case'],
 ];
 const textExtensions = new Set(['.html', '.css', '.js']);
-const publicExtensions = new Set([...textExtensions, '.png', '.svg', '.jpg', '.jpeg', '.webp', '.gif', '.ico', '.woff', '.woff2']);
+const publicExtensions = new Set([...textExtensions, '.png', '.svg', '.jpg', '.jpeg', '.webp', '.gif', '.ico', '.woff', '.woff2', '.ttf']);
 let count = 0;
 
 async function copyPublic(source, target) {
@@ -27,7 +27,8 @@ async function copyPublic(source, target) {
     return;
   }
   const extension = extname(source).toLowerCase();
-  if (!publicExtensions.has(extension)) return;
+  const isFontLicense = /(?:^|[\\/])fonts[\\/][^\\/]+-OFL\.txt$/.test(source);
+  if (!publicExtensions.has(extension) && !isFontLicense) return;
   await mkdir(dirname(target), { recursive: true });
   if (textExtensions.has(extension)) {
     // Keep the same nesting so script-relative URLs continue to work.
