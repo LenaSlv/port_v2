@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Смешанная оплата заказа</title>
+  <style>
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+    img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; visibility: hidden; }
+    img.current { visibility: visible; }
+  </style>
+</head>
+<body inert>
+  <img class="current" src="assets/mixed-payment/0.png" alt="">
+  <script>
+    (async () => {
+      const pauses = [2600, 2000, 1800, 1400, 330, 330, 1600, 2600, 1400, 330, 330, 1600, 2600];
+      const frames = pauses.map((_, index) => {
+        if (index === 0) return document.querySelector('img');
+        const frame = new Image();
+        frame.alt = '';
+        frame.src = 'assets/mixed-payment/' + index + '.png';
+        document.body.append(frame);
+        return frame;
+      });
+      await Promise.all(frames.map(frame => frame.decode()));
+      const motion = matchMedia('(prefers-reduced-motion: reduce)');
+      let index = 0;
+      let timer;
+      function show(next) {
+        frames[index].classList.remove('current');
+        index = next;
+        frames[index].classList.add('current');
+      }
+      function play() {
+        clearTimeout(timer);
+        if (motion.matches) {
+          show(11);
+          return;
+        }
+        timer = setTimeout(() => {
+          show((index + 1) % frames.length);
+          play();
+        }, pauses[index]);
+      }
+      motion.addEventListener('change', play);
+      play();
+    })();
+  </script>
+</body>
+</html>

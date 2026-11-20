@@ -56,3 +56,14 @@ main{padding-top:169px}main section[id],#contact{scroll-margin-top:110px}.hero{p
  #payment .two-col .card>p{color:#f6f9ff}
  #refund .card>p{color:#7f8c9f}
 }
+
+.payment-demo { position: relative; width: min(100%, 668px); aspect-ratio: 668 / 786; margin: auto; }
+.payment-demo iframe, .zoom-dialog .payment-preview { display: block; width: 100%; height: 100%; border: 0; pointer-events: none; }
+.payment-demo .payment-zoom { position: absolute; inset: 0; width: 100%; height: 100%; }
+.zoom-dialog .payment-preview { width: min(100%, calc((100dvh - 120px) * .85), 1069px); height: auto; aspect-ratio: 668 / 786; }
+.zoom-dialog img[hidden] { display: none; }
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  .payment-demo { transition: transform .5s var(--ease), filter .5s var(--ease); }
+  .payment-demo:hover, .payment-demo:focus-within { transform: translateY(-10px) scale(1.04); filter: drop-shadow(0 22px 24px #0009); z-index: 10; }
+  .payment-demo .payment-zoom { transform: none; }
+}

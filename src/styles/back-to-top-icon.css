@@ -1,0 +1,6 @@
+/* WEB-083: center a fixed vector icon independently of font metrics. */
+.to-top, .back-top { padding: 0; }
+.to-top > img, .back-top > img { display: block; width: 24px; height: 24px; pointer-events: none; }
+@media (max-width: 900px) {
+  .to-top > img, .back-top > img { width: 22px; height: 22px; }
+}

@@ -31,8 +31,17 @@
   document.querySelectorAll('.zoom-trigger').forEach(button => button.addEventListener('click', () => {
     trigger = button;
     const source = button.querySelector('img');
-    zoomImage.src = source.src;
-    zoomImage.alt = source.alt;
+    const demo = button.closest('.payment-demo');
+    if (demo) {
+      const preview = demo.querySelector('iframe').cloneNode(false);
+      preview.className = 'payment-preview';
+      preview.loading = 'eager';
+      zoomImage.hidden = true;
+      zoomImage.after(preview);
+    } else {
+      zoomImage.src = source.src;
+      zoomImage.alt = source.alt;
+    }
     dialog.showModal();
     close.focus();
   }));
@@ -40,6 +49,8 @@
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
   dialog.addEventListener('close', () => {
     zoomImage.removeAttribute('src');
+    dialog.querySelector('.payment-preview')?.remove();
+    zoomImage.hidden = false;
     trigger?.focus({ preventScroll: true });
   });
 })();

@@ -80,6 +80,18 @@ main [id],footer[id]{scroll-margin-top:110px}
 .animation-zoom-trigger:focus-visible{outline:3px solid #89b6ff;outline-offset:-5px}
 @media(max-width:850px){.animation-zoom-trigger{border-radius:12px}}
 @media(max-width:480px){.animation-zoom-trigger{border-radius:7px}}
+/* WEB-082: scale device and screen corners together with the mobile mockup. */
+@media(max-width:900px){
+  .case-display{container-type:inline-size}
+  .case-display .display-monitor{
+    container-type:inline-size;
+    border-width:.24512cqw;
+    border-radius:3.40924cqw 3.40924cqw 3.66493cqw 3.06831cqw;
+  }
+  .display-monitor .screen,
+  .animation-monitor iframe,
+  .animation-monitor .animation-zoom-trigger{border-radius:1.70462cqw}
+}
 /* WEB-043: обложка кейса уменьшена по запросу — на всю ширину, высота 520 вместо 630. */
 @media(min-width:901px){
 .hero-stage{width:100%;height:auto;aspect-ratio:1248/520;margin-inline:0}

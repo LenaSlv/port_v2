@@ -30,6 +30,8 @@
 .portfolio-card[data-case-id="corporate"] .portfolio-card-image{background:linear-gradient(130.23deg,#1d1f27 0.98%,#69708d 100%)}
 .portfolio-card[data-case-id="corporate"] .portfolio-preview-image{position:absolute;width:113.83%;height:103.32%;left:-13.77%;top:-.15%}
 .portfolio-card[data-case-id="transport"] .portfolio-preview-image{position:absolute;width:109.12%;height:100%;left:-2.92%;top:0}
+/* WEB-082: reveal more of the left phone in the corporate case's first card. */
+.portfolio-projects[data-current-case="corporate"] .portfolio-card[data-case-id="transport"] .portfolio-preview-image{left:0}
 .portfolio-monitoring-scene{position:absolute;top:50%;left:0;width:305px;height:407.022px;transform:translateY(-50%);background:#04060e}
 .portfolio-monitoring-scene>img,.portfolio-monitoring-scene>div{position:absolute;max-width:none}
 .monitoring-glow-blue{left:-284.26px;top:-142.12px;width:949.7px;height:801.13px}
